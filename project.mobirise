@@ -201,6 +201,9 @@
             },
             ".mbr-text DIV": {
               "color": "#232323"
+            },
+            ".mbr-text LI": {
+              "color": "#232323"
             }
           },
           "_name": "content11",
