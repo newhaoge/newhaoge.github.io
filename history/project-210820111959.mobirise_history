@@ -71,6 +71,8 @@
     "favicon": "",
     "noImageResize": "",
     "google-analytics": "<!-- Global site tag (gtag.js) - Google Analytics -->\r\n<script async src=\"https://www.googletagmanager.com/gtag/js?id=UA-135435395-1\"></script>\r\n<script>\r\n  window.dataLayer = window.dataLayer || [];\r\n  function gtag(){dataLayer.push(arguments);}\r\n  gtag('js', new Date());\r\n\r\n  gtag('config', 'UA-135435395-1');\r\n</script>\r\n",
+    "publishType": "local",
+    "publishPath": "@PROJECT_PATH@",
     "imageResize": true
   },
   "pages": {
@@ -151,12 +153,12 @@
           "_isUserblock": true,
           "_sourceTheme": "mobirise4",
           "_cid": "sGDHs5rP7T",
-          "_PHPplaceholders": [],
-          "_JSplaceholders": [],
           "_protectedParams": [],
           "_global": false,
           "_once": false,
-          "_params": {}
+          "_params": {},
+          "_PHPplaceholders": [],
+          "_JSplaceholders": []
         },
         {
           "_styles": {
@@ -1670,7 +1672,7 @@
                 "videoPreview": "@THEME_PATH@/components/_images/gallery/preview.jpg",
                 "playVideo": false,
                 "videoUrl": "https://www.youtube.com/watch?v=fwkKc6M60-0",
-                "image": "@PROJECT_PATH@/assets/images/img-3152-polarr-1616x1080.jpg",
+                "image": "@PROJECT_PATH@/assets/images/img_3152_polarr-1616x1080.jpg",
                 "thumb": "@PROJECT_PATH@/assets/images/img-3152-polarr-1616x1080-800x535.jpg",
                 "alt": "",
                 "title": "",
