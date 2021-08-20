@@ -685,63 +685,51 @@ iframe.lazy-placeholder,
 section.lazy-placeholder:after {
   opacity: 0.3;
 }
-.cid-sDAqdUUlXb {
-  padding-top: 60px;
-  padding-bottom: 0px;
-  background-color: #f3f4f6;
+.cid-sGDIEH06Dl {
+  padding-top: 105px;
+  padding-bottom: 30px;
+  background-color: #ffffff;
 }
-.cid-sDAqdUUlXb .testimonial-text {
-  font-style: italic;
-  color: #676767;
-  font-weight: 300;
+.cid-sGDIEH06Dl .carousel-item {
+  justify-content: center;
+  -webkit-justify-content: center;
 }
-.cid-sDAqdUUlXb .mbr-author-name {
-  font-weight: bold;
-  color: #232;
+.cid-sGDIEH06Dl .carousel-item.active,
+.cid-sGDIEH06Dl .carousel-item-next,
+.cid-sGDIEH06Dl .carousel-item-prev {
+  display: flex;
 }
-.cid-sDAqdUUlXb .mbr-author-desc {
-  color: #232;
+.cid-sGDIEH06Dl .user_image {
+  width: 200px;
+  height: 200px;
+  margin-bottom: 1.6rem;
+  overflow: hidden;
+  border-radius: 50%;
+  margin: 0 auto 2rem auto;
 }
-@media (max-width: 660px) {
-  .cid-sDAqdUUlXb .mbr-figure,
-  .cid-sDAqdUUlXb img {
-    max-height: 300px;
-    margin-left: 50px;
-    width: auto;
-    margin: auto;
+.cid-sGDIEH06Dl .user_image img {
+  width: 100%;
+  min-width: 100%;
+  min-height: 100%;
+}
+@media (max-width: 230px) {
+  .cid-sGDIEH06Dl .user_image {
+    width: 100%;
+    height: auto;
   }
 }
-.cid-sDyTD0Liak {
+.cid-sGDHs5rP7T {
   padding-top: 15px;
   padding-bottom: 15px;
   background-color: #ffffff;
 }
-.cid-sDyTD0Liak P {
+.cid-sGDHs5rP7T .mbr-text,
+.cid-sGDHs5rP7T blockquote {
   color: #767676;
 }
-.cid-sDyTD0Liak .mbr-text,
-.cid-sDyTD0Liak .mbr-section-btn {
-  text-align: left;
+.cid-sGDHs5rP7T .mbr-text P {
   color: #232323;
-}
-.cid-sDyTD0Liak H1 {
-  text-align: left;
-}
-.cid-sDAfjZmg8W {
-  padding-top: 30px;
-  padding-bottom: 60px;
-  background-color: #ffffff;
-}
-.cid-sDAfjZmg8W P {
-  color: #767676;
-}
-.cid-sDAfjZmg8W .mbr-text,
-.cid-sDAfjZmg8W .mbr-section-btn {
-  text-align: left;
-  color: #232323;
-}
-.cid-sDAfjZmg8W H1 {
-  text-align: left;
+  text-align: justify;
 }
 .cid-rjvawNCJY8 {
   padding-top: 15px;
