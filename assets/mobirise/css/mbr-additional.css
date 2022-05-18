@@ -1154,88 +1154,28 @@ section.lazy-placeholder:after {
 .cid-rjv3yyZnbB .dropdown-item:hover {
   color: #767676 !important;
 }
-.cid-sQtSWt1GI6 {
-  padding-top: 60px;
+.cid-t6dfHNwCTD {
+  padding-top: 45px;
   padding-bottom: 15px;
   background-color: #ffffff;
 }
-.cid-sQtSWt1GI6 .counter-container {
+.cid-t6dfHNwCTD .mbr-text,
+.cid-t6dfHNwCTD blockquote {
   color: #767676;
 }
-.cid-sQtSWt1GI6 .counter-container ol {
-  margin-bottom: 0;
-  counter-reset: myCounter;
-}
-.cid-sQtSWt1GI6 .counter-container ol li {
-  margin-bottom: 1rem;
-}
-.cid-sQtSWt1GI6 .counter-container ol li {
-  list-style: none;
-  padding-left: .5rem;
-}
-.cid-sQtSWt1GI6 .counter-container ol li:before {
-  position: absolute;
-  left: 0px;
-  margin-top: -10px;
-  counter-increment: myCounter;
-  content: counter(myCounter);
-  display: inline-block;
-  text-align: center;
-  margin: 5px 10px;
-  line-height: 40px;
-  transition: all .2s;
-  color: #ffffff;
-  background: #149dcc;
-  width: 40px;
-  height: 40px;
-  border-radius: 50%;
-}
-.cid-sQtSWt1GI6 .mbr-text DIV {
+.cid-t6dfHNwCTD .mbr-text P {
   color: #232323;
 }
-.cid-sQtSWt1GI6 .mbr-text LI {
-  color: #232323;
-}
-.cid-rsLreObE7E {
+.cid-t6dhnS1ciq {
   padding-top: 0px;
   padding-bottom: 0px;
   background-color: #ffffff;
 }
-.cid-rsLreObE7E .counter-container {
+.cid-t6dhnS1ciq .mbr-text,
+.cid-t6dhnS1ciq blockquote {
   color: #767676;
 }
-.cid-rsLreObE7E .counter-container ol {
-  margin-bottom: 0;
-  counter-reset: myCounter;
-}
-.cid-rsLreObE7E .counter-container ol li {
-  margin-bottom: 1rem;
-}
-.cid-rsLreObE7E .counter-container ol li {
-  list-style: none;
-  padding-left: .5rem;
-}
-.cid-rsLreObE7E .counter-container ol li:before {
-  position: absolute;
-  left: 0px;
-  margin-top: -10px;
-  counter-increment: myCounter;
-  content: counter(myCounter);
-  display: inline-block;
-  text-align: center;
-  margin: 5px 10px;
-  line-height: 40px;
-  transition: all .2s;
-  color: #ffffff;
-  background: #149dcc;
-  width: 40px;
-  height: 40px;
-  border-radius: 50%;
-}
-.cid-rsLreObE7E .mbr-text DIV {
-  color: #232323;
-}
-.cid-rsLreObE7E .mbr-text LI {
+.cid-t6dhnS1ciq .mbr-text P {
   color: #232323;
 }
 .cid-rjv6CMb8cn {
