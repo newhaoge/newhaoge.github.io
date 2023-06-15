@@ -700,21 +700,21 @@ section.lazy-placeholder:after {
   display: flex;
 }
 .cid-sGDIEH06Dl .user_image {
-  width: 200px;
-  height: 200px;
-  margin-bottom: 1.6rem;
+  width: 180px;
+  height: 180px;
+  margin-bottom: 1rem;
   overflow: hidden;
-  border-radius: 50%;
+  border-radius: 60%;
   margin: 0 auto 2rem auto;
 }
 .cid-sGDIEH06Dl .user_image img {
-  width: 100%;
+  width: 80%;
   min-width: 100%;
   min-height: 100%;
 }
-@media (max-width: 230px) {
+@media (max-width: 300px) {
   .cid-sGDIEH06Dl .user_image {
-    width: 100%;
+    width: 60%;
     height: auto;
   }
 }
