@@ -65,7 +65,7 @@
         "url": "https://fonts.googleapis.com/css?family=Ubuntu:300,300i,400,400i,500,500i,700,700i"
       }
     ],
-    "uniqCompNum": 78,
+    "uniqCompNum": 76,
     "versionPublish": "4.8.8",
     "screenshot": "screenshot.png",
     "favicon": "",
@@ -1860,7 +1860,7 @@
             }
           },
           "_name": "content1",
-          "_customHTML": "<section class=\"mbr-section article content1\">\n    \n    <mbr-parameters>\n    <!-- Block parameters controls (Blue \"Gear\" panel) -->\n        <input type=\"range\" inline title=\"Top\" name=\"paddingTop\" min=\"0\" max=\"8\" step=\"1\" value=\"1\">\n        <input type=\"range\" inline title=\"Bottom\" name=\"paddingBottom\" min=\"0\" max=\"8\" step=\"1\" value=\"0\">\n        <input type=\"range\" inline title=\"Width Content\" name=\"widthContent\" min=\"1\" max=\"4\" step=\"1\" value=\"2\">\n        <input type=\"color\" title=\"Background Color\" name=\"bgColor\" value=\"#ffffff\">\n    <!-- End block parameters -->\n    </mbr-parameters> \n\n    <div class=\"container\">\n        <div class=\"media-container-row\">\n            <div class=\"mbr-text col-12 mbr-fonts-style\" mbr-theme-style=\"display-7\" data-app-selector=\".mbr-text\" data-multiline mbr-article mbr-class=\"{'col-md-6': widthContent == 1, 'col-md-8': widthContent == 2, 'col-md-10': widthContent == 3, 'col-md-12': widthContent == 4}\"><p><span style=\"font-size: 25px;\"><b>About Me</b></span></p><p>Hao Zheng is a tenure-track assistant professor in the <a href=\"https://www.ece.ucf.edu/\">Department of Electrical and Computer Engineering</a> at the University of Central Florida.&nbsp;</p><p><span style=\"font-size: 1rem;\">Hao Zheng received his Ph.D. degree from George Washington University, advised by <a href=\"https://hpcat.seas.gwu.edu/\">Prof. Ahmed Louri</a>. He received his B.S. in Electrical Engineering from Beijing Jiaotong University, China. His research interests are in the areas of computer architecture, with emphasis on on-chip interconnects, energy-efficient many-core architecture designs, and machine learning for efficient computing.</span></p><p><br></p></div>\n        </div>\n    </div>\n</section>",
+          "_customHTML": "<section class=\"mbr-section article content1\">\n    \n    <mbr-parameters>\n    <!-- Block parameters controls (Blue \"Gear\" panel) -->\n        <input type=\"range\" inline title=\"Top\" name=\"paddingTop\" min=\"0\" max=\"8\" step=\"1\" value=\"1\">\n        <input type=\"range\" inline title=\"Bottom\" name=\"paddingBottom\" min=\"0\" max=\"8\" step=\"1\" value=\"0\">\n        <input type=\"range\" inline title=\"Width Content\" name=\"widthContent\" min=\"1\" max=\"4\" step=\"1\" value=\"2\">\n        <input type=\"color\" title=\"Background Color\" name=\"bgColor\" value=\"#ffffff\">\n    <!-- End block parameters -->\n    </mbr-parameters> \n\n    <div class=\"container\">\n        <div class=\"media-container-row\">\n            <div class=\"mbr-text col-12 mbr-fonts-style\" mbr-theme-style=\"display-7\" data-app-selector=\".mbr-text\" data-multiline mbr-article mbr-class=\"{'col-md-6': widthContent == 1, 'col-md-8': widthContent == 2, 'col-md-10': widthContent == 3, 'col-md-12': widthContent == 4}\"><p><span style=\"font-size: 25px;\"><b>About Me</b></span></p><p>Hao Zheng is a tenure-track assistant professor in the <a href=\"https://www.ece.ucf.edu/\">Department of Electrical and Computer Engineering</a> at the University of Central Florida.&nbsp;</p><p><span style=\"font-size: 1rem;\">Hao Zheng received his Ph.D. degree from George Washington University, advised by <a href=\"https://hpcat.seas.gwu.edu/\">Prof. Ahmed Louri</a>. He received his B.S. in Electrical Engineering from Beijing Jiaotong University, China. His research interests are in the areas of computer architecture, with emphasis on on-chip interconnects, energy-efficient many-core architecture designs, and machine learning for efficient computing.</span><br></p><p><br></p><p style=\"font-size:25px\"><b>Openings</b></p><p>Graduate Research Assistantships (GRAs) are available for Ph.D. students to work on several research projects include, but not limited to: machine learning techniques for efficient computing; heterogeneous chiplet-based architectures; application-aware reconfigurable manycore architectures; graph processing and neural network accelerators.&nbsp;</p><p><span style=\"font-size: 1rem;\">I am also hiring master and undergraduate research assistants at UCF.&nbsp;</span></p><p><span style=\"font-size: 1rem;\">If you are interested, please send your CV and Transcripts to Hao.Zheng@ucf.edu</span><br></p><p><br></p></div>\n        </div>\n    </div>\n</section>",
           "_anchor": "content1-1b",
           "_isUserblock": true,
           "_sourceTheme": "mobirise4",
@@ -1893,41 +1893,6 @@
           "_cid": "trxxi8C9q9",
           "_PHPplaceholders": [],
           "_JSplaceholders": [],
-          "_protectedParams": [],
-          "_global": false,
-          "_once": false,
-          "_params": {}
-        },
-        {
-          "_styles": {
-            "padding-top": "(@paddingTop * 15px)",
-            "padding-bottom": "(@paddingBottom * 15px)",
-            "background-color": "@bgColor",
-            ".line": {
-              "background-color": "@lineColor",
-              "color": "@lineColor",
-              "align": "center",
-              "height": "2px",
-              "margin": "0 auto"
-            },
-            ".section-text": {
-              "padding": "2rem 0"
-            },
-            ".inner-container": {
-              "margin": "0 auto"
-            },
-            "@media (max-width: 768px)": {
-              ".inner-container": {
-                "width": "100% !important"
-              }
-            }
-          },
-          "_name": "content10",
-          "_customHTML": "<section class=\"mbr-section article content10\" group=\"Article\">\n    \n    <mbr-parameters>\n    <!-- Block parameters controls (Blue \"Gear\" panel) -->\n        <input type=\"range\" inline title=\"Top\" name=\"paddingTop\" min=\"0\" max=\"8\" step=\"1\" value=\"1\">\n        <input type=\"range\" inline title=\"Bottom\" name=\"paddingBottom\" min=\"0\" max=\"8\" step=\"1\" value=\"1\">\n        <input type=\"range\" inline title=\"Text Width\" name=\"innerWidth\" min=\"50\" max=\"100\" step=\"1\" value=\"73\">\n        <input type=\"range\" inline title=\"Line Width\" name=\"lineLength\" min=\"10\" max=\"100\" step=\"1\" value=\"44\">\n        <input type=\"color\" title=\"Line Color\" name=\"lineColor\" value=\"#ffffff\">\n        <input type=\"color\" title=\"Background Color\" name=\"bgColor\" value=\"#767676\">\n    <!-- End block parameters -->\n    </mbr-parameters> \n\n    <div class=\"container\">\n        <div class=\"inner-container\" mbr-style=\"{'width': innerWidth + '%'}\">\n            <hr class=\"line\" mbr-style=\"{'width': lineLength + '%'}\">\n            <div class=\"section-text align-center mbr-white mbr-fonts-style\" mbr-theme-style=\"display-2\" data-app-selector=\".section-text\" mbr-text>\n                    Contact<br></div>\n            <hr class=\"line\" mbr-style=\"{'width': lineLength + '%'}\">\n        </div>\n    </div>\n</section>",
-          "_anchor": "content10-25",
-          "_isUserblock": true,
-          "_sourceTheme": "mobirise4",
-          "_cid": "tXjs2lE00Z",
           "_protectedParams": [],
           "_global": false,
           "_once": false,
@@ -2349,6 +2314,31 @@
           "_protectedParams": [],
           "_global": true,
           "_once": "menu",
+          "_params": {}
+        },
+        {
+          "_styles": {
+            "padding-top": "(@paddingTop * 15px)",
+            "padding-bottom": "(@paddingBottom * 15px)",
+            "background-color": "@bgColor",
+            ".mbr-text, blockquote": {
+              "color": "#767676"
+            },
+            ".mbr-text P": {
+              "color": "#232323"
+            }
+          },
+          "_name": "content1",
+          "_customHTML": "<section class=\"mbr-section article content1\">\n    \n    <mbr-parameters>\n    <!-- Block parameters controls (Blue \"Gear\" panel) -->\n        <input type=\"range\" inline title=\"Top\" name=\"paddingTop\" min=\"0\" max=\"8\" step=\"1\" value=\"0\">\n        <input type=\"range\" inline title=\"Bottom\" name=\"paddingBottom\" min=\"0\" max=\"8\" step=\"1\" value=\"0\">\n        <input type=\"range\" inline title=\"Width Content\" name=\"widthContent\" min=\"1\" max=\"4\" step=\"1\" value=\"2\">\n        <input type=\"color\" title=\"Background Color\" name=\"bgColor\" value=\"#ffffff\">\n    <!-- End block parameters -->\n    </mbr-parameters> \n\n    <div class=\"container\">\n        <div class=\"media-container-row\">\n            <div class=\"mbr-text col-12 mbr-fonts-style\" style=\"text-align: justify;\" mbr-theme-style=\"display-7\" data-app-selector=\".mbr-text\" data-multiline mbr-article mbr-class=\"{'col-md-6': widthContent == 1, 'col-md-8': widthContent == 2, 'col-md-10': widthContent == 3, 'col-md-12': widthContent == 4}\"><p style=\"font-size:25px\"><b>Patents</b></p><p><span style=\"font-size: 1rem;\">Hao Zheng and Ahmed Louri, \"EZ-Pass: An Energy &amp; Performance-Efficient Power-Gating Router Architecture for Scalable NoCs.\", U.S. Patent, US 11502934 B2, Granted, Nov. 2022&nbsp;</span><br></p><p>Hao Zheng, Ke Wang, and Ahmed Louri,, \"A Versatile and Flexible Interconnection Network Design for Chiplet-Based Manycore Architecture\", U.S. Patent, US 11489788 B2, Granted, Nov. 2022</p><p>Hao Zheng and Ahmed Louri, “A Learning-Enabled Energy-Efficient On-Chip Interconnection\", U.S. Provisional Application No. 62/853,418, filed May, 2019.</p><p>Ke Wang, Hao Zheng, and Ahmed Louri, “Learning-Based High-Performance, Energy-Efficient, and Secure Interconnection Design Framework”, No. 63/019,720, U.S. Provisional Patent, filed May 2020.</p></div>\n        </div>\n    </div>\n</section>",
+          "_anchor": "content1-1r",
+          "_isUserblock": true,
+          "_sourceTheme": "mobirise4",
+          "_cid": "t6dhnS1ciq",
+          "_PHPplaceholders": [],
+          "_JSplaceholders": [],
+          "_protectedParams": [],
+          "_global": false,
+          "_once": false,
           "_params": {}
         },
         {
