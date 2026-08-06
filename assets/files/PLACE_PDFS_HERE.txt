@@ -1,0 +1,4 @@
+Paper PDFs go here. The eight currently referenced in data/publications.json:
+  TensorPrism_ISCA26.pdf, MICRO_2025.pdf, DiTile-DGNN.pdf, I-DGNN.pdf,
+  MICRO-2024.pdf, ICCD_Ployform.pdf, ICCAD_ARIES.pdf, ICCAD_SAGA.pdf
+Copy them from your old site's assets/files/ folder.
