@@ -275,7 +275,9 @@ def render_lab(site, people):
     alumni = "\n".join(
         f'      <li>{a["name"]}<span class="dest">{a["dest"]}</span></li>' for a in people["alumni"])
     sponsors = "\n".join(
-        f'      <div><img src="{s["img"]}" alt="{s["name"]}" loading="lazy"></div>'
+        f'      <div><img src="{s["img"]}" alt="{s["name"]}" loading="lazy" '
+        f'onerror="this.hidden=true;this.nextElementSibling.hidden=false">'
+        f'<span hidden>{s["name"]}</span></div>'
         for s in people["sponsors"])
 
     return f"""

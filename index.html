@@ -1031,15 +1031,15 @@ h3{font-family:Archivo,system-ui,sans-serif;font-weight:600;letter-spacing:-.015
 
     <h3 class="yearhead">Research support</h3>
     <div class="sponsors" style="margin-top:18px">
-      <div><img src="http://haozheng.us/assets/images/nsf-removebg-preview-2-224x225.png" alt="National Science Foundation" loading="lazy"></div>
-      <div><img src="http://haozheng.us/assets/images/doe-color-seal-green-top-buffer-removebg-preview-3-400x154.png" alt="U.S. Department of Energy" loading="lazy"></div>
-      <div><img src="http://haozheng.us/assets/images/darpa-logo-2010-400x218.png" alt="DARPA" loading="lazy"></div>
-      <div><img src="http://haozheng.us/assets/images/nih-logo-2012-400x400.png" alt="National Institutes of Health" loading="lazy"></div>
-      <div><img src="http://haozheng.us/assets/images/l3.svg" alt="L3Harris" loading="lazy"></div>
-      <div><img src="http://haozheng.us/assets/images/arilinc-removebg-preview-2-375x225.png" alt="AriLinc" loading="lazy"></div>
-      <div><img src="http://haozheng.us/assets/images/tablockup-vertical-kgrgb-300ppi-1-240x234.png" alt="Research sponsor" loading="lazy"></div>
-      <div><img src="http://haozheng.us/assets/images/xilinx-logo-400x210.jpg" alt="Xilinx" loading="lazy"></div>
-      <div><img src="http://haozheng.us/assets/images/nvidia-removebg-preview-400x225.png" alt="NVIDIA" loading="lazy"></div>
+      <div><img src="assets/images/nsf-removebg-preview-2-224x225.png" alt="National Science Foundation" loading="lazy"></div>
+      <div><img src="assets/images/doe-color-seal-green-top-buffer-removebg-preview-3-400x154.png" alt="U.S. Department of Energy" loading="lazy"></div>
+      <div><img src="assets/images/darpa-logo-2010-400x218.png" alt="DARPA" loading="lazy"></div>
+      <div><img src="assets/images/nih-logo-2012-400x400.png" alt="National Institutes of Health" loading="lazy"></div>
+      <div><img src="assets/images/l3.svg" alt="L3Harris" loading="lazy"></div>
+      <div><img src="assets/images/arilinc-removebg-preview-2-375x225.png" alt="AriLinc" loading="lazy"></div>
+      <div><img src="assets/images/tablockup-vertical-kgrgb-300ppi-1-240x234.png" alt="University of Central Florida" loading="lazy"></div>
+      <div><img src="assets/images/xilinx-logo-400x210.jpg" alt="Xilinx" loading="lazy"></div>
+      <div><img src="assets/images/nvidia-removebg-preview-400x225.png" alt="NVIDIA" loading="lazy"></div>
     </div>
   </div>
 </section>
@@ -1212,13 +1212,12 @@ h3{font-family:Archivo,system-ui,sans-serif;font-weight:600;letter-spacing:-.015
   "use strict";
   document.getElementById('yr').textContent = new Date().getFullYear();
 
-  /* ---------- portrait: local file first, then the old site, then a monogram ---------- */
+  /* ---------- portrait: local file, then a monogram ---------- */
   (function(){
     var img = document.getElementById('portrait');
     var fb  = document.getElementById('portraitFallback');
     if (!img) return;
-    var sources = ['https://haozheng.us/assets/images/img-3720.jpg-360x480.jpg',
-                   'https://haozheng.us/assets/images/img-3720.jpg-360x480.jpg'];
+    var sources = [];
     var i = 0;
     function fail(){
       if (i < sources.length){ img.src = sources[i++]; }

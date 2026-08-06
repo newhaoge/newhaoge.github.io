@@ -357,6 +357,10 @@ h3{font-family:Archivo,system-ui,sans-serif;font-weight:600;letter-spacing:-.015
 }
 .sponsors div{background:var(--plate);display:grid;place-items:center;padding:20px 16px;min-height:104px}
 .sponsors img{max-height:52px;width:auto;object-fit:contain;opacity:.86}
+.sponsors span{
+  font-family:Archivo,system-ui,sans-serif;font-size:13px;font-weight:600;
+  line-height:1.25;text-align:center;color:var(--ink-2)
+}
 
 .courses{display:grid;gap:14px;grid-template-columns:repeat(auto-fit,minmax(280px,1fr))}
 .course{border:1px solid var(--rule);background:var(--plate);padding:22px}
