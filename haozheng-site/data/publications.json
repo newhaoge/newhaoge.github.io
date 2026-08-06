@@ -1,0 +1,670 @@
+{
+  "groups": [
+    {
+      "label": "2026",
+      "items": [
+        {
+          "venue": "MICRO&rsquo;26",
+          "type": "conf",
+          "title": "KAIROS: Fast Microarchitectural Design Space Exploration by Bridging Architectural Semantics and Logic Gates",
+          "authors": [
+            "Shilin Tian",
+            "Sanjay Gandham",
+            "Lingxiang Yin",
+            "Mingjie Lin",
+            "Hao Zheng"
+          ],
+          "published": "IEEE/ACM International Symposium on Microarchitecture (MICRO) · Athens, Greece · Oct 31 – Nov 4, 2026 · To appear",
+          "tier": "top"
+        },
+        {
+          "venue": "MICRO&rsquo;26",
+          "type": "conf",
+          "title": "Argus: An Efficient Accelerator Design for Sparse Nonlinear Solver",
+          "authors": [
+            "Fangzhou Ye",
+            "Amir Ghazizadeh Ahsaei",
+            "Hao Zheng"
+          ],
+          "published": "IEEE/ACM International Symposium on Microarchitecture (MICRO) · Athens, Greece · Oct 31 – Nov 4, 2026 · To appear",
+          "tier": "top"
+        },
+        {
+          "venue": "MICRO&rsquo;26",
+          "type": "conf",
+          "title": "DireLeak: Cross-socket Cache Timing Channels Exploiting Memory Directory",
+          "authors": [
+            "Md Hafizul Islam Chowdhuryy",
+            "Kunbei Cai",
+            "Zhenkai Zhang",
+            "Hao Zheng",
+            "Fan Yao"
+          ],
+          "published": "IEEE/ACM International Symposium on Microarchitecture (MICRO) · Athens, Greece · Oct 31 – Nov 4, 2026 · To appear",
+          "tier": "top"
+        },
+        {
+          "venue": "MICRO&rsquo;26",
+          "type": "conf",
+          "title": "MOSAIC: An Accelerator Design for Heterophilic Graph Learning",
+          "authors": [
+            "Fangzhou Ye",
+            "Wei Zhang",
+            "Ahmed Louri",
+            "Hao Zheng"
+          ],
+          "published": "IEEE/ACM International Symposium on Microarchitecture (MICRO) · Athens, Greece · Oct 31 – Nov 4, 2026 · To appear",
+          "tier": "top"
+        },
+        {
+          "venue": "ISCA&rsquo;26",
+          "type": "conf",
+          "title": "TensorPrism: Rethinking Sparse High-order Tensor Acceleration via Co-occurrence Graph",
+          "authors": [
+            "Fangzhou Ye",
+            "Shilin Tian",
+            "Amir Ghazizadeh Ahsaei",
+            "Hao Zheng"
+          ],
+          "published": "ACM/IEEE International Symposium on Computer Architecture (ISCA) · Raleigh, NC · Jun 27 – Jul 1, 2026",
+          "tier": "top",
+          "selected": true,
+          "links": [
+            {
+              "label": "PDF",
+              "url": "assets/files/TensorPrism_ISCA26.pdf"
+            }
+          ]
+        },
+        {
+          "venue": "DAC&rsquo;26",
+          "type": "conf",
+          "title": "PanGaea: A Unified Memory-Efficient Accelerator for Pangenome Chaining and Alignment",
+          "authors": [
+            "Shilin Tian",
+            "Fangzhou Ye",
+            "Amir Ghazizadeh Ahsaei",
+            "Wei Zhang",
+            "Hao Zheng"
+          ],
+          "published": "Design Automation Conference (DAC) · Long Beach, CA · Jul 2026",
+          "tier": "top",
+          "selected": true
+        },
+        {
+          "venue": "HPCA&rsquo;26",
+          "type": "conf",
+          "title": "Scaling Graph Neural Network Training via Geometric Optimization",
+          "authors": [
+            "Fangzhou Ye",
+            "Lingxiang Yin",
+            "Hao Zheng"
+          ],
+          "published": "IEEE International Symposium on High-Performance Computer Architecture (HPCA) · Sydney, Australia · Jan 2026",
+          "tier": "top",
+          "selected": true
+        },
+        {
+          "venue": "NeuS&rsquo;26",
+          "type": "conf",
+          "title": "Neuro-Symbolic Safety Guidance for Vision-Language-Action Models via Constrained Flow Matching",
+          "authors": [
+            "William H. English",
+            "Hao Zheng",
+            "Rickard Ewetz"
+          ],
+          "published": "International Conference on Neuro-Symbolic Systems (NeuS) · Los Angeles, CA · Jun 16–18, 2026"
+        }
+      ]
+    },
+    {
+      "label": "2025",
+      "items": [
+        {
+          "venue": "NeurIPS&rsquo;25",
+          "type": "conf",
+          "title": "GAMMA: Gated Multi-hop Message Passing for Homophily-Agnostic Node Representation in GNNs",
+          "authors": [
+            "Amir Ghazizadeh Ahsaei",
+            "Rickard Ewetz",
+            "Hao Zheng"
+          ],
+          "published": "Annual Conference on Neural Information Processing Systems (NeurIPS) · San Diego, CA · Dec 2–7, 2025",
+          "tier": "top",
+          "selected": true,
+          "links": [
+            {
+              "label": "Code",
+              "url": "https://github.com/amir-ghz/GAMMA"
+            }
+          ]
+        },
+        {
+          "venue": "MICRO&rsquo;25",
+          "type": "conf",
+          "title": "Rethinking Tiling and Dataflow for SpMM Acceleration: A Graph Transformation Framework",
+          "authors": [
+            "Amir Ghazizadeh Ahsaei",
+            "Lingxiang Yin",
+            "Shilin Tian",
+            "Fangzhou Ye",
+            "Fan Yao",
+            "Hao Zheng"
+          ],
+          "published": "IEEE/ACM International Symposium on Microarchitecture (MICRO) · Seoul, South Korea · Oct 2025",
+          "tier": "top",
+          "selected": true,
+          "links": [
+            {
+              "label": "PDF",
+              "url": "assets/files/MICRO_2025.pdf"
+            }
+          ]
+        },
+        {
+          "venue": "ISCA&rsquo;25",
+          "type": "conf",
+          "title": "DiTile-DGNN: An Efficient Accelerator for Distributed Dynamic Graph Neural Network Inference",
+          "authors": [
+            "Jiaqi Yang",
+            "Hao Zheng",
+            "Ahmed Louri"
+          ],
+          "published": "ACM/IEEE International Symposium on Computer Architecture (ISCA) · Tokyo, Japan · Jun 2025",
+          "tier": "top",
+          "selected": true,
+          "links": [
+            {
+              "label": "PDF",
+              "url": "assets/files/DiTile-DGNN.pdf"
+            }
+          ]
+        },
+        {
+          "venue": "HPCA&rsquo;25",
+          "type": "conf",
+          "title": "I-DGNN: A Graph Dissimilarity-based Framework for Designing Scalable and Efficient DGNN Accelerators",
+          "authors": [
+            "Jiaqi Yang",
+            "Hao Zheng",
+            "Ahmed Louri"
+          ],
+          "published": "IEEE International Symposium on High-Performance Computer Architecture (HPCA) · Las Vegas, NV · Mar 2025",
+          "tier": "top",
+          "links": [
+            {
+              "label": "PDF",
+              "url": "assets/files/I-DGNN.pdf"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "label": "2024",
+      "items": [
+        {
+          "venue": "MICRO&rsquo;24",
+          "type": "conf",
+          "title": "SCALE: A Structure-Centric Accelerator for Message Passing Graph Neural Networks",
+          "authors": [
+            "Lingxiang Yin",
+            "Sanjay Gandham",
+            "Mingjie Lin",
+            "Hao Zheng"
+          ],
+          "published": "IEEE/ACM International Symposium on Microarchitecture (MICRO) · Austin, TX · Nov 2–6, 2024",
+          "tier": "top",
+          "selected": true,
+          "links": [
+            {
+              "label": "PDF",
+              "url": "assets/files/MICRO-2024.pdf"
+            }
+          ]
+        },
+        {
+          "venue": "ICCAD&rsquo;24",
+          "type": "conf",
+          "title": "CircuitSeer: RTL Post-PnR Delay Prediction via Coupling Functional and Structural Representation",
+          "authors": [
+            "Sanjay Gandham",
+            "Joe Walston",
+            "Sourav Samanta",
+            "Lingxiang Yin",
+            "Hao Zheng",
+            "Mingjie Lin",
+            "Stelios Diamantidis"
+          ],
+          "published": "ACM/IEEE International Conference on Computer-Aided Design (ICCAD) · New Jersey, USA · Oct 2024",
+          "tier": "top"
+        },
+        {
+          "venue": "ISCA&rsquo;24",
+          "type": "conf",
+          "title": "MetaLeak: Uncovering Side Channels in Secure Memory Architectures Exploiting Metadata",
+          "authors": [
+            "Md Hafizul Chowdhuryy",
+            "Hao Zheng",
+            "Fan Yao"
+          ],
+          "published": "51st International Symposium on Computer Architecture (ISCA) · Buenos Aires, Argentina · Jun 29 – Jul 3, 2024",
+          "tier": "top",
+          "selected": true
+        },
+        {
+          "venue": "DAC&rsquo;24",
+          "type": "conf",
+          "title": "EGMA: Enhancing Data Reuse and Workload Balancing in Message Passing GNN Acceleration via Gram Matrix Optimization",
+          "authors": [
+            "Fangzhou Ye",
+            "Lingxiang Yin",
+            "Amir Ghazizadeh Ahsaei",
+            "Hao Zheng"
+          ],
+          "published": "61st Design Automation Conference (DAC) · San Francisco, CA · Jun 23–27, 2024",
+          "tier": "top"
+        },
+        {
+          "venue": "DAC&rsquo;24",
+          "type": "conf",
+          "title": "VITA: ViT Acceleration for Efficient 3D Human Mesh Recovery via Hardware-Algorithm Co-Design",
+          "authors": [
+            "Shilin Tian",
+            "Chase Szafranski",
+            "Ce Zheng",
+            "Fan Yao",
+            "Ahmed Louri",
+            "Chen Chen",
+            "Hao Zheng"
+          ],
+          "published": "61st Design Automation Conference (DAC) · San Francisco, CA · Jun 23–27, 2024",
+          "tier": "top",
+          "links": [
+            {
+              "label": "Project",
+              "url": "https://shilinti.github.io/vita-demo/"
+            },
+            {
+              "label": "Code",
+              "url": "https://github.com/UCF-iCAT-lab/VITA"
+            }
+          ]
+        },
+        {
+          "venue": "IPDPS&rsquo;24",
+          "type": "conf",
+          "title": "Aurora: A Versatile and Flexible Accelerator for Graph Neural Networks",
+          "authors": [
+            "Jiaqi Yang",
+            "Hao Zheng",
+            "Ahmed Louri"
+          ],
+          "published": "IEEE International Parallel &amp; Distributed Processing Symposium (IPDPS) · San Francisco, CA · May 27–31, 2024"
+        },
+        {
+          "venue": "TPDS",
+          "type": "journal",
+          "title": "Versa-DNN: A Versatile Architecture Enabling High-Performance and Energy-Efficient Multi-DNN Acceleration",
+          "authors": [
+            "Jiaqi Yang",
+            "Hao Zheng",
+            "Ahmed Louri"
+          ],
+          "published": "IEEE Transactions on Parallel and Distributed Systems · 2024"
+        },
+        {
+          "venue": "ASP-DAC&rsquo;24",
+          "type": "conf",
+          "title": "Towards Area-Efficient Path-Based In-Memory Computing using Graph Isomorphisms",
+          "authors": [
+            "Sven Thijssen",
+            "Muhammad Rashedul Haq Rashed",
+            "Hao Zheng",
+            "Sumit Kumar Jha",
+            "Rickard Ewetz"
+          ],
+          "published": "ACM/IEEE Asia and South Pacific Design Automation Conference (ASP-DAC) · Tokyo, Japan · Jan 22–25, 2024"
+        }
+      ]
+    },
+    {
+      "label": "2023",
+      "items": [
+        {
+          "venue": "ICCD&rsquo;23",
+          "type": "conf",
+          "title": "Polyform: A Versatile Architecture for Multi-DNN Execution via Spatial and Temporal Acceleration",
+          "authors": [
+            "Lingxiang Yin",
+            "Amir Ghazizadeh",
+            "Shilin Tian",
+            "Ahmed Louri",
+            "Hao Zheng"
+          ],
+          "published": "IEEE International Conference on Computer Design (ICCD) · Washington, DC · Nov 6–8, 2023",
+          "links": [
+            {
+              "label": "PDF",
+              "url": "assets/files/ICCD_Ployform.pdf"
+            }
+          ]
+        },
+        {
+          "venue": "ICCAD&rsquo;23",
+          "type": "conf",
+          "title": "ARIES: Accelerating Distributed Training in Chiplet-based Systems via Flexible Interconnects",
+          "authors": [
+            "Lingxiang Yin",
+            "Amir Ghazizadeh",
+            "Ahmed Louri",
+            "Hao Zheng"
+          ],
+          "published": "International Conference on Computer-Aided Design (ICCAD) · San Francisco, CA · Oct 29 – Nov 2, 2023",
+          "tier": "top",
+          "selected": true,
+          "links": [
+            {
+              "label": "PDF",
+              "url": "assets/files/ICCAD_ARIES.pdf"
+            }
+          ]
+        },
+        {
+          "venue": "ICCAD&rsquo;23",
+          "type": "conf",
+          "title": "SAGA: Sparsity-Agnostic Graph Convolutional Network Acceleration with Near-optimal Workload Balance",
+          "authors": [
+            "Sanjay Gandham*",
+            "Lingxiang Yin*",
+            "Hao Zheng",
+            "Mingjie Lin"
+          ],
+          "published": "International Conference on Computer-Aided Design (ICCAD) · San Francisco, CA · Oct 29 – Nov 2, 2023",
+          "tier": "top",
+          "note": "* co-first authors",
+          "links": [
+            {
+              "label": "PDF",
+              "url": "assets/files/ICCAD_SAGA.pdf"
+            }
+          ]
+        },
+        {
+          "venue": "ICCAD&rsquo;23",
+          "type": "conf",
+          "title": "Path-based Processing using In-Memory Systolic Arrays for Accelerating Data-Intensive Applications",
+          "authors": [
+            "Muhammad Rashedul Haq Rashed",
+            "Sven Thijssen",
+            "Hao Zheng",
+            "Sumit Kumar Jha",
+            "Rickard Ewetz"
+          ],
+          "published": "International Conference on Computer-Aided Design (ICCAD) · San Francisco, CA · Oct 29 – Nov 2, 2023",
+          "tier": "top"
+        },
+        {
+          "venue": "DAC&rsquo;23",
+          "type": "conf",
+          "title": "Venus: A Versatile Deep Neural Network Accelerator Architecture Design for Multiple Applications",
+          "authors": [
+            "Jiaqi Yang",
+            "Hao Zheng",
+            "Ahmed Louri"
+          ],
+          "published": "60th Design Automation Conference (DAC) · San Francisco, CA · Jul 9–13, 2023",
+          "tier": "top"
+        },
+        {
+          "venue": "ISCA&rsquo;23",
+          "type": "conf",
+          "title": "FDMAX: An Elastic Accelerator Architecture for Solving Partial Differential Equations",
+          "authors": [
+            "Jiajun Li",
+            "Yuxuan Zhang",
+            "Hao Zheng",
+            "Ke Wang"
+          ],
+          "published": "50th International Symposium on Computer Architecture (ISCA) · Orlando, FL · Jun 17–21, 2023",
+          "tier": "top",
+          "selected": true
+        },
+        {
+          "venue": "GLSVLSI&rsquo;23",
+          "type": "conf",
+          "title": "Exploring Architecture, Dataflow, and Sparsity for GCN Accelerators: A Holistic Framework",
+          "authors": [
+            "Lingxiang Yin",
+            "Jun Wang",
+            "Hao Zheng"
+          ],
+          "published": "33rd ACM Great Lakes Symposium on VLSI (GLSVLSI) · Jun 5–7, 2023"
+        },
+        {
+          "venue": "FCCM&rsquo;23",
+          "type": "conf",
+          "title": "OCMGen: Extended Design Space Exploration with Efficient FPGA Memory Inference (Poster)",
+          "authors": [
+            "Sanjay Gandham",
+            "Lingxiang Yin",
+            "Hao Zheng",
+            "Mingjie Lin"
+          ],
+          "published": "31st IEEE International Symposium on Field-Programmable Custom Computing Machines (FCCM) · Marina Del Rey, CA · May 8–11, 2023"
+        },
+        {
+          "venue": "TSUSC",
+          "type": "journal",
+          "title": "Morph-GCNX: A Universal Architecture for High-performance and Energy-efficient Graph Convolutional Network Acceleration",
+          "authors": [
+            "Ke Wang",
+            "Hao Zheng",
+            "Jiajun Li",
+            "Ahmed Louri"
+          ],
+          "published": "IEEE Transactions on Sustainable Computing · 2023"
+        },
+        {
+          "venue": "JCST",
+          "type": "journal",
+          "title": "GShuttle: Optimizing Memory Access Efficiency for Graph Convolutional Neural Network Accelerators",
+          "authors": [
+            "Jiajun Li",
+            "Ke Wang",
+            "Hao Zheng",
+            "Ahmed Louri"
+          ],
+          "published": "Journal of Computer Science and Technology · Feb 2023"
+        }
+      ]
+    },
+    {
+      "label": "2022",
+      "items": [
+        {
+          "venue": "TCAS-I",
+          "type": "journal",
+          "title": "ASCEND: A Scalable and Energy-Efficient DNN Accelerator with Photonic Interconnects",
+          "authors": [
+            "Yuan Li",
+            "Ke Wang",
+            "Hao Zheng",
+            "Ahmed Louri",
+            "Avinash Karanth"
+          ],
+          "published": "IEEE Transactions on Circuits and Systems I — Special Issue on Circuits and Systems for Emerging Computing Paradigms · Apr 2022"
+        },
+        {
+          "venue": "GLSVLSI&rsquo;22",
+          "type": "conf",
+          "title": "Adapt-Flow: A Flexible DNN Accelerator Architecture for Heterogeneous Dataflow Implementation",
+          "authors": [
+            "Jiaqi Yang",
+            "Hao Zheng",
+            "Ahmed Louri"
+          ],
+          "published": "32nd ACM Great Lakes Symposium on VLSI (GLSVLSI) · Jun 6–8, 2022"
+        },
+        {
+          "venue": "DATE&rsquo;22",
+          "type": "conf",
+          "title": "AGAPE: Anomaly Detection with Generative Adversarial Network for Improved Performance, Energy, and Security in Manycore Systems",
+          "authors": [
+            "Ke Wang",
+            "Hao Zheng",
+            "Yuan Li",
+            "Jiajun Li",
+            "Ahmed Louri"
+          ],
+          "published": "25th Design, Automation &amp; Test in Europe Conference (DATE) · Mar 14–23, 2022"
+        }
+      ]
+    },
+    {
+      "label": "2018 – 2021",
+      "items": [
+        {
+          "venue": "TPDS",
+          "type": "journal",
+          "title": "SGCNAX: A Scalable Graph Convolutional Neural Network Accelerator with Workload Balancing",
+          "authors": [
+            "Jiajun Li",
+            "Hao Zheng",
+            "Ke Wang",
+            "Ahmed Louri"
+          ],
+          "published": "IEEE Transactions on Parallel and Distributed Systems — Special Section on Parallel and Distributed Computing Techniques for AI, ML, and DL · 2021"
+        },
+        {
+          "venue": "TSUSC",
+          "type": "journal",
+          "title": "SecureNoC: A Learning-enabled, High-performance, Energy-efficient, and Secure On-chip Communication Framework Design",
+          "authors": [
+            "Ke Wang",
+            "Hao Zheng",
+            "Yuan Li",
+            "Ahmed Louri"
+          ],
+          "published": "IEEE Transactions on Sustainable Computing · 2021"
+        },
+        {
+          "venue": "HPCA&rsquo;21",
+          "type": "conf",
+          "title": "Adapt-NoC: A Flexible Network-on-Chip Design for Heterogeneous Manycore Architecture",
+          "authors": [
+            "Hao Zheng",
+            "Ke Wang",
+            "Ahmed Louri"
+          ],
+          "published": "27th IEEE International Symposium on High-Performance Computer Architecture (HPCA) · Seoul, South Korea · Feb 27 – Mar 3, 2021",
+          "tier": "top",
+          "selected": true
+        },
+        {
+          "venue": "DAC&rsquo;20",
+          "type": "conf",
+          "title": "A Versatile and Flexible Chiplet-based System Design for Heterogeneous Manycore Architectures",
+          "authors": [
+            "Hao Zheng",
+            "Ke Wang",
+            "Ahmed Louri"
+          ],
+          "published": "57th Design Automation Conference (DAC) · Virtual · Jul 19–23, 2020",
+          "tier": "top",
+          "selected": true
+        },
+        {
+          "venue": "TETC",
+          "type": "journal",
+          "title": "Agile: A Learning-enabled Power and Performance-Efficient Network-on-Chip Design",
+          "authors": [
+            "Hao Zheng",
+            "Ahmed Louri"
+          ],
+          "published": "IEEE Transactions on Emerging Topics in Computing (TETC) · Jun 2020 · DOI 10.1109/TETC.2020.3003496"
+        },
+        {
+          "venue": "IEEE Micro",
+          "type": "journal",
+          "title": "TSA-NoC: Learning-Based Threat Detection and Mitigation for Secure Network-On-Chip Architecture",
+          "authors": [
+            "Ke Wang",
+            "Hao Zheng",
+            "Ahmed Louri"
+          ],
+          "published": "IEEE Micro — Special Issue on Machine Learning for Systems · Sep/Oct 2020"
+        },
+        {
+          "venue": "DAC&rsquo;19",
+          "type": "conf",
+          "title": "An Energy-Efficient Network-on-Chip Design using Reinforcement Learning",
+          "authors": [
+            "Hao Zheng",
+            "Ahmed Louri"
+          ],
+          "published": "56th Design Automation Conference (DAC) · Las Vegas, NV · Jun 2–6, 2019",
+          "tier": "top"
+        },
+        {
+          "venue": "CAL",
+          "type": "journal",
+          "title": "EZ-Pass: An Energy &amp; Performance-Efficient Power-Gating Router Architecture for Scalable On-chip Interconnect",
+          "authors": [
+            "Hao Zheng",
+            "Ahmed Louri"
+          ],
+          "published": "IEEE Computer Architecture Letters (CAL) · vol. 17, no. 1, pp. 88–91 · 2018"
+        }
+      ]
+    },
+    {
+      "label": "Patents",
+      "items": [
+        {
+          "venue": "US 11502934 B2",
+          "type": "patent",
+          "title": "EZ-Pass: An Energy &amp; Performance-Efficient Power-Gating Router Architecture for Scalable NoCs",
+          "authors": [
+            "Hao Zheng",
+            "Ahmed Louri"
+          ],
+          "published": "U.S. Patent · Granted Nov 2022"
+        },
+        {
+          "venue": "US 11489788 B2",
+          "type": "patent",
+          "title": "A Versatile and Flexible Interconnection Network Design for Chiplet-Based Manycore Architecture",
+          "authors": [
+            "Hao Zheng",
+            "Ke Wang",
+            "Ahmed Louri"
+          ],
+          "published": "U.S. Patent · Granted Nov 2022"
+        },
+        {
+          "venue": "63/019,720",
+          "type": "patent",
+          "title": "Learning-Based High-Performance, Energy-Efficient, and Secure Interconnection Design Framework",
+          "authors": [
+            "Ke Wang",
+            "Hao Zheng",
+            "Ahmed Louri"
+          ],
+          "published": "U.S. Patent · Granted Jan 2025"
+        },
+        {
+          "venue": "63/665,776",
+          "type": "patent",
+          "title": "Versatile Accelerator Design for Multiple Deep Neural Network Applications",
+          "authors": [
+            "Jiaqi Yang",
+            "Hao Zheng",
+            "Ahmed Louri"
+          ],
+          "published": "U.S. Patent · Filed Jul 2024 · Pending"
+        }
+      ]
+    }
+  ]
+}

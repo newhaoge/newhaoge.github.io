@@ -1,0 +1,3 @@
+Drop your portrait here as: hao-zheng.jpg  (roughly 3:4, 600px wide is plenty)
+Sponsor logos go in sponsors/ — see README.md for the expected filenames.
+Until the photo exists the site shows an "HZ" monogram, so nothing breaks.

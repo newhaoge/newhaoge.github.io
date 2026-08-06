@@ -1,272 +1,1619 @@
 <!DOCTYPE html>
-<html  >
+<html lang="en">
 <head>
-  
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  
-  <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1">
-  <link rel="shortcut icon" href="assets/images/logo2.png" type="image/x-icon">
-  <meta name="description" content="">
-  
-  
-  <title>Home</title>
-  <link rel="stylesheet" href="assets/web/assets/mobirise-icons/mobirise-icons.css">
-  <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
-  <link rel="stylesheet" href="assets/bootstrap/css/bootstrap-grid.min.css">
-  <link rel="stylesheet" href="assets/bootstrap/css/bootstrap-reboot.min.css">
-  <link rel="stylesheet" href="assets/tether/tether.min.css">
-  <link rel="stylesheet" href="assets/dropdown/css/style.css">
-  <link rel="stylesheet" href="assets/theme/css/style.css">
-  <link rel="preload" href="https://fonts.googleapis.com/css?family=Ubuntu:300,300i,400,400i,500,500i,700,700i&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
-  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Ubuntu:300,300i,400,400i,500,500i,700,700i&display=swap"></noscript>
-  <link rel="preload" href="https://fonts.googleapis.com/css?family=Rubik:300,400,500,600,700,800,900,300i,400i,500i,600i,700i,800i,900i&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
-  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Rubik:300,400,500,600,700,800,900,300i,400i,500i,600i,700i,800i,900i&display=swap"></noscript>
-  <link rel="preload" as="style" href="assets/mobirise/css/mbr-additional.css?v=QD5zJ1"><link rel="stylesheet" href="assets/mobirise/css/mbr-additional.css?v=QD5zJ1" type="text/css">
-
-  
-  
-  
-</head>
-<body>
-
-<!-- Analytics -->
-<!-- Global site tag (gtag.js) - Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=UA-135435395-1"></script>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#000000">
+<title>Hao Zheng — Assistant Professor, ECE, University of Central Florida</title>
+<meta name="description" content="Hao Zheng is a tenure-track Assistant Professor of Electrical and Computer Engineering at the University of Central Florida, working on computer architecture, AI/ML systems, hardware accelerators, chiplets, and AI-assisted chip design. Director of the iCAT lab.">
+<link rel="canonical" href="https://haozheng.us/">
+<meta property="og:type" content="profile">
+<meta property="og:title" content="Hao Zheng — Assistant Professor, ECE, University of Central Florida">
+<meta property="og:description" content="Computer architecture and machine learning: AI/ML systems, hardware accelerators, networks-on-chip, chiplet-based systems, and AI-assisted chip design.">
+<meta property="og:url" content="https://haozheng.us/">
+<meta property="og:image" content="https://haozheng.us/assets/images/img-3720.jpg-360x480.jpg">
+<meta name="twitter:card" content="summary">
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-FWJ2TZ58WX"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
   gtag('js', new Date());
-
-  gtag('config', 'UA-135435395-1');
+  gtag('config', 'G-FWJ2TZ58WX');
 </script>
+<link rel="icon" type="image/png" href="assets/img/ucf-tab.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;1,8..60,400&display=swap" rel="stylesheet">
+<style>
+/* ============================================================
+   Design tokens
+   Palette drawn from chip-layout tooling: a wafer-gray substrate,
+   deep "metal layer" indigo for traces and links, amber for active
+   signal. Dark hero panel reads as a die photograph.
+   ============================================================ */
+:root{
+  --paper:#F4F4F4;
+  --paper-2:#E8E8E8;
+  --plate:#FFFFFF;
+  --ink:#000000;
+  --ink-2:#4A4A4A;
+  --ink-3:#7A7A7A;
+  --rule:#D4D4D4;
+  --rule-2:#B8B8B8;
+  --trace:#000000;
+  --trace-lite:#555555;
+  --signal:#765900;
+  --signal-lite:#FFC904;
+  --die:#000000;
+  --die-2:#181818;
+  --wrap:1140px;
+  --pad:clamp(20px,5vw,48px);
+  --chamfer:16px;
+}
 
-<!-- /Analytics -->
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{
+  margin:0;
+  background:linear-gradient(135deg,#FFFFFF 0%,var(--paper) 52%,#E9E9E9 100%) fixed;
+  color:var(--ink);
+  font-family:"Source Serif 4",Georgia,serif;
+  font-size:17px;
+  line-height:1.68;
+  font-optical-sizing:auto;
+  -webkit-font-smoothing:antialiased;
+}
+img{max-width:100%;display:block}
+a{color:var(--trace);text-underline-offset:3px;text-decoration-thickness:1px}
+a:hover{color:var(--signal)}
+:focus-visible{outline:2px solid var(--trace);outline-offset:3px}
+.die-panel :focus-visible{outline-color:var(--signal-lite)}
+.skip{position:absolute;left:-9999px}
+.skip:focus{left:12px;top:12px;z-index:99;background:var(--ink);color:var(--paper);padding:10px 14px}
 
+.wrap{max-width:var(--wrap);margin-inline:auto;padding-inline:var(--pad)}
+.chamfer{clip-path:polygon(0 0,calc(100% - var(--chamfer)) 0,100% var(--chamfer),100% 100%,0 100%)}
 
-  
-  <section class="menu cid-rjv3yyZnbB" once="menu" id="menu2-4">
+/* --------------------------- masthead --------------------------- */
+.masthead{
+  position:sticky;top:0;z-index:40;
+  background:rgba(255,255,255,.94);
+  backdrop-filter:saturate(150%) blur(10px);
+  border-bottom:1px solid var(--rule);
+}
+.masthead .wrap{
+  display:flex;align-items:center;gap:clamp(16px,3vw,40px);
+  min-height:66px;flex-wrap:wrap;
+}
+.brand{display:flex;align-items:center;gap:11px;text-decoration:none;color:var(--ink);margin-right:auto}
+.brand .ucf-logo{width:31px;height:42px;object-fit:contain;flex:0 0 auto}
+.brand .name{font-family:Archivo,system-ui,sans-serif;font-weight:600;font-size:16px;letter-spacing:-.015em}
 
-    
+.nav{display:flex;gap:clamp(10px,2vw,26px);align-items:center;flex-wrap:wrap}
+.nav a{
+  font-family:Archivo,system-ui,sans-serif;font-size:13.5px;font-weight:500;
+  letter-spacing:.01em;color:var(--ink-2);text-decoration:none;
+  padding:5px 0;border-bottom:2px solid transparent;
+}
+.nav a:hover{color:var(--ink)}
+.nav a[aria-current="page"]{color:var(--ink);border-bottom-color:var(--signal)}
+.mailto{
+  font-family:"IBM Plex Mono",monospace;font-size:11.5px;letter-spacing:.02em;
+  color:var(--ink-2);text-decoration:none;border:1px solid var(--rule-2);
+  padding:7px 11px;white-space:nowrap;
+}
+.mailto:hover{border-color:var(--ink);color:var(--ink);background:var(--plate)}
+@media(max-width:880px){
+  .masthead .wrap{padding-block:10px}
+  .brand{flex:1 1 auto}
+  .nav{order:3;width:100%;overflow-x:auto;flex-wrap:nowrap;padding-bottom:2px;-webkit-overflow-scrolling:touch}
+  .nav::-webkit-scrollbar{display:none}
+  .mailto{font-size:10.5px;padding:6px 9px}
+}
 
-    <nav class="navbar navbar-expand beta-menu navbar-dropdown align-items-center navbar-fixed-top navbar-toggleable-sm">
-        <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <div class="hamburger">
-                <span></span>
-                <span></span>
-                <span></span>
-                <span></span>
-            </div>
-        </button>
-        <div class="menu-logo">
-            <div class="navbar-brand">
-                
-                
-            </div>
-        </div>
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav nav-dropdown nav-right navbar-nav-top-padding" data-app-modern-menu="true"><li class="nav-item">
-                    <a class="nav-link link text-black display-4" href="index.html">Home</a>
-                </li><li class="nav-item"><a class="nav-link link text-black display-4" href="index.html#testimonials-slider1-1c">About Me</a></li><li class="nav-item"><a class="nav-link link text-black display-4" href="Publications.html">Publications<br></a></li><li class="nav-item"><a class="nav-link link text-black display-4" href="lab.html">Lab<br></a></li><li class="nav-item"><a class="nav-link link text-black display-4" href="teaching.html">Teaching<br></a></li><li class="nav-item"></li>
-                <li class="nav-item">
-                    <a class="nav-link link text-black display-4" href="index.html#form4-d">Contact Me<br></a>
-                </li></ul>
-            
-        </div>
+/* --------------------------- typography --------------------------- */
+.eyebrow{
+  font-family:"IBM Plex Mono",monospace;font-size:11px;font-weight:500;
+  text-transform:uppercase;letter-spacing:.16em;color:var(--ink-2);
+  margin:0 0 14px;display:flex;align-items:flex-start;gap:9px;
+}
+.eyebrow::before{content:"";width:7px;height:7px;background:var(--signal);flex:0 0 7px;margin-top:.42em}
+.sec-title{
+  font-family:Archivo,system-ui,sans-serif;font-weight:600;
+  font-size:clamp(1.55rem,3.4vw,2.15rem);letter-spacing:-.026em;line-height:1.12;
+  margin:0 0 12px;
+}
+.sec-note{color:var(--ink-2);font-size:15.5px;margin:0;max-width:none}
+.sec-head{margin-bottom:clamp(28px,4vw,44px)}
+h3{font-family:Archivo,system-ui,sans-serif;font-weight:600;letter-spacing:-.015em}
+
+.view{padding-block:clamp(46px,7vw,84px)}
+.view[hidden]{display:none}
+#home{padding-top:0}
+.rule{border:0;border-top:1px solid var(--rule);margin:clamp(44px,6vw,72px) 0}
+
+/* --------------------------- hero / die --------------------------- */
+.die-panel{
+  position:relative;overflow:hidden;background:var(--die);color:#E8EAED;
+  clip-path:polygon(0 0,100% 0,100% calc(100% - 34px),calc(100% - 34px) 100%,0 100%);
+}
+.die-panel canvas{position:absolute;inset:0;width:100%;height:100%;display:block}
+.die-panel .veil{
+  position:absolute;inset:0;
+  background:
+    radial-gradient(105% 80% at 20% 38%,rgba(15,19,23,.95) 0%,rgba(15,19,23,.80) 40%,rgba(15,19,23,.30) 76%,rgba(15,19,23,.10) 100%),
+    linear-gradient(180deg,rgba(15,19,23,.50),rgba(15,19,23,.12) 70%,rgba(15,19,23,.06));
+}
+.hero{position:relative;display:grid;gap:clamp(28px,5vw,60px);padding:clamp(60px,8vw,96px) 0 clamp(96px,12vw,150px);
+  grid-template-columns:minmax(0,1.55fr) minmax(0,.85fr);align-items:center}
+@media(max-width:840px){.hero{grid-template-columns:1fr}}
+.hero .eyebrow{color:#9BA3AC}
+.hero .eyebrow::before{background:var(--signal-lite)}
+.hero h1{
+  font-family:Archivo,system-ui,sans-serif;font-weight:700;
+  font-size:clamp(2.9rem,8vw,5rem);line-height:.94;letter-spacing:-.042em;
+  margin:0 0 20px;color:#FCFCFA;
+}
+.hero .role{
+  font-family:Archivo,system-ui,sans-serif;font-size:clamp(15px,1.6vw,17.5px);
+  font-weight:500;color:#C6CBD1;margin:0 0 22px;letter-spacing:-.005em;
+}
+.hero .role .sep{color:var(--signal-lite);padding:0 8px}
+.hero .lede{max-width:52ch;color:#B7BEC5;font-size:16.5px;margin:0 0 30px}
+.creds{display:flex;flex-wrap:wrap;gap:8px;list-style:none;padding:0;margin:0}
+.creds li{
+  font-family:"IBM Plex Mono",monospace;font-size:11px;letter-spacing:.05em;
+  text-transform:uppercase;color:#CBD1D7;border:1px solid rgba(232,179,61,.34);
+  padding:6px 10px;background:rgba(232,179,61,.06);
+}
+.portrait{position:relative;justify-self:end;width:min(100%,220px)}
+@media(max-width:840px){.portrait{justify-self:start;width:min(52%,180px)}}
+.portrait .frame{
+  background:var(--die-2);border:1px solid rgba(255,255,255,.14);padding:9px;
+  clip-path:polygon(0 0,calc(100% - 18px) 0,100% 18px,100% 100%,0 100%);
+}
+.portrait img{width:100%;aspect-ratio:1;object-fit:cover;filter:contrast(1.03) saturate(.94)}
+.portrait .fallback[hidden]{display:none}
+.portrait .fallback{
+  width:100%;aspect-ratio:1;display:grid;place-items:center;background:#22282E;
+  font-family:Archivo,sans-serif;font-size:54px;font-weight:600;color:#4E5761;letter-spacing:-.03em;
+}
+.portrait figcaption{
+  font-family:"IBM Plex Mono",monospace;font-size:10.5px;letter-spacing:.08em;
+  text-transform:uppercase;color:#7B838C;margin-top:10px;
+}
+
+/* --------------------------- prose --------------------------- */
+.prose{max-width:70ch}
+
+/* justified body copy */
+.prose p,
+.sec-note,
+.panel p,
+.hero .lede,
+.timeline p,
+.timeline ol li,
+.feed p,
+.deflist dd,
+.card .honors,
+.foot-grid p{
+  text-align:justify;
+  text-justify:inter-word;
+  hyphens:auto;
+  -webkit-hyphens:auto;
+}
+.about{max-width:none}
+.about .prose{max-width:none}
+.about .eyebrow{margin-bottom:18px}
+.prose p{margin:0 0 18px}
+.prose p:last-child{margin-bottom:0}
+.topics{list-style:none;padding:0;margin:26px 0 0;display:grid;gap:0;border-top:1px solid var(--rule)}
+.topics li{
+  border-bottom:1px solid var(--rule);padding:11px 0;display:flex;gap:14px;align-items:baseline;
+  font-size:15.5px;
+}
+.topics .idx{
+  font-family:"IBM Plex Mono",monospace;font-size:10.5px;color:var(--ink-3);
+  letter-spacing:.08em;flex:0 0 96px;text-transform:uppercase;
+}
+@media(max-width:560px){
+  .topics li{flex-direction:column;gap:3px}
+  .topics .idx{flex:0 0 auto}
+}
+
+/* --------------------------- news --------------------------- */
+.timeline{list-style:none;margin:0;padding:0}
+.timeline li{
+  display:grid;grid-template-columns:112px minmax(0,1fr);gap:clamp(14px,3vw,30px);
+  padding:15px 0;border-top:1px solid var(--rule);
+}
+.timeline{border-bottom:1px solid var(--rule)}
+.timeline li[hidden]{display:none}
+.newstools{
+  display:flex;align-items:center;gap:12px;flex-wrap:wrap;
+  padding:13px 0;border-top:1px solid var(--rule);margin-bottom:4px;
+}
+.newstools label{
+  font-family:"IBM Plex Mono",monospace;font-size:11px;letter-spacing:.13em;
+  text-transform:uppercase;color:var(--ink-2);
+}
+.newsselect{
+  font-family:"IBM Plex Mono",monospace;font-size:12px;letter-spacing:.06em;color:var(--ink);
+  background-color:var(--plate);border:1px solid var(--rule-2);border-radius:2px;cursor:pointer;
+  padding:8px 34px 8px 12px;appearance:none;-webkit-appearance:none;
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 10 6'%3E%3Cpath d='M1 1l4 4 4-4' fill='none' stroke='%2359616A' stroke-width='1.4'/%3E%3C/svg%3E");
+  background-repeat:no-repeat;background-position:right 11px center;background-size:9px;
+}
+.newsselect:hover{border-color:var(--ink)}
+.timeline time{
+  font-family:"IBM Plex Mono",monospace;font-size:11.5px;letter-spacing:.06em;
+  color:var(--ink-2);text-transform:uppercase;padding-top:4px;
+}
+.timeline h3{margin:0 0 3px;font-size:16px}
+.timeline p{margin:0;font-size:15px;color:var(--ink-2)}
+.timeline ol{margin:8px 0 0;padding-left:18px;font-size:14.5px;color:var(--ink-2)}
+.timeline ol li{display:block;border:0;padding:3px 0;grid-template-columns:none}
+
+.feedwrap{position:relative}
+.feedwrap::after{
+  content:"";position:absolute;left:1px;right:1px;bottom:1px;height:56px;pointer-events:none;
+  background:linear-gradient(to bottom,rgba(255,255,255,0),rgba(255,255,255,.96));
+  opacity:1;transition:opacity .2s ease;
+}
+.feedwrap.at-end::after{opacity:0}
+.feed{
+  max-height:min(58vh,430px);overflow-y:auto;overscroll-behavior:contain;
+  border:1px solid var(--rule);background:var(--plate);
+  padding:2px clamp(16px,2.4vw,28px);
+  scrollbar-width:thin;scrollbar-color:var(--rule-2) transparent;
+}
+.feed::-webkit-scrollbar{width:8px}
+.feed::-webkit-scrollbar-thumb{background:var(--rule-2)}
+.feed::-webkit-scrollbar-track{background:transparent}
+.feed ul{list-style:none;margin:0;padding:0}
+.feed li{
+  display:grid;grid-template-columns:74px minmax(0,1fr);gap:clamp(14px,2vw,24px);
+  padding:12px 0;border-top:1px solid var(--rule);align-items:baseline;
+}
+.feed li:first-child{border-top:0}
+.feed time{font-family:"IBM Plex Mono",monospace;font-size:11.5px;letter-spacing:.04em;color:var(--signal)}
+.feed p{margin:0;font-size:15.5px;line-height:1.55}
+@media(max-width:560px){
+  .feed li{grid-template-columns:1fr;gap:2px}
+}
+@media(max-width:620px){
+  .timeline li{grid-template-columns:1fr;gap:4px}
+  .timeline time{padding-top:0}
+}
+
+/* --------------------------- publications --------------------------- */
+.pubtools{
+  display:flex;flex-wrap:wrap;gap:10px;align-items:center;
+  padding:14px 0;border-block:1px solid var(--rule);margin-bottom:8px;
+  position:sticky;top:66px;background:var(--paper);z-index:20;
+}
+@media(max-width:880px){.pubtools{position:static}}
+.pubsearch{
+  flex:0 1 260px;min-width:150px;font:inherit;font-size:14.5px;
+  border:1px solid var(--rule-2);background:var(--plate);padding:8px 11px;color:var(--ink);
+  font-family:"IBM Plex Mono",monospace;
+}
+.pubsearch::placeholder{color:var(--ink-3)}
+.filters{display:flex;flex-wrap:wrap;gap:6px}
+.filters button{
+  font-family:"IBM Plex Mono",monospace;font-size:11px;letter-spacing:.08em;text-transform:uppercase;
+  border:1px solid var(--rule-2);background:transparent;color:var(--ink-2);
+  padding:7px 11px;cursor:pointer;border-radius:2px;
+}
+.filters button:hover{border-color:var(--ink);color:var(--ink)}
+.filters button[aria-pressed="true"]{background:var(--ink);border-color:var(--ink);color:var(--paper)}
+.count{font-family:"IBM Plex Mono",monospace;font-size:11px;color:var(--ink-3);letter-spacing:.06em;margin-left:auto}
+
+.yearhead{
+  display:flex;align-items:center;gap:16px;margin:38px 0 6px;
+  font-family:"IBM Plex Mono",monospace;font-size:12px;letter-spacing:.18em;color:var(--ink-2);
+}
+.yearhead::after{content:"";height:1px;background:var(--rule-2);flex:1}
+.yeargroup[hidden]{display:none}
+
+.pub{
+  display:grid;grid-template-columns:118px minmax(0,1fr);gap:clamp(14px,3vw,28px);
+  padding:17px 0;border-top:1px solid var(--rule);
+}
+.pub[hidden]{display:none}
+.tag{
+  display:inline-block;font-family:"IBM Plex Mono",monospace;font-size:10.5px;font-weight:500;
+  letter-spacing:.05em;padding:4px 7px;border:1px solid var(--rule-2);color:var(--ink-2);
+  white-space:nowrap;border-radius:2px;
+}
+.pub[data-tier="top"] .tag{border-color:var(--signal);color:var(--signal);background:rgba(156,110,6,.07)}
+.pub[data-type="patent"] .tag{border-color:var(--trace);color:var(--trace);background:rgba(46,47,160,.06)}
+.pub-title{margin:0 0 5px;font-size:16.5px;line-height:1.34;letter-spacing:-.012em}
+.pub-authors{margin:0 0 4px;font-size:15px;color:var(--ink)}
+.pub-authors b{font-weight:600;box-shadow:inset 0 -5px 0 rgba(232,179,61,.32)}
+.pub-venue{margin:0;font-size:14px;color:var(--ink-2);font-family:Archivo,system-ui,sans-serif}
+.pub-links{margin:8px 0 0;display:flex;gap:7px;flex-wrap:wrap}
+.pub-links a{
+  font-family:"IBM Plex Mono",monospace;font-size:10.5px;letter-spacing:.07em;text-transform:uppercase;
+  text-decoration:none;border:1px solid var(--rule-2);padding:4px 8px;color:var(--ink-2);border-radius:2px;
+}
+.pub-links a:hover{border-color:var(--trace);color:var(--trace);background:var(--plate)}
+.empty{padding:40px 0;color:var(--ink-2);font-style:italic}
+.empty[hidden]{display:none}
+@media(max-width:620px){.pub{grid-template-columns:1fr;gap:9px}}
+
+/* --------------------------- panels / lists --------------------------- */
+.panel{background:var(--plate);border:1px solid var(--rule);padding:clamp(20px,3.4vw,34px);box-shadow:0 12px 30px rgba(23,25,28,.055)}
+.panel.accent{border-left:3px solid var(--signal)}
+.panel h3{margin:0 0 12px;font-size:18px}
+.panel .prose{max-width:none}
+.panel p:last-child{margin-bottom:0}
+
+.cards{display:grid;gap:14px;grid-template-columns:repeat(auto-fill,minmax(255px,1fr));margin:0;padding:0;list-style:none}
+.card{background:var(--plate);border:1px solid var(--rule);padding:18px 18px 16px;box-shadow:0 6px 18px rgba(23,25,28,.04)}
+.card h4{font-family:Archivo,sans-serif;font-weight:600;margin:0 0 3px;font-size:16px;letter-spacing:-.01em}
+.card .meta{font-family:"IBM Plex Mono",monospace;font-size:10.5px;letter-spacing:.07em;text-transform:uppercase;color:var(--ink-3);margin:0 0 9px}
+.card .honors{margin:0;font-size:14px;color:var(--ink-2)}
+
+.deflist{margin:0;display:grid;grid-template-columns:auto minmax(0,1fr);gap:0}
+.deflist dt{
+  font-family:"IBM Plex Mono",monospace;font-size:10.5px;letter-spacing:.1em;text-transform:uppercase;
+  color:var(--ink-2);padding:14px 26px 14px 0;border-top:1px solid var(--rule);white-space:nowrap;
+}
+.deflist dd{margin:0;padding:14px 0;border-top:1px solid var(--rule);font-size:15.5px}
+@media(max-width:700px){
+  .deflist{grid-template-columns:1fr}
+  .deflist dt{padding-bottom:2px;border-top:1px solid var(--rule)}
+  .deflist dd{padding-top:0;border-top:0}
+}
+
+.plainlist{list-style:none;margin:0;padding:0}
+.plainlist li{padding:10px 0;border-top:1px solid var(--rule);font-size:15.5px;display:flex;gap:16px;align-items:baseline}
+.plainlist li:last-child{border-bottom:1px solid var(--rule)}
+.plainlist .yr{font-family:"IBM Plex Mono",monospace;font-size:11.5px;color:var(--ink-2);flex:0 0 46px;letter-spacing:.04em}
+.plainlist .note{color:var(--ink-2);font-size:14px;display:block}
+
+.alumni{columns:2;column-gap:36px;list-style:none;margin:0;padding:0}
+@media(max-width:700px){.alumni{columns:1}}
+.alumni li{break-inside:avoid;padding:9px 0;border-bottom:1px solid var(--rule);font-size:15px}
+.alumni .dest{display:block;color:var(--ink-2);font-size:13.5px;font-family:Archivo,sans-serif}
+
+.sponsors{
+  display:grid;grid-template-columns:repeat(auto-fill,minmax(132px,1fr));gap:1px;
+  background:var(--rule);border:1px solid var(--rule);
+}
+.sponsors div{background:var(--plate);display:grid;place-items:center;padding:20px 16px;min-height:104px}
+.sponsors img{max-height:52px;width:auto;object-fit:contain;opacity:.86}
+
+.courses{display:grid;gap:14px;grid-template-columns:repeat(auto-fit,minmax(280px,1fr))}
+.course{border:1px solid var(--rule);background:var(--plate);padding:22px}
+.course .code{font-family:"IBM Plex Mono",monospace;font-size:12px;letter-spacing:.09em;color:var(--signal);margin:0 0 7px}
+.course h3{margin:0 0 6px;font-size:19px}
+.course p{margin:0;color:var(--ink-2);font-size:14.5px;font-family:Archivo,sans-serif}
+
+.btn{
+  display:inline-flex;align-items:center;gap:9px;font-family:Archivo,sans-serif;font-weight:500;
+  font-size:14px;text-decoration:none;background:var(--ink);color:var(--paper);padding:11px 18px;
+  clip-path:polygon(0 0,calc(100% - 9px) 0,100% 9px,100% 100%,0 100%);
+}
+.btn:hover{background:var(--trace);color:#fff}
+.btn.ghost{background:transparent;color:var(--ink);border:1px solid var(--rule-2);clip-path:none}
+.btn.ghost:hover{border-color:var(--ink);background:var(--plate);color:var(--ink)}
+.btnrow{display:flex;gap:10px;flex-wrap:wrap;margin-top:26px}
+
+/* --------------------------- footer --------------------------- */
+.site-footer{background:var(--die);color:#A8B0B8;margin-top:clamp(50px,7vw,90px);
+  clip-path:polygon(0 0,34px 0,68px 0,100% 0,100% 100%,0 100%)}
+.foot-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(215px,1fr));
+  gap:clamp(24px,4vw,48px);padding-block:clamp(44px,6vw,70px)}
+.site-footer h2{font-family:Archivo,sans-serif;font-size:13px;font-weight:600;letter-spacing:.14em;
+  text-transform:uppercase;color:#6E767F;margin:0 0 16px}
+.site-footer a{color:#DCE1E6}
+.site-footer a:hover{color:var(--signal-lite)}
+.site-footer address{font-style:normal;font-size:15px;line-height:1.75}
+.bigmail{font-family:Archivo,sans-serif;font-size:clamp(17px,2.3vw,22px);font-weight:500;
+  letter-spacing:-.02em;color:#FBFBF8;text-decoration:none;display:inline-block;
+  border-bottom:1px solid rgba(232,179,61,.5);padding-bottom:3px}
+.bigmail:hover{color:var(--signal-lite);border-bottom-color:var(--signal-lite)}
+.footlinks{list-style:none;margin:0;padding:0;font-size:15px}
+.footlinks li{padding:4px 0}
+.colophon{border-top:1px solid rgba(255,255,255,.1);padding-block:20px;
+  display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;
+  font-family:"IBM Plex Mono",monospace;font-size:10.5px;letter-spacing:.07em;
+  text-transform:uppercase;color:#666E77}
+
+@media(prefers-reduced-motion:reduce){
+  *{animation-duration:.001ms!important;transition-duration:.001ms!important;scroll-behavior:auto!important}
+}
+@media print{
+  .masthead,.pubtools,.site-footer,.portrait,.btnrow{display:none!important}
+  body{background:#fff;font-size:11pt}
+  .die-panel{background:#fff;color:#000;clip-path:none}
+  .die-panel canvas,.die-panel .veil{display:none}
+  .hero h1,.hero .role,.hero .lede,.hero .eyebrow{color:#000}
+  .creds li{color:#000;border-color:#999}
+  .view[hidden]{display:block!important}
+}
+</style>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+
+<header class="masthead">
+  <div class="wrap">
+    <a class="brand" href="#home">
+      <img class="ucf-logo" src="assets/img/ucf-tab.png" width="332" height="448" alt="UCF">
+      <span class="name">Hao Zheng</span>
+    </a>
+    <nav class="nav" aria-label="Primary">
+      <a href="#home">Home</a>
+      <a href="#publications">Publications</a>
+      <a href="#lab">Lab</a>
+      <a href="#teaching">Teaching</a>
+      <a href="#service">Service</a>
+      <a href="#news">News</a>
     </nav>
-</section>
+    <a class="mailto" href="mailto:Hao.Zheng@ucf.edu">Hao.Zheng@ucf.edu</a>
+  </div>
+</header>
 
-<section class="carousel slide testimonials-slider cid-sGDIEH06Dl" data-interval="false" id="testimonials-slider1-1c">
-    
-    
+<main id="main">
 
-    
+<!-- =========================== HOME =========================== -->
+<section class="view" id="home" aria-label="Home">
 
-    <div class="container text-center">
-        
-
-        <div class="carousel slide" role="listbox" data-pause="true" data-keyboard="false" data-ride="false" data-interval="false">
-            <div class="carousel-inner">
-                
-                
-            <div class="carousel-item">
-                    <div class="user col-md-8">
-                        <div class="user_image">
-                            <img src="assets/images/img-3720.jpg-360x480.jpg" alt="" title="">
-                        </div>
-
-                        <div class="user_name mbr-bold pb-2 mbr-fonts-style display-5">
-                            Hao Zheng</div>
-                        <div class="user_desk mbr-light mbr-fonts-style display-7"><div>Assistant Professor</div><div>&nbsp;University of Central Florida</div></div>
-                    </div>
-                    
-
-                </div></div>
-
-            <div class="carousel-controls">
-                <a class="carousel-control-prev" role="button" data-slide="prev">
-                  <span aria-hidden="true" class="mbri-arrow-prev mbr-iconfont"></span>
-                  <span class="sr-only">Previous</span>
-                </a>
-                
-                <a class="carousel-control-next" role="button" data-slide="next">
-                  <span aria-hidden="true" class="mbri-arrow-next mbr-iconfont"></span>
-                  <span class="sr-only">Next</span>
-                </a>
-            </div>
+  <div class="die-panel">
+    <canvas id="mesh" hidden aria-hidden="true"></canvas>
+    <div class="veil" aria-hidden="true"></div>
+    <div class="wrap">
+      <div class="hero">
+        <div>
+          <p class="eyebrow">Computer architecture &amp; machine learning</p>
+          <h1>Hao&nbsp;Zheng</h1>
+          <p class="role">Electrical &amp; Computer Engineering<span class="sep">/</span>University of Central Florida</p>
+          <p class="lede">Building Scalable, Efficient, and Adaptive Computing Infrastructure for AI: From Silicon to Algorithms</p>
+          <ul class="creds">
+            <li>AEiC, IEEE Trans. on Computers</li>
+            <li>Director, iCAT Lab</li>
+          </ul>
         </div>
+        <figure class="portrait">
+          <div class="frame">
+            <img id="portrait" src="assets/images/img-3720.jpg-360x480.jpg" alt="Portrait of Hao Zheng">
+            <div class="fallback" id="portraitFallback" hidden aria-hidden="true">HZ</div>
+          </div>
+          <figcaption>Harris Engineering Center, Orlando</figcaption>
+        </figure>
+      </div>
     </div>
+  </div>
+
+  <div class="wrap" style="padding-top:clamp(48px,7vw,84px)">
+    <div class="about">
+      <p class="eyebrow">About</p>
+      <div class="prose">
+        <p>Hao Zheng is a tenure-track Assistant Professor in the <a href="https://www.ece.ucf.edu/">Department of Electrical and Computer Engineering</a> at the University of Central Florida, where he directs the iCAT lab.</p>
+        <p>He received his Ph.D. from George Washington University, advised by <a href="https://hpcat.seas.gwu.edu/">Prof. Ahmed Louri</a>. His research interests are in computer architecture and machine learning, with emphasis on AI/ML systems, hardware accelerators, on- and off-chip communication, manycore processors, chiplet-based systems, and AI-assisted chip design. His work has been published in top-tier computer architecture and EDA conferences and journals such as ISCA, MICRO, HPCA, DAC, ICCAD, DATE, TPDS, and TETC.</p>
+        <p>He is a recipient of the <a href="https://www.nsf.gov/funding/opportunities/career-faculty-early-career-development-program">NSF CAREER Award</a> and the <a href="https://facultyexcellence.ucf.edu/award/reach-for-the-stars-award/">UCF Reach for the Stars Award</a>. He has served on organizing and technical program committees for top computer systems conferences and as a panelist for multiple NSF programs. He currently serves as Associate Editor-in-Chief for <em>IEEE Transactions on Computers</em> and as an Associate Editor for <em>IEEE Transactions on Sustainable Computing</em>.</p>
+        <p>If you are interested in serving as a reviewer for <a href="https://www.computer.org/csdl/journal/tc">IEEE TC</a>, please fill out the <a href="https://docs.google.com/forms/d/e/1FAIpQLScnBeBChpP9nZjyztYFd7uBaIh6cIC2cqRQJCVYd0EDCkhCBg/viewform?usp=publish-editor">reviewer form</a>.</p>
+      </div>
+    </div>
+
+    <hr class="rule">
+
+    <div class="sec-head">
+      <p class="eyebrow">News</p>
+      <h2 class="sec-title">Latest updates</h2>
+      <p class="sec-note">Papers, grants, and awards from the lab. <a href="#news">Open the full timeline &rarr;</a></p>
+    </div>
+    <div class="feedwrap">
+      <div class="feed" id="feed" tabindex="0" role="region" aria-label="Recent lab news">
+        <ul id="feedlist">
+          <li><time>&mdash;</time><p><a href="#news">See the news timeline</a></p></li>
+        </ul>
+      </div>
+    </div>
+
+    <hr class="rule">
+
+    <div class="sec-head">
+      <p class="eyebrow">Selected work</p>
+      <h2 class="sec-title">Selected Recent Publications</h2>
+      <p class="sec-note">The complete list, with PDFs and code, is on the <a href="#publications">publications page</a>.</p>
+    </div>
+    <div id="selected"></div>
+    <div class="btnrow"><a class="btn ghost" href="#publications">All publications &amp; patents</a></div>
+
+    <hr class="rule">
+
+    <div class="panel accent chamfer">
+      <h3>Joining iCAT</h3>
+      <p>Graduate research and teaching assistantships are available for prospective Ph.D. students. If the work here interests you, send a CV and transcripts to <a href="mailto:Hao.Zheng@ucf.edu">Hao.Zheng@ucf.edu</a>.</p>
+      <div class="btnrow"><a class="btn" href="#lab">What the lab is like</a></div>
+    </div>
+  </div>
 </section>
 
-<section class="mbr-section article content1 cid-sGDHs5rP7T" id="content1-1b">
-    
-     
-
-    <div class="container">
-        <div class="media-container-row">
-            <div class="mbr-text col-12 mbr-fonts-style display-7 col-md-8"><p><span style="font-size: 25px;"><strong>About Me</strong></span></p><p>Hao Zheng is a tenure-track Assistant Professor in the <a href="https://www.ece.ucf.edu/">Department of Electrical and Computer Engineering</a> at the University of Central Florida.&nbsp;</p><p><span style="font-size: 1rem;">Hao Zheng received his Ph.D. degree from George Washington University, advised by <a href="https://hpcat.seas.gwu.edu/">Prof. Ahmed Louri</a>. His research interests are in the areas of computer architecture and machine learning, with emphasis on AI/ML systems, hardware accelerators, on-/off-chip communications, manycore processors, chiplet-based systems, and AI-assisted chip design. His work has been published in top-tier computer architecture and EDA conferences and journals such as ISCA, MICRO, HPCA, DAC, ICCAD, DATE, TPDS, and TETC. He is the recipient of the <a href="https://www.nsf.gov/funding/opportunities/career-faculty-early-career-development-program" class="text-primary">National Science Foundation (NSF) CAREER Award</a> and <a href="https://facultyexcellence.ucf.edu/award/reach-for-the-stars-award/" class="text-primary">UCF Reach for the Stars Award</a>. He has served on the organization and technical program committees of top computer system conferences, and has served as a panelist on multiple NSF programs. He is currently serving as the Associate Editor-in-Chief for IEEE Transactions on Computers, and as an Associate Editor for IEEE Transactions on Sustainable Computing.</span></p><p><span style="font-size: 1rem;">If you are interested in serving as a reviewer for <a href="https://www.computer.org/csdl/journal/tc" class="text-primary">IEEE TC</a>, please fill out the&nbsp;<a href="https://docs.google.com/forms/d/e/1FAIpQLScnBeBChpP9nZjyztYFd7uBaIh6cIC2cqRQJCVYd0EDCkhCBg/viewform?usp=publish-editor" class="text-primary">form</a>.&nbsp;</span></p></div>
-        </div>
+<!-- ======================= PUBLICATIONS ======================= -->
+<section class="view" id="publications" hidden aria-label="Publications">
+  <div class="wrap">
+    <div class="sec-head">
+      <p class="eyebrow">Publications</p>
+      <h2 class="sec-title">Papers, journals, and patents</h2>
+      <p class="sec-note">Venues marked in amber are top-tier computer science conferences as listed on <a href="https://csrankings.org/">csrankings.org</a>. Search by title, author, or venue.</p>
     </div>
+
+    <div class="pubtools">
+      <input class="pubsearch" id="pubsearch" type="search" placeholder="Search publications…" aria-label="Search publications">
+      <div class="filters" role="group" aria-label="Filter publications">
+        <button data-filter="all" aria-pressed="true">All</button>
+        <button data-filter="top" aria-pressed="false">Top-tier</button>
+        <button data-filter="conf" aria-pressed="false">Conference</button>
+        <button data-filter="journal" aria-pressed="false">Journal</button>
+        <button data-filter="patent" aria-pressed="false">Patents</button>
+      </div>
+      <span class="count" id="pubcount"></span>
+    </div>
+
+    <div id="publist">
+
+      <div class="yeargroup"><h3 class="yearhead">2026</h3>
+        <article class="pub" data-type="conf" data-tier="top">
+          <div><span class="tag">MICRO&rsquo;26</span></div>
+          <div>
+            <h3 class="pub-title">KAIROS: Fast Microarchitectural Design Space Exploration by Bridging Architectural Semantics and Logic Gates</h3>
+            <p class="pub-authors">Shilin Tian, Sanjay Gandham, Lingxiang Yin, Mingjie Lin, <b>Hao Zheng</b></p>
+            <p class="pub-venue">IEEE/ACM International Symposium on Microarchitecture (MICRO) · Athens, Greece · Oct 31 – Nov 4, 2026 · To appear</p>
+          </div>
+        </article>
+        <article class="pub" data-type="conf" data-tier="top">
+          <div><span class="tag">MICRO&rsquo;26</span></div>
+          <div>
+            <h3 class="pub-title">Argus: An Efficient Accelerator Design for Sparse Nonlinear Solver</h3>
+            <p class="pub-authors">Fangzhou Ye, Amir Ghazizadeh Ahsaei, <b>Hao Zheng</b></p>
+            <p class="pub-venue">IEEE/ACM International Symposium on Microarchitecture (MICRO) · Athens, Greece · Oct 31 – Nov 4, 2026 · To appear</p>
+          </div>
+        </article>
+        <article class="pub" data-type="conf" data-tier="top">
+          <div><span class="tag">MICRO&rsquo;26</span></div>
+          <div>
+            <h3 class="pub-title">DireLeak: Cross-socket Cache Timing Channels Exploiting Memory Directory</h3>
+            <p class="pub-authors">Md Hafizul Islam Chowdhuryy, Kunbei Cai, Zhenkai Zhang, <b>Hao Zheng</b>, Fan Yao</p>
+            <p class="pub-venue">IEEE/ACM International Symposium on Microarchitecture (MICRO) · Athens, Greece · Oct 31 – Nov 4, 2026 · To appear</p>
+          </div>
+        </article>
+        <article class="pub" data-type="conf" data-tier="top">
+          <div><span class="tag">MICRO&rsquo;26</span></div>
+          <div>
+            <h3 class="pub-title">MOSAIC: An Accelerator Design for Heterophilic Graph Learning</h3>
+            <p class="pub-authors">Fangzhou Ye, Wei Zhang, Ahmed Louri, <b>Hao Zheng</b></p>
+            <p class="pub-venue">IEEE/ACM International Symposium on Microarchitecture (MICRO) · Athens, Greece · Oct 31 – Nov 4, 2026 · To appear</p>
+          </div>
+        </article>
+        <article class="pub" data-type="conf" data-tier="top" data-selected="1">
+          <div><span class="tag">ISCA&rsquo;26</span></div>
+          <div>
+            <h3 class="pub-title">TensorPrism: Rethinking Sparse High-order Tensor Acceleration via Co-occurrence Graph</h3>
+            <p class="pub-authors">Fangzhou Ye, Shilin Tian, Amir Ghazizadeh Ahsaei, <b>Hao Zheng</b></p>
+            <p class="pub-venue">ACM/IEEE International Symposium on Computer Architecture (ISCA) · Raleigh, NC · Jun 27 – Jul 1, 2026</p>
+            <p class="pub-links"><a href="http://haozheng.us/assets/files/TensorPrism_ISCA26.pdf">PDF</a></p>
+          </div>
+        </article>
+        <article class="pub" data-type="conf" data-tier="top" data-selected="1">
+          <div><span class="tag">DAC&rsquo;26</span></div>
+          <div>
+            <h3 class="pub-title">PanGaea: A Unified Memory-Efficient Accelerator for Pangenome Chaining and Alignment</h3>
+            <p class="pub-authors">Shilin Tian, Fangzhou Ye, Amir Ghazizadeh Ahsaei, Wei Zhang, <b>Hao Zheng</b></p>
+            <p class="pub-venue">Design Automation Conference (DAC) · Long Beach, CA · Jul 2026</p>
+          </div>
+        </article>
+        <article class="pub" data-type="conf" data-tier="top" data-selected="1">
+          <div><span class="tag">HPCA&rsquo;26</span></div>
+          <div>
+            <h3 class="pub-title">Scaling Graph Neural Network Training via Geometric Optimization</h3>
+            <p class="pub-authors">Fangzhou Ye, Lingxiang Yin, <b>Hao Zheng</b></p>
+            <p class="pub-venue">IEEE International Symposium on High-Performance Computer Architecture (HPCA) · Sydney, Australia · Jan 2026</p>
+          </div>
+        </article>
+        <article class="pub" data-type="conf">
+          <div><span class="tag">NeuS&rsquo;26</span></div>
+          <div>
+            <h3 class="pub-title">Neuro-Symbolic Safety Guidance for Vision-Language-Action Models via Constrained Flow Matching</h3>
+            <p class="pub-authors">William H. English, <b>Hao Zheng</b>, Rickard Ewetz</p>
+            <p class="pub-venue">International Conference on Neuro-Symbolic Systems (NeuS) · Los Angeles, CA · Jun 16–18, 2026</p>
+          </div>
+        </article>
+      </div>
+
+      <div class="yeargroup"><h3 class="yearhead">2025</h3>
+        <article class="pub" data-type="conf" data-tier="top" data-selected="1">
+          <div><span class="tag">NeurIPS&rsquo;25</span></div>
+          <div>
+            <h3 class="pub-title">GAMMA: Gated Multi-hop Message Passing for Homophily-Agnostic Node Representation in GNNs</h3>
+            <p class="pub-authors">Amir Ghazizadeh Ahsaei, Rickard Ewetz, <b>Hao Zheng</b></p>
+            <p class="pub-venue">Annual Conference on Neural Information Processing Systems (NeurIPS) · San Diego, CA · Dec 2–7, 2025</p>
+            <p class="pub-links"><a href="https://github.com/amir-ghz/GAMMA">Code</a></p>
+          </div>
+        </article>
+        <article class="pub" data-type="conf" data-tier="top" data-selected="1">
+          <div><span class="tag">MICRO&rsquo;25</span></div>
+          <div>
+            <h3 class="pub-title">Rethinking Tiling and Dataflow for SpMM Acceleration: A Graph Transformation Framework</h3>
+            <p class="pub-authors">Amir Ghazizadeh Ahsaei, Lingxiang Yin, Shilin Tian, Fangzhou Ye, Fan Yao, <b>Hao Zheng</b></p>
+            <p class="pub-venue">IEEE/ACM International Symposium on Microarchitecture (MICRO) · Seoul, South Korea · Oct 2025</p>
+            <p class="pub-links"><a href="http://haozheng.us/assets/files/MICRO_2025.pdf">PDF</a></p>
+          </div>
+        </article>
+        <article class="pub" data-type="conf" data-tier="top" data-selected="1">
+          <div><span class="tag">ISCA&rsquo;25</span></div>
+          <div>
+            <h3 class="pub-title">DiTile-DGNN: An Efficient Accelerator for Distributed Dynamic Graph Neural Network Inference</h3>
+            <p class="pub-authors">Jiaqi Yang, <b>Hao Zheng</b>, Ahmed Louri</p>
+            <p class="pub-venue">ACM/IEEE International Symposium on Computer Architecture (ISCA) · Tokyo, Japan · Jun 2025</p>
+            <p class="pub-links"><a href="http://haozheng.us/assets/files/DiTile-DGNN.pdf">PDF</a></p>
+          </div>
+        </article>
+        <article class="pub" data-type="conf" data-tier="top">
+          <div><span class="tag">HPCA&rsquo;25</span></div>
+          <div>
+            <h3 class="pub-title">I-DGNN: A Graph Dissimilarity-based Framework for Designing Scalable and Efficient DGNN Accelerators</h3>
+            <p class="pub-authors">Jiaqi Yang, <b>Hao Zheng</b>, Ahmed Louri</p>
+            <p class="pub-venue">IEEE International Symposium on High-Performance Computer Architecture (HPCA) · Las Vegas, NV · Mar 2025</p>
+            <p class="pub-links"><a href="http://haozheng.us/assets/files/I-DGNN.pdf">PDF</a></p>
+          </div>
+        </article>
+      </div>
+
+      <div class="yeargroup"><h3 class="yearhead">2024</h3>
+        <article class="pub" data-type="conf" data-tier="top" data-selected="1">
+          <div><span class="tag">MICRO&rsquo;24</span></div>
+          <div>
+            <h3 class="pub-title">SCALE: A Structure-Centric Accelerator for Message Passing Graph Neural Networks</h3>
+            <p class="pub-authors">Lingxiang Yin, Sanjay Gandham, Mingjie Lin, <b>Hao Zheng</b></p>
+            <p class="pub-venue">IEEE/ACM International Symposium on Microarchitecture (MICRO) · Austin, TX · Nov 2–6, 2024</p>
+            <p class="pub-links"><a href="http://haozheng.us/assets/files/MICRO-2024.pdf">PDF</a></p>
+          </div>
+        </article>
+        <article class="pub" data-type="conf" data-tier="top">
+          <div><span class="tag">ICCAD&rsquo;24</span></div>
+          <div>
+            <h3 class="pub-title">CircuitSeer: RTL Post-PnR Delay Prediction via Coupling Functional and Structural Representation</h3>
+            <p class="pub-authors">Sanjay Gandham, Joe Walston, Sourav Samanta, Lingxiang Yin, <b>Hao Zheng</b>, Mingjie Lin, Stelios Diamantidis</p>
+            <p class="pub-venue">ACM/IEEE International Conference on Computer-Aided Design (ICCAD) · New Jersey, USA · Oct 2024</p>
+          </div>
+        </article>
+        <article class="pub" data-type="conf" data-tier="top" data-selected="1">
+          <div><span class="tag">ISCA&rsquo;24</span></div>
+          <div>
+            <h3 class="pub-title">MetaLeak: Uncovering Side Channels in Secure Memory Architectures Exploiting Metadata</h3>
+            <p class="pub-authors">Md Hafizul Chowdhuryy, <b>Hao Zheng</b>, Fan Yao</p>
+            <p class="pub-venue">51st International Symposium on Computer Architecture (ISCA) · Buenos Aires, Argentina · Jun 29 – Jul 3, 2024</p>
+          </div>
+        </article>
+        <article class="pub" data-type="conf" data-tier="top">
+          <div><span class="tag">DAC&rsquo;24</span></div>
+          <div>
+            <h3 class="pub-title">EGMA: Enhancing Data Reuse and Workload Balancing in Message Passing GNN Acceleration via Gram Matrix Optimization</h3>
+            <p class="pub-authors">Fangzhou Ye, Lingxiang Yin, Amir Ghazizadeh Ahsaei, <b>Hao Zheng</b></p>
+            <p class="pub-venue">61st Design Automation Conference (DAC) · San Francisco, CA · Jun 23–27, 2024</p>
+          </div>
+        </article>
+        <article class="pub" data-type="conf" data-tier="top">
+          <div><span class="tag">DAC&rsquo;24</span></div>
+          <div>
+            <h3 class="pub-title">VITA: ViT Acceleration for Efficient 3D Human Mesh Recovery via Hardware-Algorithm Co-Design</h3>
+            <p class="pub-authors">Shilin Tian, Chase Szafranski, Ce Zheng, Fan Yao, Ahmed Louri, Chen Chen, <b>Hao Zheng</b></p>
+            <p class="pub-venue">61st Design Automation Conference (DAC) · San Francisco, CA · Jun 23–27, 2024</p>
+            <p class="pub-links"><a href="https://shilinti.github.io/vita-demo/">Project</a><a href="https://github.com/UCF-iCAT-lab/VITA">Code</a></p>
+          </div>
+        </article>
+        <article class="pub" data-type="conf">
+          <div><span class="tag">IPDPS&rsquo;24</span></div>
+          <div>
+            <h3 class="pub-title">Aurora: A Versatile and Flexible Accelerator for Graph Neural Networks</h3>
+            <p class="pub-authors">Jiaqi Yang, <b>Hao Zheng</b>, Ahmed Louri</p>
+            <p class="pub-venue">IEEE International Parallel &amp; Distributed Processing Symposium (IPDPS) · San Francisco, CA · May 27–31, 2024</p>
+          </div>
+        </article>
+        <article class="pub" data-type="journal">
+          <div><span class="tag">TPDS</span></div>
+          <div>
+            <h3 class="pub-title">Versa-DNN: A Versatile Architecture Enabling High-Performance and Energy-Efficient Multi-DNN Acceleration</h3>
+            <p class="pub-authors">Jiaqi Yang, <b>Hao Zheng</b>, Ahmed Louri</p>
+            <p class="pub-venue">IEEE Transactions on Parallel and Distributed Systems · 2024</p>
+          </div>
+        </article>
+        <article class="pub" data-type="conf">
+          <div><span class="tag">ASP-DAC&rsquo;24</span></div>
+          <div>
+            <h3 class="pub-title">Towards Area-Efficient Path-Based In-Memory Computing using Graph Isomorphisms</h3>
+            <p class="pub-authors">Sven Thijssen, Muhammad Rashedul Haq Rashed, <b>Hao Zheng</b>, Sumit Kumar Jha, Rickard Ewetz</p>
+            <p class="pub-venue">ACM/IEEE Asia and South Pacific Design Automation Conference (ASP-DAC) · Tokyo, Japan · Jan 22–25, 2024</p>
+          </div>
+        </article>
+      </div>
+
+      <div class="yeargroup"><h3 class="yearhead">2023</h3>
+        <article class="pub" data-type="conf">
+          <div><span class="tag">ICCD&rsquo;23</span></div>
+          <div>
+            <h3 class="pub-title">Polyform: A Versatile Architecture for Multi-DNN Execution via Spatial and Temporal Acceleration</h3>
+            <p class="pub-authors">Lingxiang Yin, Amir Ghazizadeh, Shilin Tian, Ahmed Louri, <b>Hao Zheng</b></p>
+            <p class="pub-venue">IEEE International Conference on Computer Design (ICCD) · Washington, DC · Nov 6–8, 2023</p>
+            <p class="pub-links"><a href="http://haozheng.us/assets/files/ICCD_Ployform.pdf">PDF</a></p>
+          </div>
+        </article>
+        <article class="pub" data-type="conf" data-tier="top" data-selected="1">
+          <div><span class="tag">ICCAD&rsquo;23</span></div>
+          <div>
+            <h3 class="pub-title">ARIES: Accelerating Distributed Training in Chiplet-based Systems via Flexible Interconnects</h3>
+            <p class="pub-authors">Lingxiang Yin, Amir Ghazizadeh, Ahmed Louri, <b>Hao Zheng</b></p>
+            <p class="pub-venue">International Conference on Computer-Aided Design (ICCAD) · San Francisco, CA · Oct 29 – Nov 2, 2023</p>
+            <p class="pub-links"><a href="http://haozheng.us/assets/files/ICCAD_ARIES.pdf">PDF</a></p>
+          </div>
+        </article>
+        <article class="pub" data-type="conf" data-tier="top">
+          <div><span class="tag">ICCAD&rsquo;23</span></div>
+          <div>
+            <h3 class="pub-title">SAGA: Sparsity-Agnostic Graph Convolutional Network Acceleration with Near-optimal Workload Balance</h3>
+            <p class="pub-authors">Sanjay Gandham*, Lingxiang Yin*, <b>Hao Zheng</b>, Mingjie Lin <span style="color:var(--ink-3)">(* co-first authors)</span></p>
+            <p class="pub-venue">International Conference on Computer-Aided Design (ICCAD) · San Francisco, CA · Oct 29 – Nov 2, 2023</p>
+            <p class="pub-links"><a href="http://haozheng.us/assets/files/ICCAD_SAGA.pdf">PDF</a></p>
+          </div>
+        </article>
+        <article class="pub" data-type="conf" data-tier="top">
+          <div><span class="tag">ICCAD&rsquo;23</span></div>
+          <div>
+            <h3 class="pub-title">Path-based Processing using In-Memory Systolic Arrays for Accelerating Data-Intensive Applications</h3>
+            <p class="pub-authors">Muhammad Rashedul Haq Rashed, Sven Thijssen, <b>Hao Zheng</b>, Sumit Kumar Jha, Rickard Ewetz</p>
+            <p class="pub-venue">International Conference on Computer-Aided Design (ICCAD) · San Francisco, CA · Oct 29 – Nov 2, 2023</p>
+          </div>
+        </article>
+        <article class="pub" data-type="conf" data-tier="top">
+          <div><span class="tag">DAC&rsquo;23</span></div>
+          <div>
+            <h3 class="pub-title">Venus: A Versatile Deep Neural Network Accelerator Architecture Design for Multiple Applications</h3>
+            <p class="pub-authors">Jiaqi Yang, <b>Hao Zheng</b>, Ahmed Louri</p>
+            <p class="pub-venue">60th Design Automation Conference (DAC) · San Francisco, CA · Jul 9–13, 2023</p>
+          </div>
+        </article>
+        <article class="pub" data-type="conf" data-tier="top" data-selected="1">
+          <div><span class="tag">ISCA&rsquo;23</span></div>
+          <div>
+            <h3 class="pub-title">FDMAX: An Elastic Accelerator Architecture for Solving Partial Differential Equations</h3>
+            <p class="pub-authors">Jiajun Li, Yuxuan Zhang, <b>Hao Zheng</b>, Ke Wang</p>
+            <p class="pub-venue">50th International Symposium on Computer Architecture (ISCA) · Orlando, FL · Jun 17–21, 2023</p>
+          </div>
+        </article>
+        <article class="pub" data-type="conf">
+          <div><span class="tag">GLSVLSI&rsquo;23</span></div>
+          <div>
+            <h3 class="pub-title">Exploring Architecture, Dataflow, and Sparsity for GCN Accelerators: A Holistic Framework</h3>
+            <p class="pub-authors">Lingxiang Yin, Jun Wang, <b>Hao Zheng</b></p>
+            <p class="pub-venue">33rd ACM Great Lakes Symposium on VLSI (GLSVLSI) · Jun 5–7, 2023</p>
+          </div>
+        </article>
+        <article class="pub" data-type="conf">
+          <div><span class="tag">FCCM&rsquo;23</span></div>
+          <div>
+            <h3 class="pub-title">OCMGen: Extended Design Space Exploration with Efficient FPGA Memory Inference (Poster)</h3>
+            <p class="pub-authors">Sanjay Gandham, Lingxiang Yin, <b>Hao Zheng</b>, Mingjie Lin</p>
+            <p class="pub-venue">31st IEEE International Symposium on Field-Programmable Custom Computing Machines (FCCM) · Marina Del Rey, CA · May 8–11, 2023</p>
+          </div>
+        </article>
+        <article class="pub" data-type="journal">
+          <div><span class="tag">TSUSC</span></div>
+          <div>
+            <h3 class="pub-title">Morph-GCNX: A Universal Architecture for High-performance and Energy-efficient Graph Convolutional Network Acceleration</h3>
+            <p class="pub-authors">Ke Wang, <b>Hao Zheng</b>, Jiajun Li, Ahmed Louri</p>
+            <p class="pub-venue">IEEE Transactions on Sustainable Computing · 2023</p>
+          </div>
+        </article>
+        <article class="pub" data-type="journal">
+          <div><span class="tag">JCST</span></div>
+          <div>
+            <h3 class="pub-title">GShuttle: Optimizing Memory Access Efficiency for Graph Convolutional Neural Network Accelerators</h3>
+            <p class="pub-authors">Jiajun Li, Ke Wang, <b>Hao Zheng</b>, Ahmed Louri</p>
+            <p class="pub-venue">Journal of Computer Science and Technology · Feb 2023</p>
+          </div>
+        </article>
+      </div>
+
+      <div class="yeargroup"><h3 class="yearhead">2022</h3>
+        <article class="pub" data-type="journal">
+          <div><span class="tag">TCAS-I</span></div>
+          <div>
+            <h3 class="pub-title">ASCEND: A Scalable and Energy-Efficient DNN Accelerator with Photonic Interconnects</h3>
+            <p class="pub-authors">Yuan Li, Ke Wang, <b>Hao Zheng</b>, Ahmed Louri, Avinash Karanth</p>
+            <p class="pub-venue">IEEE Transactions on Circuits and Systems I — Special Issue on Circuits and Systems for Emerging Computing Paradigms · Apr 2022</p>
+          </div>
+        </article>
+        <article class="pub" data-type="conf">
+          <div><span class="tag">GLSVLSI&rsquo;22</span></div>
+          <div>
+            <h3 class="pub-title">Adapt-Flow: A Flexible DNN Accelerator Architecture for Heterogeneous Dataflow Implementation</h3>
+            <p class="pub-authors">Jiaqi Yang, <b>Hao Zheng</b>, Ahmed Louri</p>
+            <p class="pub-venue">32nd ACM Great Lakes Symposium on VLSI (GLSVLSI) · Jun 6–8, 2022</p>
+          </div>
+        </article>
+        <article class="pub" data-type="conf">
+          <div><span class="tag">DATE&rsquo;22</span></div>
+          <div>
+            <h3 class="pub-title">AGAPE: Anomaly Detection with Generative Adversarial Network for Improved Performance, Energy, and Security in Manycore Systems</h3>
+            <p class="pub-authors">Ke Wang, <b>Hao Zheng</b>, Yuan Li, Jiajun Li, Ahmed Louri</p>
+            <p class="pub-venue">25th Design, Automation &amp; Test in Europe Conference (DATE) · Mar 14–23, 2022</p>
+          </div>
+        </article>
+      </div>
+
+      <div class="yeargroup"><h3 class="yearhead">2018 – 2021</h3>
+        <article class="pub" data-type="journal">
+          <div><span class="tag">TPDS</span></div>
+          <div>
+            <h3 class="pub-title">SGCNAX: A Scalable Graph Convolutional Neural Network Accelerator with Workload Balancing</h3>
+            <p class="pub-authors">Jiajun Li, <b>Hao Zheng</b>, Ke Wang, Ahmed Louri</p>
+            <p class="pub-venue">IEEE Transactions on Parallel and Distributed Systems — Special Section on Parallel and Distributed Computing Techniques for AI, ML, and DL · 2021</p>
+          </div>
+        </article>
+        <article class="pub" data-type="journal">
+          <div><span class="tag">TSUSC</span></div>
+          <div>
+            <h3 class="pub-title">SecureNoC: A Learning-enabled, High-performance, Energy-efficient, and Secure On-chip Communication Framework Design</h3>
+            <p class="pub-authors">Ke Wang, <b>Hao Zheng</b>, Yuan Li, Ahmed Louri</p>
+            <p class="pub-venue">IEEE Transactions on Sustainable Computing · 2021</p>
+          </div>
+        </article>
+        <article class="pub" data-type="conf" data-tier="top" data-selected="1">
+          <div><span class="tag">HPCA&rsquo;21</span></div>
+          <div>
+            <h3 class="pub-title">Adapt-NoC: A Flexible Network-on-Chip Design for Heterogeneous Manycore Architecture</h3>
+            <p class="pub-authors"><b>Hao Zheng</b>, Ke Wang, Ahmed Louri</p>
+            <p class="pub-venue">27th IEEE International Symposium on High-Performance Computer Architecture (HPCA) · Seoul, South Korea · Feb 27 – Mar 3, 2021</p>
+          </div>
+        </article>
+        <article class="pub" data-type="conf" data-tier="top" data-selected="1">
+          <div><span class="tag">DAC&rsquo;20</span></div>
+          <div>
+            <h3 class="pub-title">A Versatile and Flexible Chiplet-based System Design for Heterogeneous Manycore Architectures</h3>
+            <p class="pub-authors"><b>Hao Zheng</b>, Ke Wang, Ahmed Louri</p>
+            <p class="pub-venue">57th Design Automation Conference (DAC) · Virtual · Jul 19–23, 2020</p>
+          </div>
+        </article>
+        <article class="pub" data-type="journal">
+          <div><span class="tag">TETC</span></div>
+          <div>
+            <h3 class="pub-title">Agile: A Learning-enabled Power and Performance-Efficient Network-on-Chip Design</h3>
+            <p class="pub-authors"><b>Hao Zheng</b>, Ahmed Louri</p>
+            <p class="pub-venue">IEEE Transactions on Emerging Topics in Computing (TETC) · Jun 2020 · DOI 10.1109/TETC.2020.3003496</p>
+          </div>
+        </article>
+        <article class="pub" data-type="journal">
+          <div><span class="tag">IEEE Micro</span></div>
+          <div>
+            <h3 class="pub-title">TSA-NoC: Learning-Based Threat Detection and Mitigation for Secure Network-On-Chip Architecture</h3>
+            <p class="pub-authors">Ke Wang, <b>Hao Zheng</b>, Ahmed Louri</p>
+            <p class="pub-venue">IEEE Micro — Special Issue on Machine Learning for Systems · Sep/Oct 2020</p>
+          </div>
+        </article>
+        <article class="pub" data-type="conf" data-tier="top">
+          <div><span class="tag">DAC&rsquo;19</span></div>
+          <div>
+            <h3 class="pub-title">An Energy-Efficient Network-on-Chip Design using Reinforcement Learning</h3>
+            <p class="pub-authors"><b>Hao Zheng</b>, Ahmed Louri</p>
+            <p class="pub-venue">56th Design Automation Conference (DAC) · Las Vegas, NV · Jun 2–6, 2019</p>
+          </div>
+        </article>
+        <article class="pub" data-type="journal">
+          <div><span class="tag">CAL</span></div>
+          <div>
+            <h3 class="pub-title">EZ-Pass: An Energy &amp; Performance-Efficient Power-Gating Router Architecture for Scalable On-chip Interconnect</h3>
+            <p class="pub-authors"><b>Hao Zheng</b>, Ahmed Louri</p>
+            <p class="pub-venue">IEEE Computer Architecture Letters (CAL) · vol. 17, no. 1, pp. 88–91 · 2018</p>
+          </div>
+        </article>
+      </div>
+
+      <div class="yeargroup"><h3 class="yearhead">Patents</h3>
+        <article class="pub" data-type="patent">
+          <div><span class="tag">US 11502934 B2</span></div>
+          <div>
+            <h3 class="pub-title">EZ-Pass: An Energy &amp; Performance-Efficient Power-Gating Router Architecture for Scalable NoCs</h3>
+            <p class="pub-authors"><b>Hao Zheng</b>, Ahmed Louri</p>
+            <p class="pub-venue">U.S. Patent · Granted Nov 2022</p>
+          </div>
+        </article>
+        <article class="pub" data-type="patent">
+          <div><span class="tag">US 11489788 B2</span></div>
+          <div>
+            <h3 class="pub-title">A Versatile and Flexible Interconnection Network Design for Chiplet-Based Manycore Architecture</h3>
+            <p class="pub-authors"><b>Hao Zheng</b>, Ke Wang, Ahmed Louri</p>
+            <p class="pub-venue">U.S. Patent · Granted Nov 2022</p>
+          </div>
+        </article>
+        <article class="pub" data-type="patent">
+          <div><span class="tag">63/019,720</span></div>
+          <div>
+            <h3 class="pub-title">Learning-Based High-Performance, Energy-Efficient, and Secure Interconnection Design Framework</h3>
+            <p class="pub-authors">Ke Wang, <b>Hao Zheng</b>, Ahmed Louri</p>
+            <p class="pub-venue">U.S. Patent · Granted Jan 2025</p>
+          </div>
+        </article>
+        <article class="pub" data-type="patent">
+          <div><span class="tag">63/665,776</span></div>
+          <div>
+            <h3 class="pub-title">Versatile Accelerator Design for Multiple Deep Neural Network Applications</h3>
+            <p class="pub-authors">Jiaqi Yang, <b>Hao Zheng</b>, Ahmed Louri</p>
+            <p class="pub-venue">U.S. Patent · Filed Jul 2024 · Pending</p>
+          </div>
+        </article>
+      </div>
+
+    </div>
+    <p class="empty" id="pubempty" hidden>No publications match that search.</p>
+  </div>
 </section>
 
-<section class="mbr-section article content1 cid-trxxi8C9q9" id="content1-1y">
-    
-     
-
-    <div class="container">
-        <div class="media-container-row">
-            <div class="mbr-text col-12 mbr-fonts-style display-7 col-md-8"><p style="font-size:25px"><strong>Lab News</strong></p><p>07/2026 Four papers are accepted in MICRO'26</p><p>03/2026 One paper is accepted in ISCA'26</p><p>02/2026 One paper is accepted in DAC'26</p><p><span style="font-size: 1rem;">11/2025 One paper is accepted in HPCA'26</span></p><p><span style="font-size: 1rem;">09/2025 One paper is accepted in NeurIPS'25</span></p><p><span style="font-size: 1rem;">07/2025 One paper is accepted in MICRO'25.</span></p><p><span style="font-size: 1rem;">03/2025 One paper is accepted in ISCA'25.</span></p><p><span style="font-size: 1rem;">11/2024 One paper is accepted in HPCA'25.</span></p><p><span style="font-size: 1rem;">07/2024 One paper is accepted in MICRO'24.</span></p><p><span style="font-size: 1rem;">06/2024 One paper is accepted in ICCAD'24.</span></p><p><span style="font-size: 1rem;">03/2024 One paper is accepted in ISCA'24.</span></p><p><span style="font-size: 1rem;">02/2024 Two papers are accepted in DAC'24.&nbsp;</span><br></p><p><a href="page5.html" style="font-size: 1rem; background-color: rgb(255, 255, 255);">See all News</a><br></p></div>
-        </div>
+<!-- =========================== LAB =========================== -->
+<section class="view" id="lab" hidden aria-label="Lab">
+  <div class="wrap">
+    <div class="sec-head">
+      <p class="eyebrow">iCAT</p>
+      <h2 class="sec-title">Intelligent Computer Architecture<br>and Technology Laboratory</h2>
+      <p class="sec-note">UCF has strong graduate programs in computer engineering. Per CSRankings, UCF stands at No.&nbsp;15 in the U.S. in computer architecture and No.&nbsp;5 in EDA; the computer engineering program ranked No.&nbsp;50 in the 2023 U.S. News &amp; World Report. Lab members have gone on to academia and industry — NUAA, Apple, AMD, and quantitative finance — within a short time of graduating.</p>
     </div>
+
+    <div class="panel accent chamfer" style="margin-bottom:clamp(34px,5vw,54px)">
+      <h3>For prospective students</h3>
+      <div class="prose">
+        <p>Students at iCAT get a well-rounded grounding in computer systems and machine learning design: theory, modeling and simulation, performance evaluation, and physical implementation. You will collaborate with researchers across the country and work on industry-scale projects that turn our research into real products. Every student is supported for conference travel each year.</p>
+        <p>The lab culture is supportive and inclusive. We care about your growth, your health, and where you go next. The mentoring philosophy is simple: give you every resource you need to do work that matters, while making sure you actually <em>enjoy</em> the Ph.D. Every student is different, and your perspective counts.</p>
+        <p>Successful candidates are motivated, willing to learn new concepts, and want to work at the frontier of this field. We expect:</p>
+      </div>
+      <ul class="topics" style="margin-top:18px">
+        <li><span class="idx">Research</span><span>Solid understanding or prior experience in one or more of: computer architecture, algorithms, machine learning applications, FPGA/HLS programming, or computer and mathematical modeling.</span></li>
+        <li><span class="idx">Tools</span><span>Proficient programming skills — C/C++, Python, Verilog, and scripting languages.</span></li>
+        <li><span class="idx">Scope</span><span>Our projects cover the whole computing stack, from algorithm to silicon, so students with different backgrounds are all welcome.</span></li>
+      </ul>
+      <div class="prose" style="margin-top:20px">
+        <p>Graduate research and teaching assistantships are available for prospective Ph.D. students. Send your CV and transcripts to <a href="mailto:Hao.Zheng@ucf.edu">Hao.Zheng@ucf.edu</a>.</p>
+      </div>
+    </div>
+
+    <h3 class="yearhead">Ph.D. students</h3>
+    <ul class="cards" style="margin-top:18px">
+      <li class="card">
+        <h4>Shilin Tian</h4>
+        <p class="meta">Since Fall 2022 · B.S. Shenzhen University</p>
+        <p class="honors">Dean's Dissertation Fellowship · ORC Fellowship</p>
+      </li>
+      <li class="card">
+        <h4>Amir Ghazizadeh</h4>
+        <p class="meta">Since Fall 2022 · B.S. Shiraz University</p>
+      </li>
+      <li class="card">
+        <h4>Fangzhou Ye</h4>
+        <p class="meta">Since Fall 2023 · B.S. Zhejiang University</p>
+        <p class="honors">ECE Best Graduate Researcher Award · FFL Fellowship · ORC Fellowship</p>
+      </li>
+    </ul>
+
+    <h3 class="yearhead">Undergraduate researchers</h3>
+    <ul class="cards" style="margin-top:18px">
+      <li class="card">
+        <h4>Peyton Barnes</h4>
+        <p class="meta">Fall 2025 – present</p>
+      </li>
+      <li class="card">
+        <h4>Eren Siegman</h4>
+        <p class="meta">Spring 2026 – present</p>
+        <p class="honors">AMD Fellowship</p>
+      </li>
+    </ul>
+
+    <h3 class="yearhead">Alumni</h3>
+    <ul class="alumni" style="margin-top:18px">
+      <li>Lingxiang Yin — Ph.D. 2024<span class="dest">Associate Professor (with tenure), NUAA</span></li>
+      <li>Jiaqi Yang — Ph.D., co-advised<span class="dest">Associate Professor (with tenure), Shandong University</span></li>
+      <li>Andres Graterol — M.S., Fall 2023 – Spring 2024<span class="dest">UCF</span></li>
+      <li>Chase Szafranski — B.S., Spring 2022 – Spring 2024<span class="dest">AMD Fellowship · UCF</span></li>
+      <li>Grace Tuomala — B.S., Fall 2023 – Spring 2024<span class="dest">AMD Fellowship · UCF</span></li>
+      <li>Mariam Rabadi — B.S., Spring 2022 – Fall 2023<span class="dest">AMD Fellowship · UCF</span></li>
+      <li>John Gierlach — B.S., Spring 2023<span class="dest">AMD Fellowship · UCF</span></li>
+      <li>Luis Infante — B.S., Fall 2024 – Spring 2025<span class="dest">UCF</span></li>
+      <li>Jessica Morris — B.S., Fall 2024 – Spring 2025<span class="dest">UCF</span></li>
+      <li>Aneesha Nayak — B.S., Fall 2024 – Spring 2025<span class="dest">2025 Order of Pegasus, the highest UCF student award</span></li>
+      <li>Jaden Jeudy — B.S., Fall 2024 – Spring 2025<span class="dest">UCF</span></li>
+      <li>Briana Thakkar — B.S., Fall 2024 – Spring 2025<span class="dest">UCF</span></li>
+      <li>Jhon Tabio — B.S., Fall 2024 – Spring 2025<span class="dest">UCF</span></li>
+      <li>Sean Zarobsky — B.S., Fall 2024 – Spring 2025<span class="dest">UCF</span></li>
+    </ul>
+
+    <h3 class="yearhead">Research support</h3>
+    <div class="sponsors" style="margin-top:18px">
+      <div><img src="http://haozheng.us/assets/images/nsf-removebg-preview-2-224x225.png" alt="National Science Foundation" loading="lazy"></div>
+      <div><img src="http://haozheng.us/assets/images/doe-color-seal-green-top-buffer-removebg-preview-3-400x154.png" alt="U.S. Department of Energy" loading="lazy"></div>
+      <div><img src="http://haozheng.us/assets/images/darpa-logo-2010-400x218.png" alt="DARPA" loading="lazy"></div>
+      <div><img src="http://haozheng.us/assets/images/nih-logo-2012-400x400.png" alt="National Institutes of Health" loading="lazy"></div>
+      <div><img src="http://haozheng.us/assets/images/l3.svg" alt="L3Harris" loading="lazy"></div>
+      <div><img src="http://haozheng.us/assets/images/arilinc-removebg-preview-2-375x225.png" alt="AriLinc" loading="lazy"></div>
+      <div><img src="http://haozheng.us/assets/images/tablockup-vertical-kgrgb-300ppi-1-240x234.png" alt="Research sponsor" loading="lazy"></div>
+      <div><img src="http://haozheng.us/assets/images/xilinx-logo-400x210.jpg" alt="Xilinx" loading="lazy"></div>
+      <div><img src="http://haozheng.us/assets/images/nvidia-removebg-preview-400x225.png" alt="NVIDIA" loading="lazy"></div>
+    </div>
+  </div>
 </section>
 
-<section class="mbr-section article content1 cid-u22jSlWt7a" id="content1-26">
-    
-     
-
-    <div class="container">
-        <div class="media-container-row">
-            <div class="mbr-text col-12 mbr-fonts-style display-7 col-md-8" style="text-align: justify;"><p style="font-size:25px"><strong>Selected Publications</strong></p><p><strong>[MICRO'26] </strong>Shilin Tian,&nbsp; Sanjay Gandham, Lingxiang Yin, Mingjie Lin, and Hao Zheng,  “KAIROS: Fast Microarchitectural Design Space Exploration by Bridging Architectural Semantics and Logic Gates”, to appear in Proceedings of IEEE/ACM International Symposium on Microarchitecture (MICRO), Athens, Greece, October 31 – November 4, 2026</p><p><strong>[MICRO'26]</strong> Fangzhou Ye, Amir Ghazizadeh Ahsaei, Hao Zheng,&nbsp; “Argus: An Efficient Accelerator Design for Sparse Nonlinear Solver”, to appear in Proceedings of IEEE/ACM International Symposium on Microarchitecture (MICRO), Athens, Greece, October 31 – November 4, 2026</p><p><strong>[MICRO'26] </strong>Md Hafizul Islam Chowdhuryy, Kunbei Cai, Zhenkai Zhang, Hao Zheng, and Fan Yao, “DireLeak: Cross-socket Cache Timing Channels Exploiting Memory Directory”, to appear in Proceedings of IEEE/ACM International Symposium on Microarchitecture (MICRO), Athens, Greece, October 31 – November 4, 2026</p><p><strong>[MICRO'26] </strong>Fangzhou Ye,  Wei Zhang, Ahmed Louri, and Hao Zheng, “MOSAIC: An Accelerator Design for Heterophilic Graph Learning”, to appear in Proceedings of IEEE/ACM International Symposium on Microarchitecture (MICRO), Athens, Greece,&nbsp;<span style="font-size: 1rem;">October 31 – November 4, 2026</span></p><p><strong>[ISCA'26] </strong>Fangzhou Ye,&nbsp; Shilin Tian, Amir Ghazizadeh Ahsaei, and Hao Zheng, “TensorPrism: Rethinking Sparse High-order Tensor Acceleration&nbsp;<span style="font-size: 1rem;">via Co-occurrence Graph”, in Proceedings of ACM/IEEE International Symposium on Computer Architecture (ISCA), Raleigh, NC, June 27-July 1, 2026.</span></p><p><strong>[HPCA'26] </strong>Fangzhou Ye, Lingxiang Yin, and Hao Zheng, “Scaling Graph Neural Network Training via Geometric Optimization”, in Proceedings of IEEE International Symposium on High-Performance Computer Architecture (HPCA), Sydney, Australia, January 2026.</p><p><strong style="font-size: 1rem;">[NeurIPS'25]</strong><span style="font-size: 1rem;"> Amir Ghazizadeh Ahsaei, Rickard Ewetz, Hao Zheng “GAMMA: Gated Multi-hop Message Passing for Homophily-Agnostic Node Representation in GNNs”, in Proceedings of Annual Conference on Neural Information Processing Systems (NeurIPS), San Diego, CA, December 2-7, 2025.</span></p><p><strong style="font-size: 1rem;">[MICRO'25] </strong><span style="font-size: 1rem;">Amir Ghazizadeh Ahsaei</span><span style="font-size: 1rem;">, Lingxiang Yin, Shilin Tian, Fangzhou Ye, Fan Yao, Hao Zheng “Rethinking Tiling and Dataflow for SpMM Acceleration: A Graph Transformation Framework”, in Proceedings of IEEE/ACM International Symposium on Microarchitecture (MICRO), Seoul, South Korea, October 2025.</span></p><p><strong style="font-size: 1rem;">[ISCA'25] </strong><span style="font-size: 1rem;">Jiaqi Yang, Hao Zheng, and Ahmed Louri, “DiTile-DGNN: An Efficient Accelerator for Distributed Dynamic Graph Neural Network Inference”, in Proceedings of ACM/IEEE International Symposium on Computer Architecture (ISCA), Tokyo, Japan, June 2025.</span></p><p><strong style="font-size: 1rem;">[HPCA'25] </strong><span style="font-size: 1rem;">Jiaqi Yang, Hao Zheng, and Ahmed Louri,</span><span style="font-size: 1rem;">&nbsp;“I-DGNN: A Graph Dissimilarity-based Framework for Designing Scalable and Efficient DGNN Accelerators”, in Proceedings of IEEE International Symposium on High-Performance Computer Architecture (HPCA), Las Vegas, NV, March 2025.</span></p><p><strong style="font-size: 1rem;">[MICRO'24] </strong><span style="font-size: 1rem;">Lingxiang Yin, Sanjay Gandham, Mingjie Lin, Hao Zheng, “SCALE: A Structure-Centric Accelerator for Message Passing Graph Neural Networks”, in Proceedings of IEEE/ACM International Symposium on Microarchitecture (MICRO), Austin, Texas, November 2-6, 2024.&nbsp;</span></p><p><span style="font-size: 1rem;"><strong>[ICCAD'24]</strong> Sanjay Gandham, Joe Walston, Sourav Samanta, Lingxiang Yin, Hao Zheng, Mingjie Lin, Stelios Diamantidis, "CircuitSeer: RTL Post-PnR Delay Prediction via Coupling Functional and Structural Representation", in Proceedings of ACM/IEEE International Conference on Computer-Aided Design (ICCAD), New Jersey, USA, Oct 27-21, 2024.&nbsp;</span></p><p><span style="font-size: 1rem;"><strong>[ISCA'24] </strong> Md Hafizul Chowdhuryy, Hao Zheng and Fan Yao, "MetaLeak: Uncovering Side Channels in Secure Memory Architectures Exploiting Metadata", in Proceedings of 51th International Symposium on Computer Architecture (ISCA'24), Buenos Aires, Argentina, June 29–July 3, 2024.&nbsp;</span></p><p><span style="font-size: 1rem;"><strong>[DAC'24]</strong> Fangzhou Ye, Lingxiang Yin, Amir Ghazizadeh Ahsaei, Hao Zheng "EGMA: Enhancing Data Reuse and Workload Balancing in Message Passing GNN Acceleration via Gram Matrix Optimization", in Proceedings of 61th Design Automation Conference (DAC’24), San Francisco, June 23-27, 2024.&nbsp;</span></p><p><span style="font-size: 1rem;"><strong>[DAC'24] </strong>Shilin Tian, Chase Szafranski, Ce Zheng, Fan Yao, Ahmed Louri,  Chen Chen, Hao Zheng "VITA: ViT Acceleration for Efficient 3D Human Mesh Recovery via Hardware-Algorithm Co-Design", in Proceedings of 61th Design Automation Conference (DAC’24), San Francisco, June 23-27, 2024.&nbsp;</span></p><p><strong style="font-size: 1rem;">[ICCAD'23] </strong><span style="font-size: 1rem;">Lingxiang Yin, Amir Ghazizadeh, Ahmed Louri, Hao Zheng, "ARIES: Accelerating Distributed Training in Chiplet-based Systems via Flexible Interconnects", &nbsp;in Proceedings of International Conference on Computer-Aided Design (ICCAD), San Francisco, CA, October 29 - November 2, 2023.&nbsp;</span></p><p><strong style="font-size: 1rem;">[ICCAD'23]&nbsp;</strong><span style="font-size: 1rem;">Sanjay Gandham*, Lingxiang Yin*, Hao Zheng, Mingjie Lin, ''SAGA: Sparsity-Agnostic Graph Convolutional Network Acceleration with Near-optimal Workload Balance", &nbsp;in Proceedings of International Conference on Computer-Aided Design (ICCAD), San Francisco, CA, October 29 - November 2, 2023. &nbsp;(* Co-first Authors)</span></p><p><span style="font-size: 1rem;"><strong>[ICCAD'23]</strong> Muhammad Rashedul Haq Rashed, Sven Thijssen, Hao Zheng, Sumit Kumar Jha, Rickard Ewetz, ''Path-based Processing using In-Memory Systolic Arrays for Accelerating Data-Intensive Applications", in proceedings of International Conference on Computer-Aided Design (ICCAD), San Francisco, CA, October 29 - November 2, 2023.</span></p><p><strong style="font-size: 1rem;">[DAC'23] </strong><span style="font-size: 1rem;">Jiaqi Yang,</span><strong style="font-size: 1rem;">&nbsp;</strong><span style="font-size: 1rem;">Hao Zheng, and Ahmed Louri, “Venus: A Versatile Deep Neural Network Accelerator Architecture Design for Multiple Applications,” in Proceedings of 60th Design Automation Conference (DAC’23), San Francisco, July 9-13, 2023.</span><br></p><p><span style="font-size: 1rem;"><strong>[ISCA'23]</strong> Jiajun Li, Yuxuan Zhang, Hao Zheng, and Ke Wang, “ FDMAX: An Elastic Accelerator Architecture for Solving Partial Differential Equations,” &nbsp;in Proceedings of 50th International Symposium on Computer Architecture (ISCA'50), Orlando, FL, June 17–21, 2023.</span></p><p><strong>[HPCA'21] </strong>Hao Zheng, Ke Wang, and Ahmed Louri, "Adapt-NoC: A Flexible Network-on-Chip Design for Heterogeneous Manycore Architecture", in Proceedings of the 27th IEEE International Symposium on High-Performance Computer Architecture (HPCA'21), Seoul, South Korea, Feb. 27 - Mar. 3, 2021.</p><p><strong>[DAC'20]</strong> Hao Zheng, Ke Wang and Ahmed Louri, “A Versatile and Flexible Chiplet-based System Design for Heterogeneous Manycore Architectures,” in Proceedings of 57th Design Automation Conference (DAC’20), Virtual Conference, July 19-23, 2020.</p><p><strong>[DAC'19]</strong> Hao Zheng and Ahmed Louri, “An Energy-Efficient Network-on-Chip Design using Reinforcement Learning,” in Proceedings of 56th Design Automation Conference (DAC’19), Las Vegas, NV, June 2-6, 2019.</p></div>
-        </div>
+<!-- ========================= TEACHING ========================= -->
+<section class="view" id="teaching" hidden aria-label="Teaching">
+  <div class="wrap">
+    <div class="sec-head">
+      <p class="eyebrow">Teaching</p>
+      <h2 class="sec-title">Courses at UCF</h2>
+      <p class="sec-note">Be a responsible educator.</p>
     </div>
+    <div class="courses">
+      <div class="course">
+        <p class="code">EEL 4768</p>
+        <h3>Computer Architecture</h3>
+        <p>Undergraduate · Fall 2021 – Spring 2025</p>
+      </div>
+      <div class="course">
+        <p class="code">EEL 6938</p>
+        <h3>Computer Architecture for AI/ML</h3>
+        <p>Graduate · Spring 2024, Fall 2025</p>
+      </div>
+    </div>
+    <div class="panel chamfer" style="margin-top:clamp(30px,4vw,44px)">
+      <h3>Course materials</h3>
+      <p>Enrolled students should use Webcourses@UCF for slides, assignments, and announcements. For questions about enrolling or prerequisites, email <a href="mailto:Hao.Zheng@ucf.edu">Hao.Zheng@ucf.edu</a>.</p>
+    </div>
+  </div>
 </section>
 
-<section class="mbr-section article content1 cid-u22k0UxIjI" id="content1-28">
-    
-     
-
-    <div class="container">
-        <div class="media-container-row">
-            <div class="mbr-text col-12 mbr-fonts-style display-7 col-md-8" style="text-align: justify;"><p style="font-size:25px"><strong>Patents</strong></p><p><span style="font-size: 1rem;">Hao Zheng and Ahmed Louri, "EZ-Pass: An Energy &amp; Performance-Efficient Power-Gating Router Architecture for Scalable NoCs.", U.S. Patent, US 11502934 B2, Granted, Nov. 2022&nbsp;</span><br></p><p>Hao Zheng, Ke Wang, and Ahmed Louri,, "A Versatile and Flexible Interconnection Network Design for Chiplet-Based Manycore Architecture", U.S. Patent, US 11489788 B2, Granted, Nov. 2022</p><p>Jiaqi Yang, Hao Zheng, Ahmed Louri, "Versatile Accelerator Design for Multiple Deep Neural Network Applications", U.S. Patent, 63/665,776, Filed, Pending, July 2024.</p><p>Ke Wang, Hao Zheng, and Ahmed Louri, “Learning-Based High-Performance, Energy-Efficient, and Secure Interconnection Design Framework”, &nbsp;U.S. Patent, No. 63/019,720, Granted, Jan. 2025.</p></div>
-        </div>
+<!-- ========================== SERVICE ========================== -->
+<section class="view" id="service" hidden aria-label="Service and awards">
+  <div class="wrap">
+    <div class="sec-head">
+      <p class="eyebrow">Professional activities</p>
     </div>
+
+    <dl class="deflist">
+      <dt>Editorial board</dt>
+      <dd>
+        Associate Editor-in-Chief, <em>IEEE Transactions on Computers</em>, 2026 – present<br>
+        Associate Editor, <em>IEEE Transactions on Computers</em>, 2025 – present<br>
+        Associate Editor, <em>IEEE Transactions on Sustainable Computing</em>, 2025 – present
+      </dd>
+
+      <dt>Program committees</dt>
+      <dd>HPCA&rsquo;27 · ISCA&rsquo;26 (LPC) · MLSys&rsquo;26 (ERC) · ICS&rsquo;26 · ISPASS&rsquo;25–26 · DAC&rsquo;24–26 · ICCAD&rsquo;24–25 · ICPP&rsquo;25 · GLSVLSI&rsquo;24 · IPDPS&rsquo;23–24 · IISWC&rsquo;23 · SRC@ASP-DAC&rsquo;23 · HiPC&rsquo;22 · NAS&rsquo;22</dd>
+
+      <dt>Organizing committees</dt>
+      <dd>Finance Chair, ISCA&rsquo;23 · Artifact Evaluation Co-Chair, IISWC&rsquo;23 · Registration Chair, ICCD&rsquo;23 · Local Arrangement Co-Chair, IPDPS&rsquo;23 · Web Chair, HPCA&rsquo;19</dd>
+
+      <dt>NSF panels</dt>
+      <dd>Panelist for multiple National Science Foundation programs.</dd>
+
+      <dt>Journal reviewing</dt>
+      <dd>IEEE Transactions on Computers · ACM/IEEE Transactions on Networking · IEEE Transactions on Cloud Computing · IEEE Transactions on Circuits and Systems II · IEEE Transactions on Sustainable Computing · IEEE Transactions on Very Large Scale Integration (VLSI) · IEEE Micro · IEEE Computer Architecture Letters · IEEE Transactions on Parallel and Distributed Systems · ACM Transactions on Architecture and Code Optimization (TACO) · IEEE Journal on Emerging and Selected Topics in Circuits and Systems · IEEE Transactions on Emerging Topics in Computing (TETC)</dd>
+    </dl>
+
+    <div class="panel accent chamfer" style="margin-top:clamp(30px,4vw,44px)">
+      <h3>Review for IEEE Transactions on Computers</h3>
+      <p>If you would like to serve as a reviewer for <a href="https://www.computer.org/csdl/journal/tc">IEEE TC</a>, please fill out the <a href="https://docs.google.com/forms/d/e/1FAIpQLScnBeBChpP9nZjyztYFd7uBaIh6cIC2cqRQJCVYd0EDCkhCBg/viewform?usp=publish-editor">reviewer interest form</a>.</p>
+    </div>
+
+    <h3 class="yearhead">Awards &amp; honors</h3>
+    <ul class="plainlist" style="margin-top:16px">
+      <li><span class="yr">2026</span><span>Inaugural ECE Excellence in Research Award, UCF</span></li>
+      <li><span class="yr">2026</span><span>UCF Reach for the Stars Award<span class="note">Highest university award for early-career faculty</span></span></li>
+      <li><span class="yr">2026</span><span>GWU Technology Commercialization Office Innovation Award</span></li>
+      <li><span class="yr">2025</span><span>NSF CAREER Award</span></li>
+      <li><span class="yr">2022</span><span>ECE Best Dissertation Award, George Washington University</span></li>
+      <li><span class="yr">2020</span><span>Best Paper Finalist, Design Automation Conference</span></li>
+      <li><span class="yr">2019</span><span>First Place in ECE, SEAS R&amp;D Showcase</span></li>
+      <li><span class="yr">2019</span><span>First Place in Engineering, GWU Research Days</span></li>
+      <li><span class="yr">2019</span><span>NSF GW I-Corps Site Grant Award</span></li>
+      <li><span class="yr">2018</span><span>Dean Summer Award Fellowship</span></li>
+      <li><span class="yr">2018</span><span>Second Place in Engineering, GWU Research Days</span></li>
+      <li><span class="yr">2017</span><span>Phillip/Temofel Sprawcew Endowment Scholarship</span></li>
+    </ul>
+  </div>
 </section>
 
-<section class="mbr-section article content1 cid-u22Y1ecDfg" id="content1-29">
-    
-     
-
-    <div class="container">
-        <div class="media-container-row">
-            <div class="mbr-text col-12 mbr-fonts-style display-7 col-md-8" style="text-align: justify;"><p style="font-size:25px"><strong>Professional Activities</strong></p><p><strong style="font-size: 1rem;">Editorial Board:</strong></p><p><span style="font-size: 1rem;">Associate Editor-in-Chief, IEEE Transactions on Computers, 2026 - present;&nbsp;</span></p><p><span style="font-size: 1rem;">Associate Editor, IEEE Transactions on Computers, 2025 - present;</span></p><p><span style="font-size: 1rem;">Associate Editor, IEEE Transactions on Sustainable Computing, 2025 - present;</span></p><p><strong style="font-size: 1rem;">Program Committee:</strong><span style="font-size: 1rem;">&nbsp;</span></p><p><span style="font-size: 1rem;">HPCA'27; ISCA'26 (LPC); MLSys'26 (ERC); ICS'26; ISPASS'25-26; DAC'24-26; ICCAD'24-25; ICPP'25; GLSVLSI'24;&nbsp;</span><span style="font-size: 1rem;">IPDPS'23-24; IISWC'23; SRC@ASP-DAC'23; HiPC'22; NAS'22;</span><br></p><p><strong>Organization Committee:</strong> </p><p>Finance Chair, ISCA'23; Artifact Evaluation Co-Chair, IISWC'23; Registration Chair, ICCD'23;&nbsp;<span style="font-size: 1rem;">Local Arrangement Co-Chair, IPDPS'23; Web Chair, HPCA'19;</span></p><p><strong style="font-size: 1rem;">Journal Reviewer:</strong><span style="font-size: 1rem;"> </span></p><p><span style="font-size: 1rem;">IEEE Transactions on Computers; ACM/IEEE Transactions on Networking; &nbsp;</span><span style="font-size: 1rem;">IEEE Transactions on Cloud Computing;&nbsp;</span><span style="font-size: 1rem;">IEEE Transactions on Circuits and Systems II;</span><span style="font-size: 1rem;">&nbsp;&nbsp;</span><span style="font-size: 1rem;">IEEE Transactions on Sustainable Computing; IEEE Transactions on Very Large Scale Integration (VLSI); IEEE Micro; IEEE Computer Architecture Letter; IEEE Transactions on Parallel and Distributed Systems; ACM Transactions on Architecture and Code Optimization (TACO);&nbsp; IEEE Journal on Emerging and Selected Topics in Circuits and Systems; IEEE Transactions on Emerging Topics in Computing (TETC);</span></p></div>
-        </div>
+<!-- =========================== NEWS =========================== -->
+<section class="view" id="news" hidden aria-label="News">
+  <div class="wrap">
+    <div class="sec-head">
+      <p class="eyebrow">News</p>
+      <h2 class="sec-title">A record of what the lab has been doing</h2>
     </div>
+    <div class="newstools">
+      <label for="newsyear">Show</label>
+      <select class="newsselect" id="newsyear">
+        <option value="all">All years</option>
+      </select>
+      <span class="count" id="newscount"></span>
+    </div>
+    <ul class="timeline">
+      <li><time datetime="2026-07">Jul 2026</time><div><h3>Four papers accepted at MICRO&nbsp;&rsquo;26</h3><p>KAIROS, Argus, DireLeak, and MOSAIC will appear in Athens.</p></div></li>
+      <li><time datetime="2026-03">Mar 2026</time><div><h3>TensorPrism accepted at ISCA&nbsp;&rsquo;26</h3><p>Sparse high-order tensor acceleration via co-occurrence graphs.</p></div></li>
+      <li><time datetime="2026-02">Feb 2026</time><div><h3>PanGaea accepted at DAC&nbsp;&rsquo;26</h3><p>A unified memory-efficient accelerator for pangenome chaining and alignment.</p></div></li>
+      <li><time datetime="2025-11">Nov 2025</time><div><h3>One paper accepted at HPCA&nbsp;&rsquo;26</h3><p>Scaling graph neural network training via geometric optimization.</p></div></li>
+      <li><time datetime="2025-09">Sep 2025</time><div><h3>GAMMA accepted at NeurIPS&nbsp;&rsquo;25</h3><p>Gated multi-hop message passing for homophily-agnostic node representation.</p></div></li>
+      <li><time datetime="2025-07">Jul 2025</time><div><h3>One paper accepted at MICRO&nbsp;&rsquo;25</h3><p>Rethinking tiling and dataflow for SpMM acceleration.</p></div></li>
+      <li><time datetime="2025-03">Mar 2025</time><div><h3>DiTile-DGNN accepted at ISCA&nbsp;&rsquo;25</h3><p>An accelerator for distributed dynamic GNN inference.</p></div></li>
+      <li><time datetime="2024-11">Nov 2024</time><div><h3>I-DGNN accepted at HPCA&nbsp;&rsquo;25</h3><p>A graph dissimilarity-based framework for DGNN accelerators.</p></div></li>
+      <li><time datetime="2024-07">Jul 2024</time><div><h3>SCALE accepted at MICRO&nbsp;&rsquo;24</h3><p>A structure-centric accelerator for message passing GNNs.</p></div></li>
+      <li><time datetime="2024-06">Jun 2024</time><div><h3>CircuitSeer accepted at ICCAD&nbsp;&rsquo;24</h3><p>RTL post-PnR delay prediction.</p></div></li>
+      <li><time datetime="2024-03">Mar 2024</time><div><h3>MetaLeak accepted at ISCA&nbsp;&rsquo;24</h3><p>Side channels in secure memory architectures.</p></div></li>
+      <li><time datetime="2024-02">Feb 2024</time><div><h3>EGMA and VITA accepted at DAC&nbsp;&rsquo;24</h3><p>Two papers at the 61st Design Automation Conference.</p></div></li>
+      <li><time datetime="2023-03">Mar 2023</time><div><h3>Papers accepted at ISCA&nbsp;&rsquo;23, DAC&nbsp;&rsquo;23, and GLSVLSI&nbsp;&rsquo;23</h3><p>Three papers accepted in the same season.</p></div></li>
+      <li><time datetime="2022-12">Dec 2022</time><div><h3>Chase and John received AMD Fellowships</h3><p>Supporting their undergraduate research projects.</p></div></li>
+      <li><time datetime="2022-11">Nov 2022</time><div><h3>Two patents granted by the USPTO</h3><p>US&nbsp;11502934 and US&nbsp;11489788.</p></div></li>
+      <li><time datetime="2022-10">Oct 2022</time><div><h3>Xilinx hardware donation</h3><p>We received an equipment donation from Xilinx. Thank you, Xilinx.</p></div></li>
+      <li><time datetime="2022-06">Jun 2022</time><div><h3>L3Harris research grant</h3><p>We received a grant from L3Harris, a leading aerospace and defense technology innovator. Thank you, L3Harris.</p></div></li>
+      <li><time datetime="2022-03">Mar 2022</time><div><h3>NVIDIA Academic Hardware Grant</h3><p>Cloud credits from NVIDIA supporting our work on machine learning training. Thank you, NVIDIA.</p></div></li>
+      <li><time datetime="2022-03">Mar 2022</time><div><h3>TPC member, NAS 2022</h3><p>Hao Zheng was invited to serve on the technical program committee for NAS 2022.</p></div></li>
+      <li><time datetime="2021-11">Nov 2021</time><div><h3>Three papers accepted at DATE&nbsp;&rsquo;22, TPDS, and TSUSC</h3>
+        <ol>
+          <li>AGAPE: Anomaly Detection with Generative Adversarial Network for Improved Performance, Energy, and Security in Manycore Systems — DATE 2022.</li>
+          <li>SGCNAX: A Scalable Graph Convolutional Neural Network Accelerator with Workload Balancing — IEEE TPDS, 2021.</li>
+          <li>SecureNoC: A Learning-enabled, High-Performance, Energy-Efficient, and Secure On-Chip Communication Framework Design — IEEE TSUSC, 2021.</li>
+        </ol>
+      </div></li>
+      <li><time datetime="2021-08">Aug 2021</time><div><h3>Joined the ECE department at UCF</h3><p>Starting the iCAT lab.</p></div></li>
+    </ul>
+  </div>
 </section>
 
-<section class="mbr-section article content1 cid-u9dPcPXdGy" id="content1-2b">
-    
-     
+</main>
 
-    <div class="container">
-        <div class="media-container-row">
-            <div class="mbr-text col-12 mbr-fonts-style display-7 col-md-8"><p style="font-size:25px"><strong>Awards</strong><br></p><p><span style="font-size: 1rem;">NSF CAREER Award, 2025</span></p><p>Inaugural ECE Excellence in Research Award, 2026</p><p><span style="font-size: 1rem;">UCF Reach for the Stars Award, highest university award for early-career faculty, 2026</span></p><p><span style="font-size: 1rem;">GWU Technology Commercialization Office</span><span style="font-size: 1rem;">&nbsp;Innovation Award, 2026</span></p><p><span style="font-size: 1rem;">ECE Best Dissertation Award, GWU, 2022</span><br></p><p>Best Paper Finalist, Design Automation Conference, 2020</p><p>First Place in ECE, SEAS R&amp;D Showcase, 2019</p><p>First Place in Engineering, GWU Research Days, 2019</p><p>NSF GW I-Corps Site Grant Award, 2019</p><p><span style="font-size: 1rem;">Dean Summer Award Fellowship, 2018</span><br></p><p>Second Place in Engineering, GWU Research Days, 2018</p><p>Phillip/Temofel Sprawcew Endowment Scholarship, 2017</p></div>
-        </div>
+<footer class="site-footer" id="contact">
+  <div class="wrap">
+    <div class="foot-grid">
+      <div>
+        <h2>Contact</h2>
+        <a class="bigmail" href="mailto:Hao.Zheng@ucf.edu">Hao.Zheng@ucf.edu</a>
+      </div>
+      <div>
+        <h2>Office</h2>
+        <address>
+          Department of Electrical &amp; Computer Engineering<br>
+          University of Central Florida<br>
+          4328 Scorpius Street<br>
+          Orlando, Florida 32816-2362<br>
+          <a href="https://www.google.com/maps/search/?api=1&amp;query=4328+Scorpius+Street+Orlando+Florida+32816">Open in Maps</a>
+        </address>
+      </div>
+      <div>
+        <h2>Elsewhere</h2>
+        <ul class="footlinks">
+          <li><a href="https://www.ece.ucf.edu/">UCF ECE Department</a></li>
+          <li><a href="https://www.computer.org/csdl/journal/tc">IEEE Transactions on Computers</a></li>
+          <li><a href="https://docs.google.com/forms/d/e/1FAIpQLScnBeBChpP9nZjyztYFd7uBaIh6cIC2cqRQJCVYd0EDCkhCBg/viewform?usp=publish-editor">Volunteer to review for IEEE TC</a></li>
+        </ul>
+      </div>
+      <div>
+        <h2>Prospective students</h2>
+        <p style="margin:0;font-size:15px">Assistantships are available. Send a CV and transcripts, and mention which of the lab's projects interest you.</p>
+      </div>
     </div>
-</section>
-
-<section class="mbr-section article content10 cid-tXjs2lE00Z" id="content10-25">
-    
-     
-
-    <div class="container">
-        <div class="inner-container" style="width: 73%;">
-            <hr class="line" style="width: 44%;">
-            <div class="section-text align-center mbr-white mbr-fonts-style display-2">
-                    Contact<br></div>
-            <hr class="line" style="width: 44%;">
-        </div>
+    <div class="colophon">
+      <span>&copy; <span id="yr">2026</span> Hao Zheng</span>
+      <span>iCAT — Intelligent Computer Architecture &amp; Technology Lab</span>
     </div>
-</section>
+  </div>
+</footer>
 
-<section class="mbr-section form4 cid-rjv9sWBwaV" id="form4-d">
+<script>
+(function(){
+  "use strict";
+  document.getElementById('yr').textContent = new Date().getFullYear();
 
-    
+  /* ---------- portrait: local file first, then the old site, then a monogram ---------- */
+  (function(){
+    var img = document.getElementById('portrait');
+    var fb  = document.getElementById('portraitFallback');
+    if (!img) return;
+    var sources = ['https://haozheng.us/assets/images/img-3720.jpg-360x480.jpg',
+                   'https://haozheng.us/assets/images/img-3720.jpg-360x480.jpg'];
+    var i = 0;
+    function fail(){
+      if (i < sources.length){ img.src = sources[i++]; }
+      else { img.style.display = 'none'; fb.hidden = false; }
+    }
+    img.addEventListener('error', fail);
+    // the image may have already failed before this script ran
+    if (img.complete && img.naturalWidth === 0) fail();
+  })();
 
-    
-    <div class="container">
-        <div class="row">
-            <div class="col-md-6">
-                <div class="google-map"><iframe frameborder="0" style="border:0" src="https://www.google.com/maps/embed/v1/place?key=AIzaSyDbnCmnHmtigIYiD8jIfeHQv7gW2ANhHD4&amp;q=4328 Scorpius Street, Orlando, Florida, 32816-2362 " allowfullscreen=""></iframe></div>
-            </div>
-            <div class="col-md-6">
-                
-                <div>
-                    <div class="icon-block pb-3 align-left">
-                        <span class="icon-block__icon">
-                            <span class="mbri-letter mbr-iconfont"></span>
-                        </span>
-                        <h4 class="icon-block__title align-left mbr-fonts-style display-7">
-                            Hao.Zheng@ucf.edu</h4>
-                    </div>
-                    
-                </div>
-                <div data-form-type="formoid">
-                    <!---Formbuilder Form--->
-                    <form action="https://mobirise.eu/" method="POST" class="mbr-form form-with-styler" data-form-title="Mobirise Form"><input type="hidden" name="email" data-form-email="true" value="aJ/U+ZYufc1LiIDqh6xKLvfp59H3XeISxs0brX7KZJYMAkCJommLK1jqjjTtXkcHi3o444nYl7HoFJ6ZmqWPr1On+K2to1c9jmD3rh/CQhrxxsB8W2PDZnhc1G8Cvk0n.3uGMoaO1ORHjH14+72oOV0DWjVU226NPnHbtYInupiRZHPZvyXLlREr2a/Uj6PuxZqBEVBkLrEeBEdXwQbtYkefu6leDeanCn2DTElX69RkXqe37SRBPwpwOiyEZ139C">
-                        <div class="row">
-                            <div hidden="hidden" data-form-alert="" class="alert alert-success col-12">Thanks for filling out the form!</div>
-                            <div hidden="hidden" data-form-alert-danger="" class="alert alert-danger col-12">
-                            </div>
-                        </div>
-                        <div class="dragArea row">
-                            <div class="col-md-6  form-group" data-for="name">
-                                <input type="text" name="name" placeholder="Your Name" data-form-field="Name" required="required" class="form-control input display-7" id="name-form4-d">
-                            </div>
-                            <div class="col-md-6  form-group" data-for="phone">
-                                <input type="text" name="phone" placeholder="Phone" data-form-field="Phone" required="required" class="form-control input display-7" id="phone-form4-d">
-                            </div>
-                            <div data-for="email" class="col-md-12  form-group">
-                                <input type="text" name="email" placeholder="Email" data-form-field="Email" class="form-control input display-7" required="required" id="email-form4-d">
-                            </div>
-                            <div data-for="message" class="col-md-12  form-group">
-                                <textarea name="message" placeholder="Message" data-form-field="Message" class="form-control input display-7" id="message-form4-d"></textarea>
-                            </div>
-                            <div class="col-md-12 input-group-btn mt-2 align-center">
-                                <button type="submit" class="btn btn-primary btn-form display-4">SEND MESSAGE</button>
-                            </div>
-                        </div>
-                    </form><!---Formbuilder Form--->
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
+  /* ---------- section router ---------- */
+  var views = Array.prototype.slice.call(document.querySelectorAll('main > .view'));
+  var navLinks = Array.prototype.slice.call(document.querySelectorAll('.nav a'));
+  var titles = {home:'Hao Zheng — Assistant Professor, ECE, UCF',
+                publications:'Publications — Hao Zheng',
+                lab:'iCAT Lab — Hao Zheng',
+                teaching:'Teaching — Hao Zheng',
+                service:'Service & Awards — Hao Zheng',
+                news:'News — Hao Zheng'};
 
+  function route(initial){
+    var id = (location.hash || '#home').slice(1);
+    var target = null;
+    for (var i=0;i<views.length;i++){ if (views[i].id === id) target = views[i]; }
+    if (!target){ target = views[0]; id = target.id; }
+    views.forEach(function(v){ v.hidden = (v !== target); });
+    navLinks.forEach(function(a){
+      if (a.getAttribute('href') === '#'+id) a.setAttribute('aria-current','page');
+      else a.removeAttribute('aria-current');
+    });
+    document.title = titles[id] || titles.home;
+    if (!initial) window.scrollTo(0,0);
+    mesh.setActive(id === 'home');
+  }
 
-<script src="assets/popper/popper.min.js"></script>
-  <script src="assets/web/assets/jquery/jquery.min.js"></script>
-  <script src="assets/bootstrap/js/bootstrap.min.js"></script>
-  <script src="assets/tether/tether.min.js"></script>
-  <script src="assets/smoothscroll/smooth-scroll.js"></script>
-  <script src="assets/dropdown/js/nav-dropdown.js"></script>
-  <script src="assets/dropdown/js/navbar-dropdown.js"></script>
-  <script src="assets/touchswipe/jquery.touch-swipe.min.js"></script>
-  <script src="assets/bootstrapcarouselswipe/bootstrap-carousel-swipe.js"></script>
-  <script src="assets/mbr-testimonials-slider/mbr-testimonials-slider.js"></script>
-  <script src="assets/theme/js/script.js"></script>
-  <script src="assets/formoid/formoid.min.js"></script>
-  
-  
-  
+  /* ---------- signature: AI-infrastructure fabric ----------
+     A two-tier spine-leaf network over pods of accelerators.
+     Pale blue traffic is scale-up (inside a pod, over the local
+     bus); amber traffic is scale-out (leaf -> spine -> leaf),
+     the path a gradient all-reduce takes across the cluster.
+     ---------------------------------------------------------- */
+  var mesh = (function(){
+    var canvas = document.getElementById('mesh');
+    var ctx = canvas.getContext('2d');
+    var reduce = true;
+    var W = 0, H = 0, dpr = 1;
+    var leaves = [], spines = [], pods = [], busY = 0;
+    var still = null, stillCtx = null;
+    var packets = [], raf = null, last = 0, spawnAt = 0, active = true, visible = true;
+
+    var POD = 4;
+
+    function layout(){
+      dpr = Math.min(window.devicePixelRatio || 1, 2);
+      var r = canvas.getBoundingClientRect();
+      W = r.width; H = r.height;
+      if (!W || !H) return;
+      canvas.width  = Math.round(W * dpr);
+      canvas.height = Math.round(H * dpr);
+      ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+
+      var pitch  = W < 640 ? 40 : 54;
+      var podGap = pitch * 0.75;
+      function spanFor(n){ return (n-1)*pitch + Math.floor((n-1)/POD)*podGap; }
+      var n = POD;
+      while (spanFor(n + 1) < W + pitch * 1.4) n += 1;
+
+      var span   = spanFor(n);
+      var startX = (W - span) / 2;
+      var leafY  = H - Math.min(70, H * 0.14);
+      busY       = leafY + Math.min(22, H * 0.045);
+      var spineY = Math.max(34, H * 0.15);
+
+      leaves = [];
+      for (var i = 0; i < n; i++){
+        leaves.push({ x: startX + i*pitch + Math.floor(i/POD)*podGap, y: leafY, pod: Math.floor(i/POD) });
+      }
+      pods = [];
+      for (var i2 = 0; i2 < leaves.length; i2 += POD){
+        pods.push(leaves.slice(i2, i2 + POD));
+      }
+
+      var sc = Math.max(3, Math.min(7, Math.round(leaves.length / POD)));
+      spines = [];
+      for (var j = 0; j < sc; j++){
+        spines.push({ x: startX + (sc === 1 ? span/2 : span * j / (sc - 1)), y: spineY });
+      }
+
+      renderStill();
+      packets = [];
+      if (reduce) blit();
+    }
+
+    /* the fabric itself never moves, so draw it once and blit each frame */
+    function renderStill(){
+      still = document.createElement('canvas');
+      still.width = Math.round(W * dpr); still.height = Math.round(H * dpr);
+      stillCtx = still.getContext('2d');
+      var c = stillCtx;
+      c.setTransform(dpr, 0, 0, dpr, 0, 0);
+      c.clearRect(0, 0, W, H);
+
+      // leaf-to-spine fabric
+      c.lineWidth = 1;
+      c.strokeStyle = 'rgba(114,122,238,0.14)';
+      c.beginPath();
+      for (var i = 0; i < leaves.length; i++){
+        for (var j = 0; j < spines.length; j++){
+          c.moveTo(leaves[i].x, leaves[i].y - 7);
+          c.lineTo(spines[j].x, spines[j].y + 4);
+        }
+      }
+      c.stroke();
+
+      // scale-up bus inside each pod
+      c.strokeStyle = 'rgba(122,132,242,0.34)';
+      c.lineWidth = 1.3;
+      c.beginPath();
+      for (var k = 0; k < pods.length; k++){
+        var pod = pods[k];
+        if (pod.length < 2) continue;
+        c.moveTo(pod[0].x, busY);
+        c.lineTo(pod[pod.length-1].x, busY);
+        for (var m = 0; m < pod.length; m++){
+          c.moveTo(pod[m].x, pod[m].y + 6);
+          c.lineTo(pod[m].x, busY);
+        }
+      }
+      c.stroke();
+
+      // spine switches
+      for (var s = 0; s < spines.length; s++){
+        c.fillStyle = 'rgba(150,162,182,0.34)';
+        c.fillRect(spines[s].x - 15, spines[s].y - 3, 30, 6);
+        c.fillStyle = 'rgba(190,200,215,0.30)';
+        c.fillRect(spines[s].x - 15, spines[s].y - 3, 30, 1.4);
+      }
+
+      // accelerators, drawn as a stack of memory bars
+      for (var a = 0; a < leaves.length; a++){
+        var x = leaves[a].x, y = leaves[a].y;
+        c.fillStyle = 'rgba(178,190,209,0.20)';
+        c.fillRect(x - 9, y - 6, 18, 12);
+        c.fillStyle = 'rgba(208,218,234,0.36)';
+        c.fillRect(x - 9, y - 6, 18, 2);
+      }
+    }
+
+    function blit(){
+      ctx.clearRect(0, 0, W, H);
+      if (still) ctx.drawImage(still, 0, 0, W, H);
+    }
+
+    function pick(n){ return (Math.random() * n) | 0; }
+
+    function spawn(tries){
+      if (leaves.length < 2) return;
+      tries = tries || 0;
+      var retry = function(){ if (tries < 6) spawn(tries + 1); };
+      var scaleUp = pods.length > 0 && Math.random() < 0.4;
+      if (scaleUp){
+        var pod = pods[pick(pods.length)];
+        if (pod.length < 2) return retry();
+        var a = pick(pod.length), b = pick(pod.length);
+        if (a === b) return retry();
+        packets.push({
+          pts: [{x:pod[a].x, y:pod[a].y+6}, {x:pod[a].x, y:busY},
+                {x:pod[b].x, y:busY},       {x:pod[b].x, y:pod[b].y+6}],
+          leg: 0, t: 0, speed: 150, head: 'rgba(176,192,255,0.95)', tail: '150,170,255'
+        });
+      } else {
+        var i = pick(leaves.length), k = pick(leaves.length);
+        if (leaves[i].pod === leaves[k].pod) return retry();
+        var j = pick(spines.length);
+        packets.push({
+          pts: [{x:leaves[i].x, y:leaves[i].y-7}, {x:spines[j].x, y:spines[j].y+4},
+                {x:leaves[k].x, y:leaves[k].y-7}],
+          leg: 0, t: 0, speed: 190, head: 'rgba(240,196,94,0.95)', tail: '232,179,61'
+        });
+      }
+    }
+
+    function draw(dt){
+      blit();
+      for (var i = packets.length - 1; i >= 0; i--){
+        var p = packets[i];
+        var a = p.pts[p.leg], b = p.pts[p.leg + 1];
+        if (!b){ packets.splice(i, 1); continue; }
+        var len = Math.hypot(b.x - a.x, b.y - a.y);
+        p.t += (dt * p.speed) / (len || 1);
+        while (p.t >= 1){
+          p.t -= 1; p.leg += 1;
+          a = p.pts[p.leg]; b = p.pts[p.leg + 1];
+          if (!b) break;
+          len = Math.hypot(b.x - a.x, b.y - a.y);
+        }
+        if (!b){ packets.splice(i, 1); continue; }
+        var hx = a.x + (b.x - a.x) * p.t, hy = a.y + (b.y - a.y) * p.t;
+        var s  = Math.max(0, p.t - 0.3);
+        var sx = a.x + (b.x - a.x) * s,  sy = a.y + (b.y - a.y) * s;
+
+        var g = ctx.createLinearGradient(sx, sy, hx, hy);
+        g.addColorStop(0, 'rgba(' + p.tail + ',0)');
+        g.addColorStop(1, 'rgba(' + p.tail + ',0.7)');
+        ctx.strokeStyle = g; ctx.lineWidth = 1.7;
+        ctx.beginPath(); ctx.moveTo(sx, sy); ctx.lineTo(hx, hy); ctx.stroke();
+
+        ctx.fillStyle = p.head;
+        ctx.fillRect(hx - 2.4, hy - 2.4, 4.8, 4.8);
+      }
+    }
+
+    function tick(now){
+      raf = requestAnimationFrame(tick);
+      if (!active || !visible){ last = now; return; }
+      var dt = Math.min((now - last) / 1000, 0.05); last = now;
+      if (now > spawnAt && packets.length < 9){ spawn(); spawnAt = now + 460 + Math.random() * 700; }
+      draw(dt);
+    }
+
+    function start(){
+      if (raf === null && !reduce){ last = performance.now(); raf = requestAnimationFrame(tick); }
+    }
+
+    window.addEventListener('resize', function(){
+      clearTimeout(layout._t); layout._t = setTimeout(layout, 160);
+    });
+    document.addEventListener('visibilitychange', function(){ visible = !document.hidden; });
+
+    return {
+      init: function(){ layout(); start(); },
+      setActive: function(v){ active = v; if (v) layout(); }
+    };
+  })();
+
+  window.addEventListener('hashchange', function(){ route(false); });
+  mesh.init();
+  route(true);
+
+  /* ---------- publication PDF searches and downloadable BibTeX ---------- */
+  (function(){
+    var groups = document.querySelectorAll('#publist .yeargroup');
+    for (var i=0;i<groups.length;i++){
+      var yearHead = groups[i].querySelector('.yearhead');
+      var yearMatch = yearHead && yearHead.textContent.match(/(?:19|20)\d{2}/);
+      var year = yearMatch ? yearMatch[0] : 'n.d.';
+      var papers = groups[i].querySelectorAll('.pub');
+      for (var j=0;j<papers.length;j++){
+        var paper = papers[j];
+        var title = paper.querySelector('.pub-title').textContent.trim();
+        var authors = paper.querySelector('.pub-authors').textContent.trim();
+        var venue = paper.querySelector('.pub-venue').textContent.trim();
+        var links = paper.querySelector('.pub-links');
+        if (!links){ links = document.createElement('p'); links.className = 'pub-links'; paper.children[1].appendChild(links); }
+        var existing = links.querySelectorAll('a');
+        var hasPdf = false;
+        for (var k=0;k<existing.length;k++) if (existing[k].textContent.trim().toLowerCase() === 'pdf') hasPdf = true;
+        if (!hasPdf){
+          var pdf = document.createElement('a');
+          pdf.href = 'https://scholar.google.com/scholar?q=' + encodeURIComponent('"' + title + '" PDF');
+          pdf.textContent = 'PDF'; links.appendChild(pdf);
+        }
+        var bib = '@misc{HaoZheng' + year + '_' + (j + 1) + ',\n  title = {' + title + '},\n  author = {' + authors.replace(/, /g, ' and ') + '},\n  note = {' + venue + '},\n  year = {' + year + '}\n}\n';
+        var bibLink = document.createElement('a');
+        bibLink.href = 'data:application/x-bibtex;charset=utf-8,' + encodeURIComponent(bib);
+        bibLink.download = 'publication-' + year + '-' + (j + 1) + '.bib';
+        bibLink.textContent = 'BibTeX'; links.appendChild(bibLink);
+      }
+    }
+  })();
+
+  /* ---------- selected publications on the home page ---------- */
+  (function(){
+    var host = document.getElementById('selected');
+    if (!host) return;
+    var groups = document.querySelectorAll('#publist .yeargroup');
+    for (var i=0;i<groups.length;i++){
+      var heading = groups[i].querySelector('.yearhead');
+      var year = heading ? parseInt(heading.textContent, 10) : 0;
+      if (year < 2023 || year > 2026) continue;
+      var papers = groups[i].querySelectorAll('.pub');
+      for (var j=0;j<papers.length;j++){
+        var tag = papers[j].querySelector('.tag');
+        var venue = tag ? tag.textContent.toUpperCase() : '';
+        if (/^(ISCA|MICRO|HPCA)/.test(venue)) host.appendChild(papers[j].cloneNode(true));
+      }
+    }
+  })();
+
+  /* ---------- news: filter by year ---------- */
+  (function(){
+    var sel = document.getElementById('newsyear');
+    if (!sel) return;
+    var items = Array.prototype.slice.call(document.querySelectorAll('#news .timeline > li'));
+    var count = document.getElementById('newscount');
+    var years = [];
+    items.forEach(function(li){
+      var t = li.querySelector('time');
+      var d = t ? t.getAttribute('datetime') : '';
+      var y = d ? d.slice(0,4) : '';
+      li.setAttribute('data-year', y);
+      if (y && years.indexOf(y) === -1) years.push(y);
+    });
+    years.sort().reverse().forEach(function(y){
+      var o = document.createElement('option');
+      o.value = y; o.textContent = y;
+      sel.appendChild(o);
+    });
+    function apply(){
+      var v = sel.value, shown = 0;
+      items.forEach(function(li){
+        var ok = (v === 'all') || (li.getAttribute('data-year') === v);
+        li.hidden = !ok;
+        if (ok) shown++;
+      });
+      count.textContent = shown + (shown === 1 ? ' update' : ' updates');
+    }
+    sel.addEventListener('change', apply);
+    apply();
+  })();
+
+  /* ---------- home: compact news feed, built from the news timeline ---------- */
+  (function(){
+    var feed = document.getElementById('feed');
+    var list = document.getElementById('feedlist');
+    if (!feed || !list) return;
+    var wrap = feed.parentNode;
+    var FEED_FROM = 2024; // the home feed starts here; the News page keeps everything
+    var items = Array.prototype.slice.call(document.querySelectorAll('#news .timeline > li'));
+    var out = '';
+    items.forEach(function(li){
+      var t = li.querySelector('time');
+      var d = t ? (t.getAttribute('datetime') || '') : '';
+      if (parseInt(d.slice(0,4), 10) < FEED_FROM) return;
+      var label = d.length >= 7 ? d.slice(5,7) + '/' + d.slice(0,4) : (t ? t.textContent : '');
+      var h = li.querySelector('h3');
+      out += '<li><time datetime="' + d + '">' + label + '</time><p>' + (h ? h.innerHTML : '') + '</p></li>';
+    });
+    if (out) list.innerHTML = out;
+    function edge(){
+      var atEnd = feed.scrollTop + feed.clientHeight >= feed.scrollHeight - 4;
+      if (atEnd) wrap.className = 'feedwrap at-end'; else wrap.className = 'feedwrap';
+    }
+    feed.addEventListener('scroll', edge);
+    window.addEventListener('resize', edge);
+    window.addEventListener('hashchange', function(){ setTimeout(edge, 60); });
+    edge();
+  })();
+
+  /* ---------- publication filtering ---------- */
+  (function(){
+    var list = document.getElementById('publist');
+    if (!list) return;
+    var pubs   = Array.prototype.slice.call(list.querySelectorAll('.pub'));
+    var groups = Array.prototype.slice.call(list.querySelectorAll('.yeargroup'));
+    var buttons= Array.prototype.slice.call(document.querySelectorAll('.filters button'));
+    var search = document.getElementById('pubsearch');
+    var count  = document.getElementById('pubcount');
+    var empty  = document.getElementById('pubempty');
+    var mode = 'all';
+
+    pubs.forEach(function(p){ p._text = p.textContent.toLowerCase(); });
+
+    function apply(){
+      var q = (search.value || '').trim().toLowerCase();
+      var shown = 0;
+      pubs.forEach(function(p){
+        var typeOk = mode === 'all'
+          || (mode === 'top'    && p.dataset.tier === 'top')
+          || (mode === 'conf'   && p.dataset.type === 'conf')
+          || (mode === 'journal'&& p.dataset.type === 'journal')
+          || (mode === 'patent' && p.dataset.type === 'patent');
+        var textOk = !q || p._text.indexOf(q) !== -1;
+        var ok = typeOk && textOk;
+        p.hidden = !ok;
+        if (ok) shown++;
+      });
+      groups.forEach(function(g){
+        g.hidden = !g.querySelector('.pub:not([hidden])');
+      });
+      count.textContent = shown + (shown === 1 ? ' entry' : ' entries');
+      empty.hidden = shown !== 0;
+    }
+
+    buttons.forEach(function(b){
+      b.addEventListener('click', function(){
+        mode = b.dataset.filter;
+        buttons.forEach(function(x){ x.setAttribute('aria-pressed', String(x === b)); });
+        apply();
+      });
+    });
+    search.addEventListener('input', apply);
+    apply();
+  })();
+})();
+</script>
 </body>
 </html>

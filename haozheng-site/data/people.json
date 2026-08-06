@@ -1,0 +1,125 @@
+{
+  "phd": [
+    {
+      "name": "Shilin Tian",
+      "meta": "Since Fall 2022 · B.S. Shenzhen University",
+      "honors": "Dean's Dissertation Fellowship · ORC Fellowship"
+    },
+    {
+      "name": "Amir Ghazizadeh",
+      "meta": "Since Fall 2022 · B.S. Shiraz University"
+    },
+    {
+      "name": "Fangzhou Ye",
+      "meta": "Since Fall 2023 · B.S. Zhejiang University",
+      "honors": "ECE Best Graduate Researcher Award · FFL Fellowship · ORC Fellowship"
+    }
+  ],
+  "undergrad": [
+    {
+      "name": "Peyton Barnes",
+      "meta": "Fall 2025 – present"
+    },
+    {
+      "name": "Eren Siegman",
+      "meta": "Spring 2026 – present",
+      "honors": "AMD Fellowship"
+    }
+  ],
+  "alumni": [
+    {
+      "name": "Lingxiang Yin — Ph.D. 2024",
+      "dest": "Associate Professor (with tenure), NUAA"
+    },
+    {
+      "name": "Jiaqi Yang — Ph.D., co-advised",
+      "dest": "Associate Professor (with tenure), Shandong University"
+    },
+    {
+      "name": "Andres Graterol — M.S., Fall 2023 – Spring 2024",
+      "dest": "UCF"
+    },
+    {
+      "name": "Chase Szafranski — B.S., Spring 2022 – Spring 2024",
+      "dest": "AMD Fellowship · UCF"
+    },
+    {
+      "name": "Grace Tuomala — B.S., Fall 2023 – Spring 2024",
+      "dest": "AMD Fellowship · UCF"
+    },
+    {
+      "name": "Mariam Rabadi — B.S., Spring 2022 – Fall 2023",
+      "dest": "AMD Fellowship · UCF"
+    },
+    {
+      "name": "John Gierlach — B.S., Spring 2023",
+      "dest": "AMD Fellowship · UCF"
+    },
+    {
+      "name": "Luis Infante — B.S., Fall 2024 – Spring 2025",
+      "dest": "UCF"
+    },
+    {
+      "name": "Jessica Morris — B.S., Fall 2024 – Spring 2025",
+      "dest": "UCF"
+    },
+    {
+      "name": "Aneesha Nayak — B.S., Fall 2024 – Spring 2025",
+      "dest": "2025 Order of Pegasus, the highest UCF student award"
+    },
+    {
+      "name": "Jaden Jeudy — B.S., Fall 2024 – Spring 2025",
+      "dest": "UCF"
+    },
+    {
+      "name": "Briana Thakkar — B.S., Fall 2024 – Spring 2025",
+      "dest": "UCF"
+    },
+    {
+      "name": "Jhon Tabio — B.S., Fall 2024 – Spring 2025",
+      "dest": "UCF"
+    },
+    {
+      "name": "Sean Zarobsky — B.S., Fall 2024 – Spring 2025",
+      "dest": "UCF"
+    }
+  ],
+  "sponsors": [
+    {
+      "name": "National Science Foundation",
+      "img": "assets/img/sponsors/nsf.png"
+    },
+    {
+      "name": "U.S. Department of Energy",
+      "img": "assets/img/sponsors/doe.png"
+    },
+    {
+      "name": "DARPA",
+      "img": "assets/img/sponsors/darpa.png"
+    },
+    {
+      "name": "National Institutes of Health",
+      "img": "assets/img/sponsors/nih.png"
+    },
+    {
+      "name": "L3Harris",
+      "img": "assets/img/sponsors/l3harris.svg"
+    },
+    {
+      "name": "AriLinc",
+      "img": "assets/img/sponsors/arilinc.png"
+    },
+    {
+      "name": "Research sponsor",
+      "img": "assets/img/sponsors/sponsor.png"
+    },
+    {
+      "name": "Xilinx",
+      "img": "assets/img/sponsors/xilinx.jpg"
+    },
+    {
+      "name": "NVIDIA",
+      "img": "assets/img/sponsors/nvidia.png"
+    }
+  ]
+}
