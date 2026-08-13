@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#000000">
+<title>Research — Hao Zheng</title>
+<meta name="description" content="Hao Zheng is a tenure-track Assistant Professor of Electrical and Computer Engineering at the University of Central Florida, working on computer architecture, AI/ML systems, hardware accelerators, chiplets, and AI-assisted chip design. Director of the iCAT lab.">
+<link rel="canonical" href="https://haozheng.us/research.html">
+<meta property="og:type" content="profile">
+<meta property="og:site_name" content="Hao Zheng">
+<meta property="og:locale" content="en_US">
+<meta property="og:title" content="Research — Hao Zheng">
+<meta property="og:description" content="Hao Zheng is a tenure-track Assistant Professor of Electrical and Computer Engineering at the University of Central Florida, working on computer architecture, AI/ML systems, hardware accelerators, chiplets, and AI-assisted chip design. Director of the iCAT lab.">
+<meta property="og:url" content="https://haozheng.us/research.html">
+<meta property="og:image" content="https://haozheng.us/assets/img/hao-zheng.jpg">
+<meta property="og:image:alt" content="Portrait of Hao Zheng">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Research — Hao Zheng">
+<meta name="twitter:description" content="Hao Zheng is a tenure-track Assistant Professor of Electrical and Computer Engineering at the University of Central Florida, working on computer architecture, AI/ML systems, hardware accelerators, chiplets, and AI-assisted chip design. Director of the iCAT lab.">
+<meta name="twitter:image" content="https://haozheng.us/assets/img/hao-zheng.jpg">
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-FWJ2TZ58WX"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-FWJ2TZ58WX');
+</script>
+<link rel="icon" type="image/png" href="assets/img/ucf-tab.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;1,8..60,400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/site.css">
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+
+<header class="masthead">
+  <div class="wrap">
+    <a class="brand" href="index.html">
+      <img class="ucf-logo" src="assets/img/ucf-tab.png" width="332" height="448" alt="UCF">
+      <span class="name">Hao Zheng</span>
+    </a>
+    <nav class="nav" aria-label="Primary">
+      <a href="index.html">Home</a>
+      <a href="research.html" aria-current="page">Research</a>
+      <a href="publications.html">Publications</a>
+      <a href="https://ucf-icat.github.io/">Lab</a>
+      <a href="teaching.html">Teaching</a>
+      <a href="service.html">Service</a>
+      <a href="news.html">News</a>
+    </nav>
+    <a class="mailto" href="mailto:Hao.Zheng@ucf.edu">Hao.Zheng@ucf.edu</a>
+  </div>
+</header>
+
+<main id="main">
+<section class="view">
+<div class="wrap">
+  <div class="sec-head">
+    <p class="eyebrow">Research</p>
+    <h2 class="sec-title">Two directions, one computing stack</h2>
+    <p class="sec-note">Moore's Law is slowing just as AI's appetite for compute keeps growing, driving a shift from general-purpose processors to specialized architectures. My lab works across the stack that shift created — from sparse-computation theory down to the chip design flow itself.</p>
+  </div>
+
+  <div class="direction">
+    <div class="direction-head">
+      <span class="dnum">01</span>
+      <div>
+        <p class="eyebrow">Algorithm, Theory &amp; Hardware Co-Design</p>
+        <h2 class="sec-title">Sparse &amp; Graph-Based Machine Learning Systems</h2>
+      </div>
+    </div>
+    <div class="prose">
+      <p>Modern ML systems are bottlenecked by memory movement more than compute. Quantization and pruning shrink model size, but the asymmetric data types and computational irregularity they introduce clash with hardware built for dense, regular linear algebra. My lab is rethinking the sparse computing stack end to end: reformulating sparse linear algebra as a graph problem to expose hidden parallelism, designing graph-ML algorithms that decouple accuracy from receptive-field cost, and building versatile accelerators for today's multimodal ML workloads.</p>
+    </div>
+    <ul class="topics" style="margin-top:22px">
+        <li><span class="idx">Theory</span><span>We posit that sparse computations are best executed in graph form, where the graph structure itself preserves sparsity. Our graph-transformation framework reinterprets tiling and dataflow for sparse–dense matrix multiplication, enabling non-contiguous tiling and quantifiable data reuse — and now extends to sparse tensor contraction and sparse–sparse matrix multiplication. Supported by an NSF CAREER Award and an NSF CSSI Award.</span></li>
+        <li><span class="idx">Algorithms</span><span>Graph neural networks scale poorly because compute grows with the receptive field. Our GNN model decouples the two, cutting GPU runtime by up to 20× on tasks such as protein–protein interaction analysis. A companion GPU framework for graph-retrieval-augmented generation eliminates redundant path enumeration to raise LLM throughput. Supported by a DARPA ANSR Award.</span></li>
+        <li><span class="idx">Hardware</span><span>We design versatile accelerators that identify regular communication patterns across heterogeneous tensor layouts and unify dataflows across mixed compute kernels, targeting the multimodal vision–language–action models increasingly used in practice. Supported by an NSF FutureCore Award.</span></li>
+    </ul>
+    <h3 class="yearhead" style="margin-top:34px">Selected publications</h3>
+    <div class="paperset">
+        <article class="pub" data-type="conf" data-tier="top">
+          <div><span class="tag">ISCA&rsquo;26</span></div>
+          <div>
+            <h3 class="pub-title">TensorPrism: Rethinking Sparse High-order Tensor Acceleration via Co-occurrence Graph</h3>
+            <p class="pub-authors">Fangzhou Ye, Shilin Tian, Amir Ghazizadeh Ahsaei, <b>Hao Zheng</b></p>
+            <p class="pub-venue">ACM/IEEE International Symposium on Computer Architecture (ISCA) · Raleigh, NC · Jun 27 – Jul 1, 2026</p>
+          <p class="pub-links"><a href="assets/files/TensorPrism_ISCA26.pdf">PDF</a><a href="assets/files/bibtex/Ye2026TensorPrism.bib" download>BibTeX</a></p>
+          </div>
+        </article>
+        <article class="pub" data-type="conf" data-tier="top">
+          <div><span class="tag">MICRO&rsquo;25</span></div>
+          <div>
+            <h3 class="pub-title">Rethinking Tiling and Dataflow for SpMM Acceleration: A Graph Transformation Framework</h3>
+            <p class="pub-authors">Amir Ghazizadeh Ahsaei, Lingxiang Yin, Shilin Tian, Fangzhou Ye, Fan Yao, <b>Hao Zheng</b></p>
+            <p class="pub-venue">IEEE/ACM International Symposium on Microarchitecture (MICRO) · Seoul, South Korea · Oct 2025</p>
+          <p class="pub-links"><a href="assets/files/MICRO_2025.pdf">PDF</a><a href="assets/files/bibtex/Ahsaei2025Rethinking.bib" download>BibTeX</a></p>
+          </div>
+        </article>
+        <article class="pub" data-type="conf" data-tier="top">
+          <div><span class="tag">NeurIPS&rsquo;25</span></div>
+          <div>
+            <h3 class="pub-title">GAMMA: Gated Multi-hop Message Passing for Homophily-Agnostic Node Representation in GNNs</h3>
+            <p class="pub-authors">Amir Ghazizadeh Ahsaei, Rickard Ewetz, <b>Hao Zheng</b></p>
+            <p class="pub-venue">Annual Conference on Neural Information Processing Systems (NeurIPS) · San Diego, CA · Dec 2–7, 2025</p>
+          <p class="pub-links"><a href="https://github.com/amir-ghz/GAMMA">Code</a><a href="https://scholar.google.com/scholar?q=%22GAMMA%3A+Gated+Multi-hop+Message+Passing+for+Homophily-Agnostic+Node+Representation+in+GNNs%22+PDF">PDF</a><a href="assets/files/bibtex/Ahsaei2025GAMMA.bib" download>BibTeX</a></p>
+          </div>
+        </article>
+        <article class="pub" data-type="conf" data-tier="top">
+          <div><span class="tag">MICRO&rsquo;24</span></div>
+          <div>
+            <h3 class="pub-title">SCALE: A Structure-Centric Accelerator for Message Passing Graph Neural Networks</h3>
+            <p class="pub-authors">Lingxiang Yin, Sanjay Gandham, Mingjie Lin, <b>Hao Zheng</b></p>
+            <p class="pub-venue">IEEE/ACM International Symposium on Microarchitecture (MICRO) · Austin, TX · Nov 2–6, 2024</p>
+          <p class="pub-links"><a href="assets/files/MICRO-2024.pdf">PDF</a><a href="assets/files/bibtex/Yin2024SCALE.bib" download>BibTeX</a></p>
+          </div>
+        </article>
+        <article class="pub" data-type="conf" data-tier="top">
+          <div><span class="tag">HPCA&rsquo;25</span></div>
+          <div>
+            <h3 class="pub-title">I-DGNN: A Graph Dissimilarity-based Framework for Designing Scalable and Efficient DGNN Accelerators</h3>
+            <p class="pub-authors">Jiaqi Yang, <b>Hao Zheng</b>, Ahmed Louri</p>
+            <p class="pub-venue">IEEE International Symposium on High-Performance Computer Architecture (HPCA) · Las Vegas, NV · Mar 2025</p>
+          <p class="pub-links"><a href="assets/files/I-DGNN.pdf">PDF</a><a href="assets/files/bibtex/Yang2025IDGNN.bib" download>BibTeX</a></p>
+          </div>
+        </article>
+    </div>
+  </div>
+
+  <hr class="rule">
+
+  <div class="direction">
+    <div class="direction-head">
+      <span class="dnum">02</span>
+      <div>
+        <p class="eyebrow">AI-Assisted EDA &amp; Design Automation</p>
+        <h2 class="sec-title">Bridging Microarchitecture and RTL for AI Chip Design</h2>
+      </div>
+    </div>
+    <div class="prose">
+      <p>As AI companies increasingly build custom silicon, shortening the chip design cycle is becoming a competitive necessity. Both high-level synthesis and hand-written RTL flows stay largely decoupled from microarchitectural behavior, limiting hardware efficiency and iteration speed alike. My lab is closing that semantic gap with fast, learned models for physical-design outcomes and a compiler that lets designers optimize timing directly on RTL.</p>
+    </div>
+    <ul class="topics" style="margin-top:22px">
+        <li><span class="idx">PPA prediction</span><span>CircuitSeer, developed with Synopsys, is a deep-learning framework that predicts post-place-and-route power, performance, and area directly from a rudimentary technology-mapped netlist — skipping logic synthesis and physical design entirely and delivering a 713× runtime speedup over traditional ASIC implementation flows.</span></li>
+        <li><span class="idx">RTL compiler</span><span>KAIROS is a source-to-source compiler that performs structural and sequential timing optimization directly on RTL through a semantic-preserving Circuit Intermediate Representation, letting designers run retiming transformations — load isolation, register repositioning — without dropping to the gate level. It achieves 6.6–13.45% peak-frequency gains over state-of-the-art commercial synthesis tools.</span></li>
+    </ul>
+    <h3 class="yearhead" style="margin-top:34px">Selected publications</h3>
+    <div class="paperset">
+        <article class="pub" data-type="conf" data-tier="top">
+          <div><span class="tag">ICCAD&rsquo;24</span></div>
+          <div>
+            <h3 class="pub-title">CircuitSeer: RTL Post-PnR Delay Prediction via Coupling Functional and Structural Representation</h3>
+            <p class="pub-authors">Sanjay Gandham, Joe Walston, Sourav Samanta, Lingxiang Yin, <b>Hao Zheng</b>, Mingjie Lin, Stelios Diamantidis</p>
+            <p class="pub-venue">ACM/IEEE International Conference on Computer-Aided Design (ICCAD) · New Jersey, USA · Oct 2024</p>
+          <p class="pub-links"><a href="https://scholar.google.com/scholar?q=%22CircuitSeer%3A+RTL+Post-PnR+Delay+Prediction+via+Coupling+Functional+and+Structural+Representation%22+PDF">PDF</a><a href="assets/files/bibtex/Gandham2024CircuitSeer.bib" download>BibTeX</a></p>
+          </div>
+        </article>
+        <article class="pub" data-type="conf" data-tier="top">
+          <div><span class="tag">MICRO&rsquo;26</span></div>
+          <div>
+            <h3 class="pub-title">KAIROS: Fast Microarchitectural Design Space Exploration by Bridging Architectural Semantics and Logic Gates</h3>
+            <p class="pub-authors">Shilin Tian, Sanjay Gandham, Lingxiang Yin, Mingjie Lin, <b>Hao Zheng</b></p>
+            <p class="pub-venue">IEEE/ACM International Symposium on Microarchitecture (MICRO) · Athens, Greece · Oct 31 – Nov 4, 2026 · To appear</p>
+          <p class="pub-links"><a href="https://scholar.google.com/scholar?q=%22KAIROS%3A+Fast+Microarchitectural+Design+Space+Exploration+by+Bridging+Architectural+Semantics+and+Logic+Gates%22+PDF">PDF</a><a href="assets/files/bibtex/Tian2026KAIROS.bib" download>BibTeX</a></p>
+          </div>
+        </article>
+    </div>
+  </div>
+
+  <hr class="rule">
+
+  <div class="panel accent chamfer">
+    <h3>Working across the stack</h3>
+    <p>All three directions share the same lab and the same students — see the full record on the
+       <a href="publications.html">publications page</a>, or read about
+       <a href="https://ucf-icat.github.io/">joining the iCAT lab</a>.</p>
+  </div>
+</div>
+</section>
+</main>
+
+<footer class="site-footer" id="contact">
+  <div class="wrap">
+    <div class="foot-grid">
+      <div>
+        <h2>Contact</h2>
+        <a class="bigmail" href="mailto:Hao.Zheng@ucf.edu">Hao.Zheng@ucf.edu</a>
+      </div>
+      <div>
+        <h2>Office</h2>
+        <address>
+          Department of Electrical &amp; Computer Engineering<br>
+          University of Central Florida<br>
+          4328 Scorpius Street<br>
+          Orlando, Florida 32816-2362<br>
+          <a href="https://www.google.com/maps/search/?api=1&amp;query=4328+Scorpius+Street+Orlando+Florida+32816">Open in Maps</a>
+        </address>
+      </div>
+      <div>
+        <h2>Elsewhere</h2>
+        <ul class="footlinks">
+          <li><a href="https://www.ece.ucf.edu/">UCF ECE Department</a></li>
+          <li><a href="https://www.computer.org/csdl/journal/tc">IEEE Transactions on Computers</a></li>
+          <li><a href="https://docs.google.com/forms/d/e/1FAIpQLScnBeBChpP9nZjyztYFd7uBaIh6cIC2cqRQJCVYd0EDCkhCBg/viewform?usp=publish-editor">Volunteer to review for IEEE TC</a></li>
+        </ul>
+      </div>
+      <div>
+        <h2>Prospective students</h2>
+        <p style="margin:0;font-size:15px">Assistantships are available. Send a CV and transcripts, and mention which of the lab's projects interest you.</p>
+      </div>
+    </div>
+    <div class="colophon">
+      <span>&copy; 2026 Hao Zheng</span>
+      <span><a href="https://ucf-icat.github.io/">iCAT — Intelligent Computer Architecture &amp; Technology Lab</a></span>
+    </div>
+  </div>
+</footer>
+
+
+</body>
+</html>

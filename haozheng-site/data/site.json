@@ -15,12 +15,12 @@
     "lede": "Building Scalable, Efficient, and Adaptive Computing Infrastructure for AI: From Silicon to Algorithms",
     "credentials": [
       "AEiC, IEEE Trans. on Computers",
-      "Director, iCAT Lab"
+      "Director, <a href=\"https://ucf-icat.github.io/\">iCAT Lab</a>"
     ]
   },
   "meta_description": "Hao Zheng is a tenure-track Assistant Professor of Electrical and Computer Engineering at the University of Central Florida, working on computer architecture, AI/ML systems, hardware accelerators, chiplets, and AI-assisted chip design. Director of the iCAT lab.",
   "about": [
-    "Hao Zheng is a tenure-track Assistant Professor in the <a href=\"https://www.ece.ucf.edu/\">Department of Electrical and Computer Engineering</a> at the University of Central Florida, where he directs the iCAT lab.",
+    "Hao Zheng is a tenure-track Assistant Professor in the <a href=\"https://www.ece.ucf.edu/\">Department of Electrical and Computer Engineering</a> at the University of Central Florida, where he directs the <a href=\"https://ucf-icat.github.io/\">iCAT lab</a>.",
     "He received his Ph.D. from George Washington University, advised by <a href=\"https://hpcat.seas.gwu.edu/\">Prof. Ahmed Louri</a>. His research interests are in computer architecture and machine learning, with emphasis on AI/ML systems, hardware accelerators, on- and off-chip communication, manycore processors, chiplet-based systems, and AI-assisted chip design. His work has been published in top-tier computer architecture and EDA conferences and journals such as ISCA, MICRO, HPCA, DAC, ICCAD, DATE, TPDS, and TETC.",
     "He is a recipient of the <a href=\"https://www.nsf.gov/funding/opportunities/career-faculty-early-career-development-program\">NSF CAREER Award</a> and the <a href=\"https://facultyexcellence.ucf.edu/award/reach-for-the-stars-award/\">UCF Reach for the Stars Award</a>. He has served on organizing and technical program committees for top computer systems conferences and as a panelist for multiple NSF programs. He currently serves as Associate Editor-in-Chief for <em>IEEE Transactions on Computers</em> and as an Associate Editor for <em>IEEE Transactions on Sustainable Computing</em>.",
     "If you are interested in serving as a reviewer for <a href=\"https://www.computer.org/csdl/journal/tc\">IEEE TC</a>, please fill out the <a href=\"https://docs.google.com/forms/d/e/1FAIpQLScnBeBChpP9nZjyztYFd7uBaIh6cIC2cqRQJCVYd0EDCkhCBg/viewform?usp=publish-editor\">reviewer form</a>."
@@ -32,7 +32,7 @@
     "intro": "UCF has strong graduate programs in computer engineering. Per CSRankings, UCF stands at No.&nbsp;15 in the U.S. in computer architecture and No.&nbsp;5 in EDA; the computer engineering program ranked No.&nbsp;50 in the 2023 U.S. News &amp; World Report. Lab members have gone on to academia and industry — NUAA, Apple, AMD, and quantitative finance — within a short time of graduating.",
     "prospective_heading": "For prospective students",
     "prospective": [
-      "Students at iCAT get a well-rounded grounding in computer systems and machine learning design: theory, modeling and simulation, performance evaluation, and physical implementation. You will collaborate with researchers across the country and work on industry-scale projects that turn our research into real products. Every student is supported for conference travel each year.",
+      "Students at <a href=\"https://ucf-icat.github.io/\">iCAT</a> get a well-rounded grounding in computer systems and machine learning design: theory, modeling and simulation, performance evaluation, and physical implementation. You will collaborate with researchers across the country and work on industry-scale projects that turn our research into real products. Every student is supported for conference travel each year.",
       "The lab culture is supportive and inclusive. We care about your growth, your health, and where you go next. The mentoring philosophy is simple: give you every resource you need to do work that matters, while making sure you actually <em>enjoy</em> the Ph.D. Every student is different, and your perspective counts.",
       "Successful candidates are motivated, willing to learn new concepts, and want to work at the frontier of this field. We expect:"
     ],
@@ -83,5 +83,5 @@
     }
   ],
   "footer_note": "Assistantships are available. Send a CV and transcripts, and mention which of the lab's projects interest you.",
-  "colophon": "iCAT — Intelligent Computer Architecture &amp; Technology Lab"
+  "colophon": "<a href=\"https://ucf-icat.github.io/\">iCAT — Intelligent Computer Architecture &amp; Technology Lab</a>"
 }

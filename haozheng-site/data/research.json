@@ -1,0 +1,42 @@
+{
+  "_comment": "Research directions page. HTML is allowed inside any text field. 'papers' entries must exactly match a publication title in publications.json.",
+  "intro": {
+    "eyebrow": "Research",
+    "title": "Two directions, one computing stack",
+    "lede": "Moore's Law is slowing just as AI's appetite for compute keeps growing, driving a shift from general-purpose processors to specialized architectures. My lab works across the stack that shift created — from sparse-computation theory down to the chip design flow itself."
+  },
+  "directions": [
+    {
+      "num": "01",
+      "eyebrow": "Algorithm, Theory &amp; Hardware Co-Design",
+      "title": "Sparse &amp; Graph-Based Machine Learning Systems",
+      "summary": "Modern ML systems are bottlenecked by memory movement more than compute. Quantization and pruning shrink model size, but the asymmetric data types and computational irregularity they introduce clash with hardware built for dense, regular linear algebra. My lab is rethinking the sparse computing stack end to end: reformulating sparse linear algebra as a graph problem to expose hidden parallelism, designing graph-ML algorithms that decouple accuracy from receptive-field cost, and building versatile accelerators for today's multimodal ML workloads.",
+      "threads": [
+        { "label": "Theory", "text": "We posit that sparse computations are best executed in graph form, where the graph structure itself preserves sparsity. Our graph-transformation framework reinterprets tiling and dataflow for sparse–dense matrix multiplication, enabling non-contiguous tiling and quantifiable data reuse — and now extends to sparse tensor contraction and sparse–sparse matrix multiplication. Supported by an NSF CAREER Award and an NSF CSSI Award." },
+        { "label": "Algorithms", "text": "Graph neural networks scale poorly because compute grows with the receptive field. Our GNN model decouples the two, cutting GPU runtime by up to 20× on tasks such as protein–protein interaction analysis. A companion GPU framework for graph-retrieval-augmented generation eliminates redundant path enumeration to raise LLM throughput. Supported by a DARPA ANSR Award." },
+        { "label": "Hardware", "text": "We design versatile accelerators that identify regular communication patterns across heterogeneous tensor layouts and unify dataflows across mixed compute kernels, targeting the multimodal vision–language–action models increasingly used in practice. Supported by an NSF FutureCore Award." }
+      ],
+      "papers": [
+        "TensorPrism: Rethinking Sparse High-order Tensor Acceleration via Co-occurrence Graph",
+        "Rethinking Tiling and Dataflow for SpMM Acceleration: A Graph Transformation Framework",
+        "GAMMA: Gated Multi-hop Message Passing for Homophily-Agnostic Node Representation in GNNs",
+        "SCALE: A Structure-Centric Accelerator for Message Passing Graph Neural Networks",
+        "I-DGNN: A Graph Dissimilarity-based Framework for Designing Scalable and Efficient DGNN Accelerators"
+      ]
+    },
+    {
+      "num": "02",
+      "eyebrow": "AI-Assisted EDA &amp; Design Automation",
+      "title": "Bridging Microarchitecture and RTL for AI Chip Design",
+      "summary": "As AI companies increasingly build custom silicon, shortening the chip design cycle is becoming a competitive necessity. Both high-level synthesis and hand-written RTL flows stay largely decoupled from microarchitectural behavior, limiting hardware efficiency and iteration speed alike. My lab is closing that semantic gap with fast, learned models for physical-design outcomes and a compiler that lets designers optimize timing directly on RTL.",
+      "threads": [
+        { "label": "PPA prediction", "text": "CircuitSeer, developed with Synopsys, is a deep-learning framework that predicts post-place-and-route power, performance, and area directly from a rudimentary technology-mapped netlist — skipping logic synthesis and physical design entirely and delivering a 713× runtime speedup over traditional ASIC implementation flows." },
+        { "label": "RTL compiler", "text": "KAIROS is a source-to-source compiler that performs structural and sequential timing optimization directly on RTL through a semantic-preserving Circuit Intermediate Representation, letting designers run retiming transformations — load isolation, register repositioning — without dropping to the gate level. It achieves 6.6–13.45% peak-frequency gains over state-of-the-art commercial synthesis tools." }
+      ],
+      "papers": [
+        "CircuitSeer: RTL Post-PnR Delay Prediction via Coupling Functional and Structural Representation",
+        "KAIROS: Fast Microarchitectural Design Space Exploration by Bridging Architectural Semantics and Logic Gates"
+      ]
+    }
+  ]
+}

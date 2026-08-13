@@ -36,6 +36,7 @@ ME = "Hao Zheng"
 # slug, nav label, page title suffix
 PAGES = [
     ("index.html", "Home", None),
+    ("research.html", "Research", "Research"),
     ("publications.html", "Publications", "Publications"),
     ("lab.html", "Lab", "iCAT Lab"),
     ("teaching.html", "Teaching", "Teaching"),
@@ -182,11 +183,11 @@ def render_home(site, news, pubs):
   <hr class="rule">
 
   <div class="panel accent chamfer">
-    <h3>Joining {site["lab"]["short_name"]}</h3>
+    <h3>Joining <a href="https://ucf-icat.github.io/">{site["lab"]["short_name"]}</a></h3>
     <p>Graduate research and teaching assistantships are available for prospective Ph.D. students.
        If the work here interests you, send a CV and transcripts to
        <a href="mailto:{site["email"]}">{site["email"]}</a>.</p>
-    <div class="btnrow"><a class="btn" href="lab.html">What the lab is like</a></div>
+    <div class="btnrow"><a class="btn" href="https://ucf-icat.github.io/">What the lab is like</a></div>
   </div>
 </div>
 """
@@ -215,6 +216,65 @@ def publication_html(p):
             <p class="pub-venue">{p["published"]}</p>{links}
           </div>
         </article>"""
+
+
+def render_research(research, pubs):
+    by_title = {p["title"]: p for group in pubs["groups"] for p in group["items"]}
+
+    sections = []
+    for d in research["directions"]:
+        threads = "\n".join(
+            f'        <li><span class="idx">{t["label"]}</span><span>{t["text"]}</span></li>'
+            for t in d["threads"])
+
+        papers_block = ""
+        found = [by_title[title] for title in d.get("papers", []) if title in by_title]
+        if found:
+            papers = "\n".join(publication_html(p) for p in found)
+            papers_block = f"""
+    <h3 class="yearhead" style="margin-top:34px">Selected publications</h3>
+    <div class="paperset">
+{papers}
+    </div>"""
+
+        sections.append(f"""  <div class="direction">
+    <div class="direction-head">
+      <span class="dnum">{d["num"]}</span>
+      <div>
+        <p class="eyebrow">{d["eyebrow"]}</p>
+        <h2 class="sec-title">{d["title"]}</h2>
+      </div>
+    </div>
+    <div class="prose">
+      <p>{d["summary"]}</p>
+    </div>
+    <ul class="topics" style="margin-top:22px">
+{threads}
+    </ul>{papers_block}
+  </div>""")
+
+    body = "\n\n  <hr class=\"rule\">\n\n".join(sections)
+    intro = research["intro"]
+    return f"""
+<div class="wrap">
+  <div class="sec-head">
+    <p class="eyebrow">{intro["eyebrow"]}</p>
+    <h2 class="sec-title">{intro["title"]}</h2>
+    <p class="sec-note">{intro["lede"]}</p>
+  </div>
+
+{body}
+
+  <hr class="rule">
+
+  <div class="panel accent chamfer">
+    <h3>Working across the stack</h3>
+    <p>All three directions share the same lab and the same students — see the full record on the
+       <a href="publications.html">publications page</a>, or read about
+       <a href="https://ucf-icat.github.io/">joining the iCAT lab</a>.</p>
+  </div>
+</div>
+"""
 
 
 def render_publications(pubs):
@@ -450,6 +510,9 @@ def prepare_bibtex(pubs):
 def nav_html(current):
     out = []
     for slug, label, _ in PAGES:
+        if slug == "lab.html":
+            out.append('      <a href="https://ucf-icat.github.io/">Lab</a>')
+            continue
         mark = ' aria-current="page"' if slug == current else ""
         out.append(f'      <a href="{slug}"{mark}>{label}</a>')
     return "\n".join(out)
@@ -498,6 +561,7 @@ def main():
     courses = load("courses")
     service = load("service")
     awards = load("awards")
+    research = load("research")
 
     shell = (TEMPLATES / "base.html").read_text(encoding="utf-8")
 
@@ -514,6 +578,8 @@ def main():
 
     full = f'{site["name"]} — {site["role"]}, {site["dept"]}, {site["university"]}'
     write_page(shell, site, "index.html", full, render_home(site, news, pubs), home_js, wrap=False)
+    write_page(shell, site, "research.html", f'Research — {site["name"]}',
+               render_research(research, pubs))
     write_page(shell, site, "publications.html", f'Publications — {site["name"]}',
                render_publications(pubs), site_js)
     write_page(shell, site, "lab.html", f'{site["lab"]["short_name"]} Lab — {site["name"]}',
