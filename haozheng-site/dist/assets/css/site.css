@@ -117,24 +117,25 @@ h3{font-family:Archivo,system-ui,sans-serif;font-weight:600;letter-spacing:-.015
 .die-panel::before,.die-panel::after{display:none}
 .die-panel canvas{display:none}
 .die-panel .veil{display:none}
-.hero{position:relative;display:grid;column-gap:clamp(40px,7vw,88px);row-gap:36px;padding:clamp(48px,6vw,70px) 0 clamp(54px,7vw,82px);
-  grid-template-columns:minmax(0,1fr) auto;align-items:center}
-@media(max-width:840px){.hero{grid-template-columns:1fr;padding:clamp(44px,8vw,62px) 0 clamp(54px,9vw,72px)}}
+.hero{position:relative;display:grid;column-gap:clamp(32px,5vw,64px);row-gap:30px;padding:clamp(42px,5vw,56px) 0 clamp(48px,5.5vw,64px);
+  grid-template-columns:auto minmax(0,1fr);align-items:center}
+@media(min-width:841px){.hero{grid-template-columns:auto minmax(0,760px);justify-content:center}}
+@media(max-width:840px){.hero{grid-template-columns:1fr;row-gap:28px;padding:clamp(38px,8vw,52px) 0 clamp(46px,9vw,60px)}.hero-copy,.portrait{grid-column:auto;grid-row:auto}.hero-copy::before{display:none}}
 .hero .eyebrow{color:#666663}
 .hero .eyebrow::before{background:var(--signal)}
 .hero h1{
   font-family:Archivo,system-ui,sans-serif;font-weight:700;
   font-size:clamp(2.9rem,8vw,5rem);line-height:.94;letter-spacing:-.042em;
-  margin:0 0 20px;color:#151719;text-shadow:none;
+  margin:0 0 14px;color:#151719;text-shadow:none;
 }
-.hero-copy{position:relative;z-index:2}
+.hero-copy{position:relative;z-index:2;grid-column:2}
 .hero-copy::before{content:"";position:absolute;left:-22px;top:0;width:2px;height:72px;background:linear-gradient(var(--signal),var(--signal-lite))}
 .hero .role{
   font-family:Archivo,system-ui,sans-serif;font-size:clamp(15px,1.6vw,17.5px);
-  font-weight:500;color:#41464A;margin:0 0 22px;letter-spacing:-.005em;
+  font-weight:500;color:#41464A;margin:0 0 16px;letter-spacing:-.005em;
 }
 .hero .role .sep{color:var(--signal);padding:0 8px}
-.hero .lede{max-width:52ch;color:#555B60;font-size:16.5px;margin:0 0 30px}
+.hero .lede{max-width:52ch;color:#555B60;font-size:16.5px;margin:0 0 22px}
 .creds{display:flex;flex-wrap:wrap;gap:8px;list-style:none;padding:0;margin:0}
 .creds li{
   font-family:"IBM Plex Mono",monospace;font-size:11px;letter-spacing:.05em;
@@ -143,11 +144,12 @@ h3{font-family:Archivo,system-ui,sans-serif;font-weight:600;letter-spacing:-.015
 }
 .creds a{color:inherit;text-decoration:none;border-bottom:1px solid rgba(63,67,70,.48)}
 .creds a:hover{color:var(--brown);border-bottom-color:var(--signal)}
-.tech-rail{display:flex;align-items:center;flex-wrap:wrap;gap:12px 18px;margin-top:20px;color:#77756E;font:500 9px/1 "IBM Plex Mono",monospace;letter-spacing:.16em}
+.tech-rail{display:flex;align-items:center;flex-wrap:wrap;gap:10px 18px;margin-top:16px;color:#77756E;font:500 9px/1 "IBM Plex Mono",monospace;letter-spacing:.16em}
 .tech-rail span{display:flex;align-items:center;gap:8px}
 .tech-rail span::before{content:"";width:4px;height:4px;background:var(--signal)}
-.portrait{position:relative;z-index:2;justify-self:start;width:clamp(210px,20vw,245px);margin:0 clamp(8px,2vw,24px) 0 0}
-@media(max-width:840px){.portrait{justify-self:center;width:min(52vw,195px);margin:4px 0 0}}
+.portrait{position:relative;z-index:2;grid-column:1;grid-row:1;justify-self:start;width:clamp(200px,18vw,225px);margin:0}
+@media(max-width:840px){.portrait{justify-self:center;width:min(50vw,190px);margin:0}}
+@media(max-width:520px){.hero{row-gap:24px;padding:34px 0 44px}.hero h1{font-size:clamp(2.65rem,15vw,3.45rem)}.hero .role{margin-bottom:14px}.hero .lede{font-size:15.5px;line-height:1.6;margin-bottom:18px}.creds{gap:7px}.creds li{font-size:10px;padding:6px 8px}.tech-rail{gap:9px 14px;margin-top:14px}.portrait{width:min(56vw,180px)}}
 .portrait .frame{
   position:relative;background:transparent;border:0;padding:0;border-radius:10px;overflow:hidden;
 }
