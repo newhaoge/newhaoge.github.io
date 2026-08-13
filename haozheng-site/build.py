@@ -124,7 +124,7 @@ def render_home(site, news, pubs):
   <div class="veil" aria-hidden="true"></div>
   <div class="wrap">
     <div class="hero">
-      <div>
+      <div class="hero-copy">
         <p class="eyebrow">{hero["eyebrow"]}</p>
         <h1>{site["name"].replace(" ", "&nbsp;")}</h1>
         <p class="role">{site["dept"]}<span class="sep">/</span>{site["university"]}</p>
@@ -132,6 +132,7 @@ def render_home(site, news, pubs):
         <ul class="creds">
 {creds}
         </ul>
+        <div class="tech-rail" aria-hidden="true"><span>AI SYSTEMS</span><span>ARCHITECTURE</span><span>SILICON</span></div>
       </div>
       <figure class="portrait">
         <div class="frame">
@@ -139,7 +140,6 @@ def render_home(site, news, pubs):
                width="600" height="600" decoding="async" fetchpriority="high">
           <div class="fallback" id="portraitFallback" hidden aria-hidden="true">{site["monogram"]}</div>
         </div>
-        <figcaption>{site["photo_caption"]}</figcaption>
       </figure>
     </div>
   </div>
@@ -185,8 +185,8 @@ def render_home(site, news, pubs):
   <div class="panel accent chamfer">
     <h3>Joining <a href="https://ucf-icat.github.io/">{site["lab"]["short_name"]}</a></h3>
     <p>Graduate research and teaching assistantships are available for prospective Ph.D. students.
-       If the work here interests you, send a CV and transcripts to
-       <a href="mailto:{site["email"]}">{site["email"]}</a>.</p>
+       If the work here interests you, send a CV and transcripts using the
+       <a href="#" data-email-link>contact link</a>.</p>
     <div class="btnrow"><a class="btn" href="https://ucf-icat.github.io/">What the lab is like</a></div>
   </div>
 </div>

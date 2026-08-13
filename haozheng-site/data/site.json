@@ -8,7 +8,6 @@
   "email": "Hao.Zheng@ucf.edu",
   "base_url": "https://haozheng.us",
   "photo": "assets/img/hao-zheng.jpg",
-  "photo_caption": "Harris Engineering Center, Orlando",
   "monogram": "HZ",
   "hero": {
     "eyebrow": "Computer architecture &amp; machine learning",
@@ -50,12 +49,12 @@
         "text": "Our projects cover the whole computing stack, from algorithm to silicon, so students with different backgrounds are all welcome."
       }
     ],
-    "closing": "Graduate research and teaching assistantships are available for prospective Ph.D. students. Send your CV and transcripts to <a href=\"mailto:Hao.Zheng@ucf.edu\">Hao.Zheng@ucf.edu</a>."
+    "closing": "Graduate research and teaching assistantships are available for prospective Ph.D. students. Send your CV and transcripts using the <a href=\"#\" data-email-link>contact link</a>."
   },
   "teaching_note": "Be a responsible educator.",
   "teaching_panel": {
     "heading": "Course materials",
-    "body": "Enrolled students should use Webcourses@UCF for slides, assignments, and announcements. For questions about enrolling or prerequisites, email <a href=\"mailto:Hao.Zheng@ucf.edu\">Hao.Zheng@ucf.edu</a>."
+    "body": "Enrolled students should use Webcourses@UCF for slides, assignments, and announcements. For questions about enrolling or prerequisites, use the <a href=\"#\" data-email-link>contact link</a>."
   },
   "service_panel": {
     "heading": "Review for IEEE Transactions on Computers",

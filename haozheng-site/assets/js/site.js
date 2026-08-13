@@ -3,6 +3,15 @@
 (function(){
   "use strict";
 
+  /* Build the contact address at runtime so it is absent from page source. */
+  (function(){
+    var codes = [72,97,111,46,90,104,101,110,103,64,117,99,102,46,101,100,117];
+    var address = codes.map(function(code){ return String.fromCharCode(code); }).join("");
+    Array.prototype.forEach.call(document.querySelectorAll("[data-email-link]"), function(link){
+      link.href = "mailto:" + address;
+    });
+  })();
+
   /* ---- portrait: falls back to a monogram if the photo is missing ---- */
   (function(){
     var img = document.getElementById('portrait');
