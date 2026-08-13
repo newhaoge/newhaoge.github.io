@@ -163,7 +163,7 @@ h3{font-family:Archivo,system-ui,sans-serif;font-weight:600;letter-spacing:-.015
   font-weight:500;color:#41464A;margin:0 0 16px;letter-spacing:-.005em;
 }
 .hero .role .sep{color:var(--signal);padding:0 8px}
-.hero .lede{max-width:52ch;color:#555B60;font-size:16.5px;margin:0 0 22px}
+.hero .lede{max-width:52ch;color:#555B60;font-size:16.5px;margin:0 0 22px;text-align:left}
 .creds{display:flex;flex-wrap:wrap;gap:8px;list-style:none;padding:0;margin:0}
 .creds li{
   font-family:"IBM Plex Mono",monospace;font-size:11px;letter-spacing:.05em;
@@ -176,8 +176,8 @@ h3{font-family:Archivo,system-ui,sans-serif;font-weight:600;letter-spacing:-.015
 .tech-rail span{display:flex;align-items:center;gap:8px}
 .tech-rail span::before{content:"";width:4px;height:4px;background:var(--signal)}
 .portrait{position:relative;z-index:2;grid-column:1;grid-row:1;justify-self:start;width:clamp(200px,18vw,225px);margin:0}
-@media(max-width:840px){.portrait{justify-self:center;width:min(50vw,190px);margin:0}}
-@media(max-width:520px){.hero{row-gap:24px;padding:34px 0 44px}.hero h1{font-size:clamp(2.65rem,15vw,3.45rem)}.hero .role{margin-bottom:14px}.hero .lede{font-size:15.5px;line-height:1.6;margin-bottom:18px}.creds{gap:7px}.creds li{font-size:10px;padding:6px 8px}.tech-rail{gap:9px 14px;margin-top:14px}.portrait{width:min(56vw,180px)}}
+@media(max-width:840px){.portrait{justify-self:center;width:min(46vw,180px);margin:0;grid-row:1}.hero-copy{grid-row:2;text-align:center}.hero .eyebrow,.creds,.tech-rail{justify-content:center}.hero .lede{margin-inline:auto;text-align:center}}
+@media(max-width:520px){.hero{row-gap:22px;padding:28px 0 38px}.hero h1{font-size:clamp(2.55rem,14vw,3.25rem);white-space:nowrap;margin-bottom:12px}.hero .eyebrow{font-size:9.5px;letter-spacing:.12em;margin-bottom:10px}.hero .role{font-size:14px;line-height:1.45;margin:0 auto 13px;max-width:28ch}.hero .role .sep{display:none}.hero .lede{font-size:15px;line-height:1.55;margin-bottom:17px;max-width:34ch}.creds{gap:7px}.creds li{font-size:9.5px;padding:6px 8px}.tech-rail{display:none}.portrait{width:min(44vw,160px)}}
 .portrait .frame{
   position:relative;background:transparent;border:0;padding:0;border-radius:10px;overflow:hidden;
 }
