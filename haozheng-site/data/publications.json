@@ -4,6 +4,21 @@
       "label": "2026",
       "items": [
         {
+          "venue": "NeurIPS&rsquo;26",
+          "type": "conf",
+          "title": "Self-Tuning Graph Filters via State-Dependent Operator Composition",
+          "authors": [
+            "Amir Ghazizadeh Ahsaei",
+            "Mahyar Alinejad",
+            "George K. Atia",
+            "Rickard Ewetz",
+            "Hao Zheng"
+          ],
+          "published": "Annual Conference on Neural Information Processing Systems (NeurIPS) · Dec 2026 · To appear",
+          "tier": "top",
+          "selected": true
+        },
+        {
           "venue": "MICRO&rsquo;26",
           "type": "conf",
           "title": "KAIROS: Fast Microarchitectural Design Space Exploration by Bridging Architectural Semantics and Logic Gates",
