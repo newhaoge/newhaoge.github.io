@@ -562,6 +562,17 @@ h3{font-family:Archivo,system-ui,sans-serif;font-weight:600;letter-spacing:-.015
 
     <div id="publist">
 
+      <div class="yeargroup"><h3 class="yearhead">2027</h3>
+        <article class="pub" data-type="conf" data-tier="top" data-selected="1">
+          <div><span class="tag">HPCA&rsquo;27</span></div>
+          <div>
+            <h3 class="pub-title">Locus: A Variation-Aware Accelerator for Sequence-to-Graph Mapping on Pangenome Graphs</h3>
+            <p class="pub-authors">Shilin Tian, Fangzhou Ye, <b>Hao Zheng</b></p>
+            <p class="pub-venue">IEEE International Symposium on High-Performance Computer Architecture (HPCA 2027) · Salt Lake City, UT · To appear</p>
+          </div>
+        </article>
+      </div>
+
       <div class="yeargroup"><h3 class="yearhead">2026</h3>
         <article class="pub" data-type="conf" data-tier="top" data-selected="1">
           <div><span class="tag">NeurIPS&rsquo;26</span></div>
@@ -576,7 +587,7 @@ h3{font-family:Archivo,system-ui,sans-serif;font-weight:600;letter-spacing:-.015
           <div>
             <h3 class="pub-title">KAIROS: Fast Microarchitectural Design Space Exploration by Bridging Architectural Semantics and Logic Gates</h3>
             <p class="pub-authors">Shilin Tian, Sanjay Gandham, Lingxiang Yin, Mingjie Lin, <b>Hao Zheng</b></p>
-            <p class="pub-venue">IEEE/ACM International Symposium on Microarchitecture (MICRO) · Athens, Greece · Oct 31 – Nov 4, 2026 · To appear</p>
+            <p class="pub-venue">IEEE/ACM International Symposium on Microarchitecture (MICRO) · Athens, Greece · Oct 31 – Nov 4, 2026</p>
             <p class="pub-links"><a href="assets/files/MICRO_KAIROS.pdf">PDF</a></p>
           </div>
         </article>
@@ -585,7 +596,7 @@ h3{font-family:Archivo,system-ui,sans-serif;font-weight:600;letter-spacing:-.015
           <div>
             <h3 class="pub-title">Argus: An Efficient Accelerator Design for Sparse Nonlinear Solver</h3>
             <p class="pub-authors">Fangzhou Ye, Amir Ghazizadeh Ahsaei, <b>Hao Zheng</b></p>
-            <p class="pub-venue">IEEE/ACM International Symposium on Microarchitecture (MICRO) · Athens, Greece · Oct 31 – Nov 4, 2026 · To appear</p>
+            <p class="pub-venue">IEEE/ACM International Symposium on Microarchitecture (MICRO) · Athens, Greece · Oct 31 – Nov 4, 2026</p>
             <p class="pub-links"><a href="assets/files/MICRO_Argus.pdf">PDF</a></p>
           </div>
         </article>
@@ -594,7 +605,7 @@ h3{font-family:Archivo,system-ui,sans-serif;font-weight:600;letter-spacing:-.015
           <div>
             <h3 class="pub-title">DireLeak: Cross-socket Cache Timing Channels Exploiting Memory Directory</h3>
             <p class="pub-authors">Md Hafizul Islam Chowdhuryy, Kunbei Cai, Zhenkai Zhang, <b>Hao Zheng</b>, Fan Yao</p>
-            <p class="pub-venue">IEEE/ACM International Symposium on Microarchitecture (MICRO) · Athens, Greece · Oct 31 – Nov 4, 2026 · To appear</p>
+            <p class="pub-venue">IEEE/ACM International Symposium on Microarchitecture (MICRO) · Athens, Greece · Oct 31 – Nov 4, 2026</p>
           </div>
         </article>
         <article class="pub" data-type="conf" data-tier="top">
@@ -602,7 +613,7 @@ h3{font-family:Archivo,system-ui,sans-serif;font-weight:600;letter-spacing:-.015
           <div>
             <h3 class="pub-title">MOSAIC: An Accelerator Design for Heterophilic Graph Learning</h3>
             <p class="pub-authors">Fangzhou Ye, Wei Zhang, Ahmed Louri, <b>Hao Zheng</b></p>
-            <p class="pub-venue">IEEE/ACM International Symposium on Microarchitecture (MICRO) · Athens, Greece · Oct 31 – Nov 4, 2026 · To appear</p>
+            <p class="pub-venue">IEEE/ACM International Symposium on Microarchitecture (MICRO) · Athens, Greece · Oct 31 – Nov 4, 2026</p>
             <p class="pub-links"><a href="assets/files/MICRO_MOSAIC.pdf">PDF</a></p>
           </div>
         </article>
@@ -1153,6 +1164,7 @@ h3{font-family:Archivo,system-ui,sans-serif;font-weight:600;letter-spacing:-.015
       <span class="count" id="newscount"></span>
     </div>
     <ul class="timeline">
+      <li><time datetime="2026-11">Nov 2026</time><div><h3>Locus accepted at HPCA&nbsp;&rsquo;27</h3><p>Locus: A Variation-Aware Accelerator for Sequence-to-Graph Mapping on Pangenome Graphs. To appear in Salt Lake City, UT.</p></div></li>
       <li><time datetime="2026-09">Sep 2026</time><div><h3>One paper accepted at NeurIPS&nbsp;&rsquo;26</h3><p>Self-Tuning Graph Filters via State-Dependent Operator Composition.</p></div></li>
       <li><time datetime="2026-09">Sep 2026</time><div><h3>Honored to receive the <a href="https://www.asemfl.org/">Rising Star Award</a> from the Academy of Science, Engineering and Medicine of Florida (ASEMFL).</h3></div></li>
       <li><time datetime="2026-07">Jul 2026</time><div><h3>Four papers accepted at MICRO&nbsp;&rsquo;26</h3><p>KAIROS, Argus, DireLeak, and MOSAIC will appear in Athens.</p></div></li>
@@ -1523,7 +1535,7 @@ h3{font-family:Archivo,system-ui,sans-serif;font-weight:600;letter-spacing:-.015
     for (var i=0;i<groups.length;i++){
       var heading = groups[i].querySelector('.yearhead');
       var year = heading ? parseInt(heading.textContent, 10) : 0;
-      if (year < 2023 || year > 2026) continue;
+      if (year < 2023) continue;
       var papers = groups[i].querySelectorAll('.pub');
       for (var j=0;j<papers.length;j++){
         var tag = papers[j].querySelector('.tag');
